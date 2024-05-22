@@ -22,7 +22,7 @@ namespace WebsiteBanDienThoai31.Controllers
             employeeSvc = new EmployeeSvc();
         }
 
-        [HttpGet("{id}")]
+        [HttpPost("{id}")]
         public IActionResult GetEmployeeByID([FromBody] SimpleReq simpleReq)
         {
             //tao bien tra ve la SingleRespone
