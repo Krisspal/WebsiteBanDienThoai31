@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace QLBH.Common.BLL
+namespace WebDT.Common.BLL
 {
     using DAL;
     using Rsp;

@@ -1,11 +1,11 @@
-﻿using QLBH.Common.Rsp;
+﻿using WebDT.Common.Rsp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace QLBH.Common.BLL
+namespace WebDT.Common.BLL
 {
     public interface IGenericSvc<T> where T : class
     {

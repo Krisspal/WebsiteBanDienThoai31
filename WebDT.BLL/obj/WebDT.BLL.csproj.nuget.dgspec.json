@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\WebDT.BLL.csproj": {}
+    "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\WebDT.BLL.csproj": {}
   },
   "projects": {
-    "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\WebDT.BLL.csproj": {
+    "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\WebDT.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\WebDT.BLL.csproj",
+        "projectUniqueName": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\WebDT.BLL.csproj",
         "projectName": "WebDT.BLL",
-        "projectPath": "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\WebDT.BLL.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\obj\\",
+        "projectPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\WebDT.BLL.csproj",
+        "packagesPath": "C:\\Users\\MSII\\.nuget\\packages\\",
+        "outputPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MSII\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,11 +28,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj": {
-                "projectPath": "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj"
+              "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj": {
+                "projectPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj"
               },
-              "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj": {
-                "projectPath": "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj"
+              "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj": {
+                "projectPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj"
               }
             }
           }
@@ -65,6 +65,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.10, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[6.6.2, )"
             }
           },
           "imports": [
@@ -87,17 +95,17 @@
         }
       }
     },
-    "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj": {
+    "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj",
+        "projectUniqueName": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj",
         "projectName": "WebDT.Common",
-        "projectPath": "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\obj\\",
+        "projectPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj",
+        "packagesPath": "C:\\Users\\MSII\\.nuget\\packages\\",
+        "outputPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MSII\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -141,6 +149,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.10, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[6.6.2, )"
             }
           },
           "imports": [
@@ -163,17 +179,17 @@
         }
       }
     },
-    "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj": {
+    "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj",
+        "projectUniqueName": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj",
         "projectName": "WebDT.DAL",
-        "projectPath": "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\obj\\",
+        "projectPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj",
+        "packagesPath": "C:\\Users\\MSII\\.nuget\\packages\\",
+        "outputPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MSII\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -187,8 +203,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj": {
-                "projectPath": "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj"
+              "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj": {
+                "projectPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj"
               }
             }
           }
@@ -221,6 +237,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.10, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[6.6.2, )"
             }
           },
           "imports": [

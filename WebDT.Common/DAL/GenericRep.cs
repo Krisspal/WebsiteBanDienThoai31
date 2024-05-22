@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Linq;
 using System.Text;
 
-namespace QLBH.Common.DAL
+namespace WebDT.Common.DAL
 {
     public class GenericRep<C, T> : IGenericRep<T> where T : class where C : DbContext, new()
     {

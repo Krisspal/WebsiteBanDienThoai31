@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 using System.Linq;
 using System.Text;
 
-namespace QLBH.Common.DAL
+namespace WebDT.Common.DAL
 {
     public interface IGenericRep<T> where T : class
     {

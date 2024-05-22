@@ -1,5 +1,5 @@
-﻿using QLBH.Common.BLL;
-using QLBH.Common.Rsp;
+﻿using WebDT.Common.BLL;
+using WebDT.Common.Rsp;
 using System;
 using System.Collections.Generic;
 using System.Text;

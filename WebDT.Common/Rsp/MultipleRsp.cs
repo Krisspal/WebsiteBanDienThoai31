@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace QLBH.Common.Rsp
+namespace WebDT.Common.Rsp
 {
     public class MultipleRsp : BaseRsp
     {
