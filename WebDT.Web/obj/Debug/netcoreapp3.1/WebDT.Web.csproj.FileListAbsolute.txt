@@ -150,3 +150,9 @@ X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Swashbuckle.As
 X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.MvcApplicationPartsAssemblyInfo.cs
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.MvcApplicationPartsAssemblyInfo.cs
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.sourcelink.json
