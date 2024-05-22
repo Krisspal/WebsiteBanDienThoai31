@@ -1,0 +1,16 @@
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.DAL.deps.json
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.DAL.runtimeconfig.json
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.DAL.runtimeconfig.dev.json
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.DAL.dll
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.DAL.pdb
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.Common.dll
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.Common.pdb
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.csproj.AssemblyReference.cache
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.AssemblyInfoInputs.cache
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.AssemblyInfo.cs
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.csproj.CoreCompileInputs.cache
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.csproj.Up2Date
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.dll
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.pdb
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.genruntimeconfig.cache
