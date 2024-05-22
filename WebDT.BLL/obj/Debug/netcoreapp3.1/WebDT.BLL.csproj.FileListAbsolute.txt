@@ -35,3 +35,4 @@ X:\LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\obj\Debug\netcoreapp3.1\WebDT.BLL.cspr
 X:\LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\obj\Debug\netcoreapp3.1\WebDT.BLL.dll
 X:\LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\obj\Debug\netcoreapp3.1\WebDT.BLL.pdb
 X:\LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\obj\Debug\netcoreapp3.1\WebDT.BLL.genruntimeconfig.cache
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\obj\Debug\netcoreapp3.1\WebDT.BLL.sourcelink.json

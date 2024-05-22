@@ -56,12 +56,7 @@ namespace WebsiteBanDienThoai31.Controllers
             rsp = employeeSvc.UpdateEmployee(employeeReq);
             return Ok();
         }
-        [HttpDelete("{id}")]
-        public IActionResult DeleteEmployee()
-        {
-            var rsp = new SingleRsp();
-            
-            return Ok();
-        }
+        
+        
     }
 }
