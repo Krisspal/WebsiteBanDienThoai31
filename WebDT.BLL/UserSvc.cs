@@ -36,75 +36,29 @@ namespace WebDT.BLL
         {
             var res = new SingleRsp();
             User user = new User();
-            var context = new QuanLyBanDienThoaiContext();
-            using (var tran = context.Database.BeginTransaction())
-            {
-                try
-                {
-                    user.UserName = userReq.UserName; ;
-                    user.Email = userReq.Email;
-                    user.Password = userReq.Password;
-                    user.IsAdmin = userReq.IsAdmin;
-                    //Nếu isAdmin khác 0 hoặc 1 thì gán mặc định là 0
-                    if (userReq.IsAdmin != 0 && userReq.IsAdmin != 1)
-                        user.IsAdmin = 0;
-                    context.Users.Add(user);
-                    context.SaveChanges();
-                    tran.Commit();
-                }
-                catch (Exception ex)
-                {
-                    tran.Rollback();
-                    res.SetError(ex.StackTrace);
-                }
-            }
+            user.UserName = userReq.UserName; ;
+            user.Email = userReq.Email;
+            user.Password = userReq.Password;
+            user.IsAdmin = userReq.IsAdmin;
+            //Nếu isAdmin khác 0 hoặc 1 thì gán mặc định là 0
+            if (userReq.IsAdmin != 0 && userReq.IsAdmin != 1)
+                user.IsAdmin = 0;
+            userRep.CreateUser(user);
             return res;
         }
 
-        public SingleRsp UpdateUser(string id, UserReq userReq)
+        public SingleRsp UpdateUser(UserReq userReq)
         {
-            int result;
-            var context = new QuanLyBanDienThoaiContext();
             var res = new SingleRsp();
-            using (var tran = context.Database.BeginTransaction())
-            {
-                try
-                {
-                    if (int.TryParse(id, out result))
-                    {
-                        var user = context.Users.FirstOrDefault(u => u.UserId == result);
-                        if (user != null)
-                        {
-                            user.UserName = userReq.UserName; ;
-                            user.Email = userReq.Email;
-                            user.Password = userReq.Password;
-                            
-                            user.IsAdmin = userReq.IsAdmin;
-                            //Nếu isAdmin khác 0 hoặc 1 thì gán mặc định là 0
-                            if (userReq.IsAdmin != 0 && userReq.IsAdmin != 1)
-                                user.IsAdmin = 0;
-                            context.SaveChanges();
-                            tran.Commit();
-                            res.SetMessage("Update thanh cong");
-                        }
-                        else
-                        {
-                            res.SetMessage("Khong tim thay user");
-                            res.SetError("404", "Khong tim thay user");
-                        }
-                    }
-                    else
-                    {
-                        res.SetError("400", "Nhap ID la so nguyen");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    tran.Rollback();
-                    res.SetError(ex.StackTrace);
-                    res.SetMessage("Update that bai");
-                }
-            }
+            User user = new User();
+            user.UserName = userReq.UserName;
+            user.Email = userReq.Email;
+            user.Password = userReq.Password;
+            user.IsAdmin = userReq.IsAdmin;
+            //Nếu isAdmin khác 0 hoặc 1 thì gán mặc định là 0
+            if (userReq.IsAdmin != 0 && userReq.IsAdmin != 1)
+                user.IsAdmin = 0;
+            userRep.UpdateUser(user);
             return res;
         }
 
@@ -126,6 +80,8 @@ namespace WebDT.BLL
             }
             return res;
         }
+
+
 
     }
 }
