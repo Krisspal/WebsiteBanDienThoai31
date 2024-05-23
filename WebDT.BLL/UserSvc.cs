@@ -11,11 +11,12 @@ using System.Linq;
 
 namespace WebDT.BLL
 {
-    public class UserSvc : GenericSvc<UserRep,User>
+    public class UserSvc : GenericSvc<UserRep, User>
     {
         UserRep userRep;
-        public UserSvc() 
-        { 
+
+        public UserSvc()
+        {
             userRep = new UserRep();
         }
 
@@ -24,11 +25,14 @@ namespace WebDT.BLL
         {
             var res = new SingleRsp();
             res.Data = _rep.Read(id);
-            if (res.Data == null) 
+
+            if (res.Data == null)
+
             {
                 res.SetMessage("Khong tim thay user");
                 res.SetError("404", "Khong tim thay user");
             }
+
             return res; 
         }
 
@@ -80,8 +84,6 @@ namespace WebDT.BLL
             }
             return res;
         }
-
-
 
     }
 }

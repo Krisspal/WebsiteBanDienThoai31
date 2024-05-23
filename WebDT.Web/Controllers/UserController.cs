@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using WebDT.Common.Req;
 using WebDT.Common.Rsp;
 using WebDT.BLL;
+using WebDT.DAL;
 
 namespace WebDT.Web.Controllers
 {
@@ -11,8 +12,8 @@ namespace WebDT.Web.Controllers
     public class UserController : ControllerBase
     {
         private UserSvc userSvc;
-        public UserController() 
-        { 
+        public UserController()
+        {
             userSvc = new UserSvc();
         }
 

@@ -22,41 +22,49 @@ namespace WebsiteBanDienThoai31.Controllers
             employeeSvc = new EmployeeSvc();
         }
 
-        [HttpPost("{id}")]
-        public IActionResult GetEmployeeByID([FromBody] SimpleReq simpleReq)
+        [HttpPost]
+        [Route("{id}")]
+        public IActionResult GetEmployeeByID(int id)
         {
-            //tao bien tra ve la SingleRespone
             var rsp = new SingleRsp();
-            //Goi ham Read o lop Svc
-            rsp = employeeSvc.Read(simpleReq.Id);
+            rsp = employeeSvc.Read(id);
             return Ok(rsp);
         }
-        [HttpGet("")]
+
+        [HttpGet("GetAllEmployee")]
         public IActionResult GetEmployeeByALL()
-        {
-            //tao bien tra ve la SingleRespone
+        {         
             var rsp = new SingleRsp();
-            //Goi ham o lop Svc
             rsp.Data = employeeSvc.All;
             return Ok(rsp);
         }
-        [HttpPost("")]
-        public IActionResult CreateEmployee([FromBody] EmployeeReq employeeReq)
+
+        [HttpPost("CreateEmployee")]
+        public IActionResult CreateEmployee(EmployeeReq employeeReq)
         {
-            //tao bien tra ve la SingleRespone
             var rsp = new SingleRsp();
-            //Goi ham o lop Svc
             rsp = employeeSvc.CreateEmployee(employeeReq);
             return Ok(rsp);
         }
-        [HttpPut("{id}")]
-        public IActionResult EditEmployee([FromBody] EmployeeReq employeeReq)
+
+        [HttpPut("UpdateEmployee/{id}")]
+        public IActionResult UpdateEmployee(int id,[FromBody] EmployeeReq employeeReq)
         {
+            if (id != employeeReq.EmployeeId)
+            {
+                return BadRequest(); 
+            }
             var rsp = new SingleRsp();
             rsp = employeeSvc.UpdateEmployee(employeeReq);
-            return Ok();
+            return Ok(rsp);
         }
-        
-        
+
+        [HttpDelete("DeleteEmployee")]
+        public IActionResult DeleteEmployee(int id)
+        {
+            var rsp = new SingleRsp();
+            rsp = employeeSvc.DeleteEmployee(id);
+            return Ok(rsp);
+        }
     }
 }

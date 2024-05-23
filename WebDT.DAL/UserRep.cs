@@ -12,7 +12,7 @@ namespace WebDT.DAL
         //Lấy user theo ID truyền vào 
         public override User Read(int id)
         {
-            var res = All.FirstOrDefault(u => u.UserId==id);
+            var res = All.FirstOrDefault(u => u.UserId == id);
             return res;
         }
         //public SingleRsp CreateUser(User user)
@@ -59,7 +59,6 @@ namespace WebDT.DAL
             }
             return res;
         }
-
         public SingleRsp UpdateUser(User user)
         {
             var res = new SingleRsp();
@@ -84,6 +83,5 @@ namespace WebDT.DAL
             }
             return res;
         }
-
     }
 }
