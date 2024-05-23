@@ -36,3 +36,22 @@ X:\LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\obj\Debug\netcoreapp3.1\WebDT.BLL.dll
 X:\LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\obj\Debug\netcoreapp3.1\WebDT.BLL.pdb
 X:\LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\obj\Debug\netcoreapp3.1\WebDT.BLL.genruntimeconfig.cache
 D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\obj\Debug\netcoreapp3.1\WebDT.BLL.sourcelink.json
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\obj\Debug\netcoreapp3.1\WebDT.BLL.csproj.AssemblyReference.cache
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\obj\Debug\netcoreapp3.1\WebDT.BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\obj\Debug\netcoreapp3.1\WebDT.BLL.AssemblyInfoInputs.cache
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\obj\Debug\netcoreapp3.1\WebDT.BLL.AssemblyInfo.cs
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\obj\Debug\netcoreapp3.1\WebDT.BLL.csproj.CoreCompileInputs.cache
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\obj\Debug\netcoreapp3.1\WebDT.BLL.sourcelink.json
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\obj\Debug\netcoreapp3.1\WebDT.BLL.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\obj\Debug\netcoreapp3.1\WebDT.BLL.pdb
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\bin\Debug\netcoreapp3.1\WebDT.BLL.deps.json
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\bin\Debug\netcoreapp3.1\WebDT.BLL.runtimeconfig.json
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\bin\Debug\netcoreapp3.1\WebDT.BLL.runtimeconfig.dev.json
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\bin\Debug\netcoreapp3.1\WebDT.BLL.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\bin\Debug\netcoreapp3.1\WebDT.BLL.pdb
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\bin\Debug\netcoreapp3.1\WebDT.Common.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\bin\Debug\netcoreapp3.1\WebDT.DAL.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\bin\Debug\netcoreapp3.1\WebDT.Common.pdb
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\bin\Debug\netcoreapp3.1\WebDT.DAL.pdb
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\obj\Debug\netcoreapp3.1\WebDT.BLL.csproj.Up2Date
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.BLL\obj\Debug\netcoreapp3.1\WebDT.BLL.genruntimeconfig.cache

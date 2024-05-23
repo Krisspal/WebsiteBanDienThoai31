@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1MhkOiylzXDp7eSKtyRRv5nFU/GqMcFKyI/hF/9quSFRL7cMBlwaRCURj7RmqR0LnEbEY0Tm11M4dZ8QGuIMZg==",
+  "dgSpecHash": "8VIgzYx0wpU=",
   "success": true,
-  "projectFilePath": "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj",
+  "projectFilePath": "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

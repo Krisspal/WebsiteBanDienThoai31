@@ -32,3 +32,20 @@ X:\LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.dll
 X:\LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.pdb
 X:\LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.genruntimeconfig.cache
 D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.sourcelink.json
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.DAL.deps.json
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.DAL.runtimeconfig.json
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.DAL.runtimeconfig.dev.json
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.DAL.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.DAL.pdb
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.Common.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.Common.pdb
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.csproj.AssemblyReference.cache
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.AssemblyInfoInputs.cache
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.AssemblyInfo.cs
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.csproj.CoreCompileInputs.cache
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.sourcelink.json
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.csproj.Up2Date
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.pdb
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.genruntimeconfig.cache
