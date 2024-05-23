@@ -18,12 +18,7 @@ namespace WebDT.DAL
             var res = All.FirstOrDefault(e => e.EmployeeId == id);
             return res;
         }
-        public int Remove(int id)
-        {
-            var m = base.All.First(e => e.EmployeeId == id);
-            m = base.Delete(m);
-            return m.EmployeeId;
-        }
+  
         #endregion
 
         #region -- Methods --
@@ -40,11 +35,13 @@ namespace WebDT.DAL
                         var e = context.Employees.Add(employee);
                         context.SaveChanges();
                         tran.Commit();
+                        res.SetMessage("Tao Employee thanh cong");
                     }
                     catch (Exception ex)
                     {
                         tran.Rollback();
                         res.SetError(ex.StackTrace);
+                        res.SetMessage("Tao Employee that bai");
                     }
                 }
             }
@@ -53,20 +50,47 @@ namespace WebDT.DAL
         public SingleRsp UpdateEmployee(Employee employee)
         {
             var res = new SingleRsp();
+
             using (var context = new QuanLyBanDienThoaiContext())
             {
                 using (var tran = context.Database.BeginTransaction())
                 {
                     try
                     {
-                        var p = context.Employees.Update(employee);
+                        context.Employees.Update(employee);
                         context.SaveChanges();
                         tran.Commit();
+                        res.SetMessage("Update Employee thanh cong");
                     }
                     catch (Exception ex)
                     {
                         tran.Rollback();
                         res.SetError(ex.StackTrace);
+                        res.SetMessage("Update Employee that bai");
+                    }
+                }
+            }
+            return res;
+        }
+        public SingleRsp DeleteEmployee(Employee employee)
+        {
+            var res = new SingleRsp();
+            using (var context = new QuanLyBanDienThoaiContext())
+            {
+                using (var tran = context.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        context.Employees.Remove(employee); 
+                        context.SaveChanges();
+                        tran.Commit();
+                        res.SetMessage("Da xoa user");
+                    }
+                    catch (Exception ex)
+                    {
+                        tran.Rollback();
+                        res.SetError(ex.StackTrace);
+                        res.SetMessage("Xoa that bai");
                     }
                 }
             }

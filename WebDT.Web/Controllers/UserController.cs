@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using WebDT.Common.Req;
 using WebDT.Common.Rsp;
 using WebDT.BLL;
+using WebDT.DAL;
 
 namespace WebDT.Web.Controllers
 {
@@ -11,16 +12,49 @@ namespace WebDT.Web.Controllers
     public class UserController : ControllerBase
     {
         private UserSvc userSvc;
-        public UserController() 
-        { 
+        public UserController()
+        {
             userSvc = new UserSvc();
         }
 
-        [HttpPost("Lay User theo ID")]
-        public IActionResult GetUserByID([FromBody] SimpleReq simpleReq)
+        [HttpPost]
+        [Route("{id}")]
+        public IActionResult GetUserByID(int id)
         {
             var res = new SingleRsp();
+            res = userSvc.Read(id);
             return Ok(res);
         }
+
+        [HttpGet("GetAllUser")]
+        public IActionResult GetAllUser()
+        {
+            var res = new SingleRsp();
+            res.Data = userSvc.All;
+            return Ok(res);
+        }
+
+        [HttpPost("CreateUser")]
+        public IActionResult CreateUser(UserReq userReq)
+        {
+            var res = userSvc.CreateUser(userReq);
+            return Ok(res);
+        }
+
+        [HttpPut("UpdateUser/{id}")]
+        public IActionResult UpdateUser([FromBody] UserReq userReq)
+        {
+            var res = userSvc.UpdateUser(userReq);
+            return Ok(res);
+        }
+
+        [HttpDelete("DeleteUser")]
+        public IActionResult DeleteUser(int id)
+        {
+            var res = userSvc.DeleteUser(id);
+            return Ok(res);
+        }
+
+
     }
 }
