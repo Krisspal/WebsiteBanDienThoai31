@@ -42,9 +42,9 @@ namespace WebDT.Web.Controllers
         }
 
         [HttpPut("UpdateUser/{id}")]
-        public IActionResult UpdateUser([FromBody] UserReq userReq)
+        public IActionResult UpdateUser(int id, [FromBody] UserReq userReq)
         {
-            var res = userSvc.UpdateUser(userReq);
+            var res = userSvc.UpdateUser(id, userReq);
             return Ok(res);
         }
 

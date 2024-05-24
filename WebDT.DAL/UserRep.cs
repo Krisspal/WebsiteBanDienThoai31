@@ -9,34 +9,12 @@ namespace WebDT.DAL
     public class UserRep : GenericRep<QuanLyBanDienThoaiContext, User>
     {
         public UserRep() { }
-        //Lấy user theo ID truyền vào 
+
         public override User Read(int id)
         {
-            var res = All.FirstOrDefault(u => u.UserId == id);
+            var res = All.FirstOrDefault(e => e.UserId == id);
             return res;
         }
-        //public SingleRsp CreateUser(User user)
-        //{
-        //    var res = new SingleRsp();
-        //    using (var context = new QuanLyBanDienThoaiContext())
-        //    {
-        //        using (var tran = context.Database.BeginTransaction())
-        //        {
-        //            try
-        //            {
-        //                var p = context.Users.Add(user);
-        //                context.SaveChanges();
-        //                tran.Commit();
-        //            }
-        //            catch (Exception ex)
-        //            {
-        //                tran.Rollback();
-        //                res.SetError(ex.StackTrace);
-        //            }
-        //        }
-        //    }
-        //    return res;
-        //}
         public SingleRsp CreateUser(User user)
         {
             var res = new SingleRsp();
@@ -48,13 +26,13 @@ namespace WebDT.DAL
                     context.Users.Add(user);
                     context.SaveChanges();
                     tran.Commit();
-                    res.SetMessage("Tao thanh cong");
+                    res.SetMessage("Tao user thanh cong");
                 }
                 catch (Exception ex)
                 {
                     tran.Rollback();
                     res.SetError(ex.StackTrace);
-                    res.SetMessage("Tao that bai");
+                    res.SetMessage("Tao user that bai");
                 }
             }
             return res;
@@ -68,16 +46,41 @@ namespace WebDT.DAL
                 {
                     try
                     {
-                        var p = context.Users.Update(user);
+                        context.Users.Update(user);
                         context.SaveChanges();
                         tran.Commit();
-                        res.SetMessage("Update thanh cong");
+                        res.SetMessage("Update user thanh cong");
                     }
                     catch (Exception ex)
                     {
                         tran.Rollback();
                         res.SetError(ex.StackTrace);
-                        res.SetMessage("Update that bai");
+                        res.SetMessage("Update user that bai");
+                    }
+                }
+            }
+            return res;
+        }
+
+        public SingleRsp DeleteUser(User user)
+        {
+            var res = new SingleRsp();
+            using (var context = new QuanLyBanDienThoaiContext())
+            {
+                using (var tran = context.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        context.Users.Remove(user);
+                        context.SaveChanges();
+                        tran.Commit();
+                        res.SetMessage("Da xoa user");
+                    }
+                    catch (Exception ex)
+                    {
+                        tran.Rollback();
+                        res.SetError(ex.StackTrace);
+                        res.SetMessage("Xoa that bai");
                     }
                 }
             }

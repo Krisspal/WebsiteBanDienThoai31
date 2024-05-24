@@ -84,7 +84,7 @@ namespace WebDT.DAL
                         context.Employees.Remove(employee); 
                         context.SaveChanges();
                         tran.Commit();
-                        res.SetMessage("Da xoa user");
+                        res.SetMessage("Da xoa nhan vien");
                     }
                     catch (Exception ex)
                     {
