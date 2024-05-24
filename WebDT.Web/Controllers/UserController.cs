@@ -26,6 +26,14 @@ namespace WebDT.Web.Controllers
             return Ok(res);
         }
 
+        [HttpPost("GetUserByUsername")]
+        public IActionResult GetUserByUsername([FromBody] string username)
+        {
+            var res = new SingleRsp();
+            res = userSvc.GetUserByUsername(username);
+            return Ok(res);
+        }
+
         [HttpGet("GetAllUser")]
         public IActionResult GetAllUser()
         {
