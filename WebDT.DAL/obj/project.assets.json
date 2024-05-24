@@ -6240,11 +6240,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj",
+      "projectUniqueName": "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj",
       "projectName": "WebDT.DAL",
-      "projectPath": "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj",
+      "projectPath": "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\obj\\",
+      "outputPath": "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6255,14 +6255,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj": {
-              "projectPath": "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj"
+            "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj": {
+              "projectPath": "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj"
             }
           }
         }
@@ -6321,7 +6322,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
