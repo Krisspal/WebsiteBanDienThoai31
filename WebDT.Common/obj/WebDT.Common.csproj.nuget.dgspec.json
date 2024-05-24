@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj": {}
+    "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj": {}
   },
   "projects": {
-    "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj": {
+    "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj",
+        "projectUniqueName": "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj",
         "projectName": "WebDT.Common",
-        "projectPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj",
-        "packagesPath": "C:\\Users\\MSII\\.nuget\\packages\\",
-        "outputPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\obj\\",
+        "projectPath": "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MSII\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

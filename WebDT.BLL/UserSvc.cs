@@ -51,10 +51,10 @@ namespace WebDT.BLL
             return res;
         }
 
-        public SingleRsp UpdateUser(UserReq userReq)
+        public SingleRsp UpdateUser(int id, UserReq userReq)
         {
             var res = new SingleRsp();
-            User user = new User();
+            var user = userRep.Read(id);
             user.UserName = userReq.UserName;
             user.Email = userReq.Email;
             user.Password = userReq.Password;
@@ -62,28 +62,34 @@ namespace WebDT.BLL
             //Nếu isAdmin khác 0 hoặc 1 thì gán mặc định là 0
             if (userReq.IsAdmin != 0 && userReq.IsAdmin != 1)
                 user.IsAdmin = 0;
-            userRep.UpdateUser(user);
+            res = userRep.UpdateUser(user);
             return res;
         }
 
         public SingleRsp DeleteUser(int id)
         {
             var res = new SingleRsp();
-            var context = new QuanLyBanDienThoaiContext();
-            var user = context.Users.Find(id);
-            if (user != null)
+
+            try
             {
-                context.Users.Remove(user);
-                context.SaveChanges();
-                res.SetMessage("Da xoa user");
+                // Find the existing employee
+                var user = userRep.Read(id);
+
+                if (user == null)
+                {
+                    res.SetError("Khong tim thay user");
+                }
+                // Delete the employee from the database
+                userRep.DeleteUser(user);
+                res.SetMessage("Xoa user thanh cong");
             }
-            else
+            catch (Exception ex)
             {
-                res.SetMessage("Khong tim thay user");
-                res.SetError("404", "Khong tim thay user");
+                res.SetError(ex.StackTrace);
+                res.SetMessage("Failed to delete employee.");
             }
+
             return res;
         }
-
     }
 }
