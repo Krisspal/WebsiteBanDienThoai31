@@ -6,7 +6,7 @@ namespace WebDT.Common.Req
 {
     public class ProductReq
     {
-        public int ProductId { get; set; }
+        public int ProductId { get; }
         public int BrandId { get; set; }
         public string ProductName { get; set; }
         public int Price { get; set; }

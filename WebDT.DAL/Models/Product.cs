@@ -12,7 +12,7 @@ namespace WebDT.DAL.Models
             Ratings = new HashSet<Rating>();
         }
 
-        public int ProductId { get; set; }
+        public int ProductId { get; }
         public int BrandId { get; set; }
         public string ProductName { get; set; }
         public int Price { get; set; }

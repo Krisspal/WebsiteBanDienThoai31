@@ -33,9 +33,9 @@ namespace WebDT.Web.Controllers
             return Ok(rsp);
         }
         [HttpPut("update-product")]
-        public IActionResult UpdateProduct([FromBody] ProductReq reqProduct)
+        public IActionResult UpdateProduct([FromBody] ProductReq reqProduct, string id)
         {
-            var res = productSvc.UpdateProduct(reqProduct);
+            var res = productSvc.UpdateProduct(reqProduct,id);
             return Ok(res);
         }
         [HttpDelete("delete-product")]
