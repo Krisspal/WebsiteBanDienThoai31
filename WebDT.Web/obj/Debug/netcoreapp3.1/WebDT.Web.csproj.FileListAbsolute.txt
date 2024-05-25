@@ -156,3 +156,9 @@ D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Swas
 D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.MvcApplicationPartsAssemblyInfo.cs
 D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.sourcelink.json
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll

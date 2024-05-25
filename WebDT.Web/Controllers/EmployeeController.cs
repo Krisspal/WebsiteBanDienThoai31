@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using WebDT.Common.Rsp;
 using WebDT.Common.Req;
 using WebDT.DAL;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebsiteBanDienThoai31.Controllers
 {
@@ -32,6 +33,7 @@ namespace WebsiteBanDienThoai31.Controllers
         }
 
         [HttpGet("GetAllEmployee")]
+        [Authorize]
         public IActionResult GetEmployeeByALL()
         {         
             var rsp = new SingleRsp();
