@@ -21,8 +21,8 @@ namespace WebDT.BLL
             res.Data = _rep.Read(id);
             if (res.Data == null)
             {
-                res.SetMessage("Khong tim thay user");
-                res.SetError("404", "Khong tim thay user");
+                res.SetMessage("Khong tim thay employee");
+                res.SetError("404", "Khong tim thay employee");
             }
             return res;
         }
