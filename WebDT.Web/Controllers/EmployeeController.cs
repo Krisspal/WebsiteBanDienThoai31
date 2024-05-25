@@ -47,6 +47,14 @@ namespace WebsiteBanDienThoai31.Controllers
             return Ok(rsp);
         }
 
+        [HttpPost("CreateEmployeeByUserId")]
+        public IActionResult CreateEmployeeWithUserId(EmployeeReq employeeReq)
+        {
+            var rsp = new SingleRsp();
+            rsp = employeeSvc.CreateEmployeeByUserId(employeeReq);
+            return Ok(rsp);
+        }
+
         [HttpPut("UpdateEmployee/{id}")]
         public IActionResult UpdateEmployee(int id,[FromBody] EmployeeReq employeeReq)
         {

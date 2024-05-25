@@ -52,6 +52,24 @@ namespace WebDT.BLL
 
             return res;
         }
+        public SingleRsp CreateEmployeeByUserId(EmployeeReq employeeReq)
+        {
+            var res = new SingleRsp();
+            Employee e = new Employee();
+
+            e.UserId = employeeRep.GetNextUserId();
+            e.EmployeeName = employeeReq.EmployeeName;
+            e.Gender = employeeReq.Gender;
+            e.BirthDate = employeeReq.BirthDate;
+            e.Idcard = employeeReq.Idcard;
+            e.Title = employeeReq.Title;
+            e.Phone = employeeReq.Phone;
+            e.Salary = employeeReq.Salary;
+
+            res = employeeRep.CreateEmployee(e);
+
+            return res;
+        }
 
         public SingleRsp UpdateEmployee(EmployeeReq employeeReq)
         {

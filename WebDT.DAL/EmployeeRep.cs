@@ -5,6 +5,7 @@ using WebDT.Common.DAL;
 using WebDT.DAL.Models;
 using System.Linq;
 using WebDT.Common.Rsp;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebDT.DAL
 {
@@ -96,7 +97,20 @@ namespace WebDT.DAL
             }
             return res;
         }
-
+        public int GetNextUserId()
+        {
+            using (var context = new QuanLyBanDienThoaiContext())
+            {
+                int latestUserId = 0;
+                var lastEmployee = context.Employees.OrderByDescending(e => e.UserId).FirstOrDefault();
+                if (lastEmployee != null)
+                {
+                    latestUserId = (int)lastEmployee.UserId;
+                }
+                return latestUserId;
+            }
+            
+        }
         #endregion
     }
 }
