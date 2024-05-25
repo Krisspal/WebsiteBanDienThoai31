@@ -162,3 +162,9 @@ D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Micr
 D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll

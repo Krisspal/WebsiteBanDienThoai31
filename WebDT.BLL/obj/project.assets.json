@@ -6520,19 +6520,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HP\\.nuget\\packages\\": {}
+    "C:\\Users\\MSII\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\WebDT.BLL.csproj",
+      "projectUniqueName": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\WebDT.BLL.csproj",
       "projectName": "WebDT.BLL",
-      "projectPath": "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\WebDT.BLL.csproj",
-      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\obj\\",
+      "projectPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\WebDT.BLL.csproj",
+      "packagesPath": "C:\\Users\\MSII\\.nuget\\packages\\",
+      "outputPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MSII\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6546,11 +6546,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj": {
-              "projectPath": "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj"
+            "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj": {
+              "projectPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj"
             },
-            "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj": {
-              "projectPath": "D:\\Đồ án LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj"
+            "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj": {
+              "projectPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj"
             }
           }
         }

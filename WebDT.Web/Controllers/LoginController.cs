@@ -33,13 +33,19 @@ namespace WebDT.Web.Controllers
         }
 
         [HttpPost("login")]
+        [AllowAnonymous]
         public async Task<ActionResult<AuthRsp>> Login(LoginReq request)
         {
             var user = await _userRepository.GetUserByEmailAndPassword(request.Email, request.Password);
             var claims = await _authService.LoginAsync(request.Email, request.Password);
+            var authProperties = new AuthenticationProperties
+            {
+                IsPersistent = false,
+                //ExpiresUtc = DateTimeOffset.UtcNow.AddHours(6)
+            };
             if (user != null)
             {
-                await HttpContext.SignInAsync(claims);
+                await HttpContext.SignInAsync(claims, authProperties);
                 var response = new AuthRsp
                 {
                     IsSuccess = true,
@@ -61,6 +67,12 @@ namespace WebDT.Web.Controllers
                 };
                 return BadRequest(response);
             }
+        }
+        [HttpPost("logout")]
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return Ok();
         }
     }
 }
