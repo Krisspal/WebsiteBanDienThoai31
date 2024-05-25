@@ -36,7 +36,7 @@ namespace WebDT.DAL
             return res;
         }
 
-        public SingleRsp UpdateProduct(Order order)
+        public SingleRsp UpdateOrder(Order order)
         {
             var res = new SingleRsp();
             using (var context = new QuanLyBanDienThoaiContext())
@@ -58,7 +58,7 @@ namespace WebDT.DAL
             }
             return res;
         }
-        public SingleRsp DeleteProduct(Order order)
+        public SingleRsp DeleteOrder(Order order)
         {
             var res = new SingleRsp();
             using (var context = new QuanLyBanDienThoaiContext())

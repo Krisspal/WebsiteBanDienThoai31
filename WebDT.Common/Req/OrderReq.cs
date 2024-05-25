@@ -1,19 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
-#nullable disable
-
-namespace WebDT.DAL.Models
+namespace WebDT.Common.Req
 {
-    public partial class Order
+    public class OrderReq
     {
-        public int OrderId { get; set; }
+        public int OrderId { get; }
         public int CustomerId { get; set; }
         public int EmployeeId { get; set; }
         public DateTime? OrderDate { get; set; }
         public string ShipAddress { get; set; }
-
-        public virtual Customer Customer { get; set; }
-        public virtual Employee Employee { get; set; }
     }
 }
