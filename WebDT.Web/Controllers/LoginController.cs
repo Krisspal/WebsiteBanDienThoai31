@@ -14,6 +14,8 @@ using Microsoft.AspNetCore.Identity;
 using System;
 using WebDT.Common.Rsp;
 using WebDT.Common.Req;
+using Microsoft.AspNetCore.Http;
+using WebDT.DAL;
 
 namespace WebDT.Web.Controllers
 {
@@ -22,29 +24,33 @@ namespace WebDT.Web.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IAuthService _authService;
+        private readonly IUserRepository _userRepository;
 
-        public AuthController(IAuthService authService)
+        public AuthController(IAuthService authService, IUserRepository userRepository)
         {
             _authService = authService;
+            _userRepository = userRepository;
         }
 
         [HttpPost("login")]
         public async Task<ActionResult<AuthRsp>> Login(LoginReq request)
         {
-            var user = await _authService.LoginAsync(request.Email, request.Password);
+            var user = await _userRepository.GetUserByEmailAndPassword(request.Email, request.Password);
+            var claims = await _authService.LoginAsync(request.Email, request.Password);
             if (user != null)
             {
+                await HttpContext.SignInAsync(claims);
                 var response = new AuthRsp
                 {
                     IsSuccess = true,
                     User = new UserRsp
                     {
-                        UserName = user.FindFirstValue(ClaimTypes.Name),
-                        Email = user.FindFirstValue(ClaimTypes.Email),
-                        IsAdmin = user.FindFirstValue(ClaimTypes.Role) == "Admin"
+                        UserName = claims.FindFirstValue(ClaimTypes.Name),
+                        Email = claims.FindFirstValue(ClaimTypes.Email),
+                        IsAdmin = claims.FindFirstValue(ClaimTypes.Role) == "Admin"
                     }
                 };
-                return Ok(response);
+                return Ok();
             }
             else
             {

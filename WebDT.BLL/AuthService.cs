@@ -47,12 +47,6 @@ namespace WebDT.BLL
                 };
 
                 var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
-
-                await httpContext.SignInAsync(
-                    claimsPrincipal,
-                    authProperties);
-
-
                 return claimsPrincipal;
             }
             else
