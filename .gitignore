@@ -1,5 +1,5 @@
 .git
 .vs
-obj
-bin
+*.obj
+bin/
 
