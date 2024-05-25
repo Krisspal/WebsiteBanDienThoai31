@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Web\\WebDT.Web.csproj": {}
+    "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Web\\WebDT.Web.csproj": {}
   },
   "projects": {
-    "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\WebDT.BLL.csproj": {
+    "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\WebDT.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\WebDT.BLL.csproj",
+        "projectUniqueName": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\WebDT.BLL.csproj",
         "projectName": "WebDT.BLL",
-        "projectPath": "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\WebDT.BLL.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\obj\\",
+        "projectPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\WebDT.BLL.csproj",
+        "packagesPath": "C:\\Users\\MSII\\.nuget\\packages\\",
+        "outputPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MSII\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,18 +22,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj": {
-                "projectPath": "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj"
+              "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj": {
+                "projectPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj"
               },
-              "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj": {
-                "projectPath": "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj"
+              "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj": {
+                "projectPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj"
               }
             }
           }
@@ -92,21 +91,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj": {
+    "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj",
+        "projectUniqueName": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj",
         "projectName": "WebDT.Common",
-        "projectPath": "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\obj\\",
+        "projectPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj",
+        "packagesPath": "C:\\Users\\MSII\\.nuget\\packages\\",
+        "outputPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MSII\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -114,7 +113,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -177,21 +175,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj": {
+    "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj",
+        "projectUniqueName": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj",
         "projectName": "WebDT.DAL",
-        "projectPath": "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\obj\\",
+        "projectPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj",
+        "packagesPath": "C:\\Users\\MSII\\.nuget\\packages\\",
+        "outputPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MSII\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -199,15 +197,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj": {
-                "projectPath": "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj"
+              "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj": {
+                "projectPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj"
               }
             }
           }
@@ -266,21 +263,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Web\\WebDT.Web.csproj": {
+    "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Web\\WebDT.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Web\\WebDT.Web.csproj",
+        "projectUniqueName": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Web\\WebDT.Web.csproj",
         "projectName": "WebDT.Web",
-        "projectPath": "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Web\\WebDT.Web.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Web\\obj\\",
+        "projectPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Web\\WebDT.Web.csproj",
+        "packagesPath": "C:\\Users\\MSII\\.nuget\\packages\\",
+        "outputPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MSII\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -288,18 +285,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\WebDT.BLL.csproj": {
-                "projectPath": "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\WebDT.BLL.csproj"
+              "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\WebDT.BLL.csproj": {
+                "projectPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\WebDT.BLL.csproj"
               },
-              "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj": {
-                "projectPath": "D:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj"
+              "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj": {
+                "projectPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj"
               }
             }
           }
@@ -361,7 +357,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     }
