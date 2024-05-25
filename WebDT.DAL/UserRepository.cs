@@ -16,15 +16,15 @@ namespace WebDT.DAL
             dbcontext = context;
         }
 
-        public async Task<User> GetUserByEmailAndPassword(string email, string password)
+        public async Task<User> GetUserByUserNameAndPassword(string username, string password)
         {
-            return await dbcontext.Users.FirstOrDefaultAsync(u => u.Email == email && u.Password == password);
+            return await dbcontext.Users.FirstOrDefaultAsync(u => u.UserName == username && u.Password == password);
         }
     }
 
     public interface IUserRepository
     {
-        Task<User> GetUserByEmailAndPassword(string email, string password);
+        Task<User> GetUserByUserNameAndPassword(string email, string password);
     }
 }
 

@@ -18,7 +18,6 @@ namespace WebDT.BLL
     public class AuthService : IAuthService
     {
         private IUserRepository _userRepository;
-        private readonly HttpContext httpContext;
 
         public AuthService(IUserRepository userRepository)
         {
@@ -27,9 +26,9 @@ namespace WebDT.BLL
 
         
 
-        public async Task<ClaimsPrincipal> LoginAsync(string email, string password)
+        public async Task<ClaimsPrincipal> LoginAsync(string username, string password)
         {
-            var user = await _userRepository.GetUserByEmailAndPassword(email, password);
+            var user = await _userRepository.GetUserByUserNameAndPassword(username, password);
             if (user != null)
             {
                 var claims = new List<Claim>

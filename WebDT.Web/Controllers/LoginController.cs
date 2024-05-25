@@ -16,6 +16,8 @@ using WebDT.Common.Rsp;
 using WebDT.Common.Req;
 using Microsoft.AspNetCore.Http;
 using WebDT.DAL;
+using System.Net.Http;
+using System.Security.Policy;
 
 namespace WebDT.Web.Controllers
 {
@@ -25,6 +27,7 @@ namespace WebDT.Web.Controllers
     {
         private readonly IAuthService _authService;
         private readonly IUserRepository _userRepository;
+        HttpClient httpClient = new HttpClient();
 
         public AuthController(IAuthService authService, IUserRepository userRepository)
         {
@@ -32,14 +35,19 @@ namespace WebDT.Web.Controllers
             _userRepository = userRepository;
         }
 
-        [HttpPost("login")]
+        [HttpPost("Login")]
+        [AllowAnonymous]
         public async Task<ActionResult<AuthRsp>> Login(LoginReq request)
         {
-            var user = await _userRepository.GetUserByEmailAndPassword(request.Email, request.Password);
-            var claims = await _authService.LoginAsync(request.Email, request.Password);
+            var user = await _userRepository.GetUserByUserNameAndPassword(request.Username, request.Password);
+            var claims = await _authService.LoginAsync(request.Username, request.Password);
+            var authProperties = new AuthenticationProperties
+            {
+                IsPersistent = false,
+        };
             if (user != null)
             {
-                await HttpContext.SignInAsync(claims);
+                await HttpContext.SignInAsync(claims, authProperties);
                 var response = new AuthRsp
                 {
                     IsSuccess = true,
@@ -57,10 +65,17 @@ namespace WebDT.Web.Controllers
                 var response = new AuthRsp
                 {
                     IsSuccess = false,
-                    ErrorMessage = "Invalid email or password."
+                    ErrorMessage = "Sai username hoac password"
                 };
                 return BadRequest(response);
             }
+        }
+
+        [HttpPost("Logout")]
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return Ok();
         }
     }
 }

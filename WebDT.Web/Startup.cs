@@ -47,34 +47,12 @@ namespace WebDT.Web
 
             services.AddDbContext<QuanLyBanDienThoaiContext>();
 
-            //services.AddAuthorization(options => options.AddPolicy("AdminOnly", policy =>
-            //policy.Requirements.Add(new AdminOnlyAuth(1))));
-            //services.AddSingleton<IAuthorizationHandler, AdminOnlyAuthHandler>();
-
+            services.Configure<SecurityStampValidatorOptions>(options =>
+            {
+                options.ValidationInterval = TimeSpan.FromSeconds(30);
+            });
             services.AddTransient<IAuthService, AuthService>();
             services.AddTransient<IUserRepository, UserRepository>();
-
-            //services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<QuanLyBanDienThoaiContext>().AddDefaultTokenProviders();
-            //services.AddAuthentication(options =>
-            //{
-            //    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-            //    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            //    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-
-            //}).AddJwtBearer(options =>
-            //{
-            //    options.SaveToken = true;
-            //    options.RequireHttpsMetadata = false;
-            //    options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
-            //    {
-            //        ValidateIssuer = true,
-            //        ValidateAudience = true,
-            //        ValidAudience = Configuration["JWT:ValidAudience"],
-            //        ValidIssuer = Configuration["JWT:ValidIssuer"],
-            //        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:Secret"]))
-            //    };
-            //});
-
 
             #region -- Swagger --  
             var inf1 = new OpenApiInfo
