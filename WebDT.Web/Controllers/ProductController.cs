@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebDT.BLL;
 using WebDT.Common.Req;
@@ -7,6 +8,7 @@ using WebDT.Common.Rsp;
 namespace WebDT.Web.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize(Roles = "Admin")]
     [ApiController]
     public class ProductController : ControllerBase
     {
@@ -15,6 +17,8 @@ namespace WebDT.Web.Controllers
         {
             productSvc = new ProductSvc();
         }
+
+        [AllowAnonymous]
         [HttpPost("search-product")]
         public IActionResult SearchProduct([FromBody] SearchProductReq searchProductReq)
         {
@@ -24,6 +28,7 @@ namespace WebDT.Web.Controllers
             rsp = (SingleRsp)productSvc.SearchProduct(searchProductReq);
             return Ok(rsp);
         }
+
         [HttpPost("create-product")]
         public IActionResult CreateProduct([FromBody] ProductReq productReq)
         {
@@ -32,12 +37,14 @@ namespace WebDT.Web.Controllers
             rsp = productSvc.CreateProduct(productReq);
             return Ok(rsp);
         }
+
         [HttpPut("update-product")]
         public IActionResult UpdateProduct([FromBody] ProductReq reqProduct, string id)
         {
             var res = productSvc.UpdateProduct(reqProduct,id);
             return Ok(res);
         }
+
         [HttpDelete("delete-product")]
         public IActionResult DeleteProduct(int id)
         {

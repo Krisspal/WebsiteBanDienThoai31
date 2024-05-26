@@ -26,14 +26,15 @@ namespace WebDT.Web.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IAuthService _authService;
-        private readonly IUserRepository _userRepository;
+        private readonly IUserAuthRep _userRepository;
         HttpClient httpClient = new HttpClient();
 
-        public AuthController(IAuthService authService, IUserRepository userRepository)
+        public AuthController(IAuthService authService, IUserAuthRep userRepository)
         {
             _authService = authService;
             _userRepository = userRepository;
         }
+
 
         [HttpPost("Login")]
         [AllowAnonymous]
@@ -58,7 +59,7 @@ namespace WebDT.Web.Controllers
                         IsAdmin = claims.FindFirstValue(ClaimTypes.Role) == "Admin"
                     }
                 };
-                return Ok();
+                return Ok("Dang nhap thanh cong");
             }
             else
             {
@@ -75,7 +76,37 @@ namespace WebDT.Web.Controllers
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return Ok();
+            return Ok("Dang xuat thanh cong");
+        }
+
+        [HttpPost("Register")]
+        public async Task<ActionResult<AuthRsp>>Register(RegisterReq registerReq)
+        {
+            var success = await _authService.RegisterAsync(registerReq);
+            if (success)
+            {
+                var response = new AuthRsp
+                {
+                    IsSuccess = true,
+                    User = new UserRsp
+                    {
+                        UserName = registerReq.UserName,
+                        Email = registerReq.Email,
+                        IsAdmin = false
+                    }
+                };
+                return Ok(response);
+            }
+            else
+            {
+                var response = new AuthRsp
+                {
+                    IsSuccess = false,
+                    ErrorMessage = "User da ton tai."
+                };
+                return BadRequest(response);
+            }
+
         }
     }
 }

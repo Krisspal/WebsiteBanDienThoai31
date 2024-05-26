@@ -15,31 +15,43 @@ namespace WebDT.DAL
             var res = All.FirstOrDefault(e => e.UserId == id);
             return res;
         }
+
         public SingleRsp CreateUser(User user)
         {
             var res = new SingleRsp();
             var context = new QuanLyBanDienThoaiContext();
             using (var tran = context.Database.BeginTransaction())
             {
-                try
+                var checkuser = context.Users.FirstOrDefault(u => u.UserName == user.UserName || u.Email == user.Email);
+                if (checkuser == null)
                 {
-                    context.Users.Add(user);
-                    context.SaveChanges();
-                    tran.Commit();
-                    res.SetMessage("Tao user thanh cong");
+                    try
+                    {
+                        context.Users.Add(user);
+                        context.SaveChanges();
+                        tran.Commit();
+                        res.SetMessage("Tao user thanh cong");
+                    }
+                    catch (Exception ex)
+                    {
+                        tran.Rollback();
+                        res.SetError(ex.StackTrace);
+                        res.SetMessage("Tao user that bai");
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    tran.Rollback();
-                    res.SetError(ex.StackTrace);
-                    res.SetMessage("Tao user that bai");
+                    res.SetMessage("User da ton tai");
+                    return res;
                 }
             }
             return res;
         }
+
         public SingleRsp UpdateUser(User user)
         {
             var res = new SingleRsp();
+
             using (var context = new QuanLyBanDienThoaiContext())
             {
                 using (var tran = context.Database.BeginTransaction())
@@ -65,6 +77,7 @@ namespace WebDT.DAL
         public SingleRsp DeleteUser(User user)
         {
             var res = new SingleRsp();
+
             using (var context = new QuanLyBanDienThoaiContext())
             {
                 using (var tran = context.Database.BeginTransaction())
