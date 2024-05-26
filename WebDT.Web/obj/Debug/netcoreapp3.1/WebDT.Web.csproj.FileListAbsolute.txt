@@ -156,15 +156,106 @@ D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Swas
 D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.MvcApplicationPartsAssemblyInfo.cs
 D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.sourcelink.json
-D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
-D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
-D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.csproj.AssemblyReference.cache
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.GeneratedMSBuildEditorConfig.editorconfig
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.AssemblyInfoInputs.cache
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.AssemblyInfo.cs
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.csproj.CoreCompileInputs.cache
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.MvcApplicationPartsAssemblyInfo.cs
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.MvcApplicationPartsAssemblyInfo.cache
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.sourcelink.json
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.pdb
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\appsettings.json
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.Web.exe
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.Web.deps.json
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.Web.runtimeconfig.json
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.Web.runtimeconfig.dev.json
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.Web.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.Web.pdb
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Humanizer.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.BLL.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.Common.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.DAL.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.BLL.pdb
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.Common.pdb
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.DAL.pdb
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.RazorTargetAssemblyInfo.cache
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\staticwebassets\WebDT.Web.StaticWebAssets.Manifest.cache
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\staticwebassets\WebDT.Web.StaticWebAssets.Pack.cache
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.WebDT.Web.Microsoft.AspNetCore.StaticWebAssets.props
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.build.WebDT.Web.props
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildMultiTargeting.WebDT.Web.props
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildTransitive.WebDT.Web.props
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.csproj.Up2Date
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.genruntimeconfig.cache
 X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
 X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+<<<<<<< HEAD
+X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+=======
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+>>>>>>> ff522927be0999dce7d0a04dad1579e3064990cd

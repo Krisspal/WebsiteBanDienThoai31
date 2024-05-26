@@ -1,24 +1,12 @@
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WebDT.BLL;
 using WebDT.DAL;
 using WebDT.DAL.Models;
@@ -47,34 +35,17 @@ namespace WebDT.Web
 
             services.AddDbContext<QuanLyBanDienThoaiContext>();
 
-            //services.AddAuthorization(options => options.AddPolicy("AdminOnly", policy =>
-            //policy.Requirements.Add(new AdminOnlyAuth(1))));
-            //services.AddSingleton<IAuthorizationHandler, AdminOnlyAuthHandler>();
-
+            services.Configure<SecurityStampValidatorOptions>(options =>
+            {
+                options.ValidationInterval = TimeSpan.FromSeconds(30);
+            });
             services.AddTransient<IAuthService, AuthService>();
-            services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<IUserAuthRep, UserAuthRep>();
 
-            //services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<QuanLyBanDienThoaiContext>().AddDefaultTokenProviders();
-            //services.AddAuthentication(options =>
-            //{
-            //    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-            //    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            //    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-
-            //}).AddJwtBearer(options =>
-            //{
-            //    options.SaveToken = true;
-            //    options.RequireHttpsMetadata = false;
-            //    options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
-            //    {
-            //        ValidateIssuer = true,
-            //        ValidateAudience = true,
-            //        ValidAudience = Configuration["JWT:ValidAudience"],
-            //        ValidIssuer = Configuration["JWT:ValidIssuer"],
-            //        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:Secret"]))
-            //    };
-            //});
-
+            services.AddControllersWithViews()
+            .AddNewtonsoftJson(options =>
+            options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+);
 
             #region -- Swagger --  
             var inf1 = new OpenApiInfo
@@ -135,15 +106,6 @@ namespace WebDT.Web
             });
             #endregion
             app.UseHttpsRedirection();
-
-            //app.Use(async (context, next) =>
-
-            //{
-            //    var cookies = context.Request.Cookies;
-            //    await next.Invoke();
-            //});
-
-           
 
             app.UseRouting();
 

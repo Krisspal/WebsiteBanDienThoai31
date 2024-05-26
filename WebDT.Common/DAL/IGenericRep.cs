@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Linq;
 using System.Text;
+using WebDT.Common.Rsp;
 
 namespace WebDT.Common.DAL
 {
@@ -54,6 +55,7 @@ namespace WebDT.Common.DAL
         /// </summary>
         /// <param name="l">List model</param>
         void Update(List<T> l);
+       
 
         #endregion
 

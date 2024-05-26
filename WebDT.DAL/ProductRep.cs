@@ -1,109 +1,111 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
 using WebDT.Common.DAL;
 using WebDT.Common.Rsp;
 using WebDT.DAL.Models;
 
 namespace WebDT.DAL
 {
-    public class UserRep : GenericRep<QuanLyBanDienThoaiContext, User>
+    public class ProductRep : GenericRep<QuanLyBanDienThoaiContext, Product>
     {
-        public UserRep() { }
+        #region -- Overrides --
 
-        public override User Read(int id)
+
+        public override Product Read(int id)
         {
-            var res = All.FirstOrDefault(e => e.UserId == id);
+            var res = All.FirstOrDefault(p => p.ProductId == id);
             return res;
         }
 
-        public SingleRsp CreateUser(User user)
+
+        public int Remove(int id)
         {
-            var res = new SingleRsp();
-            var context = new QuanLyBanDienThoaiContext();
-            using (var tran = context.Database.BeginTransaction())
-            {
-                var checkuser = context.Users.FirstOrDefault(u => u.UserName == user.UserName || u.Email == user.Email);
-                if (checkuser == null)
-                {
-                    try
-                    {
-                        context.Users.Add(user);
-                        context.SaveChanges();
-                        tran.Commit();
-                        res.SetMessage("Tao user thanh cong");
-                    }
-                    catch (Exception ex)
-                    {
-                        tran.Rollback();
-                        res.SetError(ex.StackTrace);
-                        res.SetMessage("Tao user that bai");
-                    }
-                }
-                else
-                {
-                    res.SetMessage("User da ton tai");
-                    return res;
-                }
-            }
-            return res;
+            var m = base.All.First(i => i.ProductId == id);
+            m = base.Delete(m);
+            return m.ProductId;
         }
 
-        public SingleRsp UpdateUser(User user)
+        #endregion
+        #region -- Methods --
+        public SingleRsp CreateProduct(Product product)
         {
             var res = new SingleRsp();
-
             using (var context = new QuanLyBanDienThoaiContext())
             {
                 using (var tran = context.Database.BeginTransaction())
                 {
                     try
                     {
-                        context.Users.Update(user);
+                        var p = context.Products.Add(product);
                         context.SaveChanges();
                         tran.Commit();
-                        res.SetMessage("Update user thanh cong");
                     }
                     catch (Exception ex)
                     {
                         tran.Rollback();
                         res.SetError(ex.StackTrace);
-                        res.SetMessage("Update user that bai");
                     }
                 }
             }
             return res;
+            
         }
-
-        public SingleRsp DeleteUser(User user)
+        public SingleRsp SearchProduct(string keyWord)
         {
             var res = new SingleRsp();
+            res.Data = All.Where(x=>x.ProductName.Contains(keyWord));
+            return res;
+        }
 
+        public SingleRsp UpdateProduct(Product product)
+        {
+            var res = new SingleRsp();
             using (var context = new QuanLyBanDienThoaiContext())
             {
                 using (var tran = context.Database.BeginTransaction())
                 {
                     try
                     {
-                        context.Users.Remove(user);
+                        var p = context.Products.Update(product);
                         context.SaveChanges();
                         tran.Commit();
-                        res.SetMessage("Da xoa user");
                     }
                     catch (Exception ex)
                     {
                         tran.Rollback();
                         res.SetError(ex.StackTrace);
-                        res.SetMessage("Xoa that bai");
+                    }
+                }
+            }
+            return res;
+        }
+        public SingleRsp DeleteProduct(Product product)
+        {
+            var res = new SingleRsp();
+            using (var context = new QuanLyBanDienThoaiContext())
+            {
+                using (var tran = context.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        var p = context.Products.Remove(product);
+                        context.SaveChanges();
+                        tran.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        tran.Rollback();
+                        res.SetError(ex.StackTrace);
                     }
                 }
             }
             return res;
         }
 
-        public User GetUserByUsername(string username)
-        {
-            var res = All.FirstOrDefault(e => e.UserName == username);
-            return res;
-        }
+        #endregion
+
     }
 }

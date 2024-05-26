@@ -13,96 +13,96 @@ namespace WebDT.BLL
 {
     public class UserSvc : GenericSvc<UserRep, User>
     {
-    //    UserRep userRep;
+        UserRep userRep;
 
-    //    public UserSvc()
-    //    {
-    //        userRep = new UserRep();
-    //    }
+        public UserSvc()
+        {
+            userRep = new UserRep();
+        }
 
-    //    //Lấy user theo ID truyền vào
-    //    public override SingleRsp Read(int id)
-    //    {
-    //        var res = new SingleRsp();
-    //        res.Data = _rep.Read(id);
+        //Lấy user theo ID truyền vào
+        public override SingleRsp Read(int id)
+        {
+            var res = new SingleRsp();
+            res.Data = _rep.Read(id);
 
-    //        if (res.Data == null)
+            if (res.Data == null)
 
-    //        {
-    //            res.SetMessage("Khong tim thay user");
-    //            res.SetError("404", "Khong tim thay user");
-    //        }
+            {
+                res.SetMessage("Khong tim thay user");
+                res.SetError("404", "Khong tim thay user");
+            }
 
-    //        return res; 
-    //    }
+            return res;
+        }
 
-    //    public SingleRsp CreateUser(UserReq userReq)
-    //    {
-    //        var res = new SingleRsp();
-    //        User user = new User();
-    //        user.UserName = userReq.UserName; ;
-    //        user.Email = userReq.Email;
-    //        user.Password = userReq.Password;
-    //        user.IsAdmin = userReq.IsAdmin;
-    //        //Nếu isAdmin khác 0 hoặc 1 thì gán mặc định là 0
-    //        if (userReq.IsAdmin != 0 && userReq.IsAdmin != 1)
-    //            user.IsAdmin = 0;
-    //        userRep.CreateUser(user);
-    //        return res;
-    //    }
+        public SingleRsp CreateUser(UserReq userReq)
+        {
+            var res = new SingleRsp();
+            User user = new User();
+            user.UserName = userReq.UserName; ;
+            user.Email = userReq.Email;
+            user.Password = userReq.Password;
+            user.IsAdmin = userReq.IsAdmin;
+            //Nếu isAdmin khác 0 hoặc 1 thì gán mặc định là 0
+            if (userReq.IsAdmin != 0 && userReq.IsAdmin != 1)
+                user.IsAdmin = 0;
+            userRep.CreateUser(user);
+            return res;
+        }
 
-    //    public SingleRsp UpdateUser(int id, UserReq userReq)
-    //    {
-    //        var res = new SingleRsp();
-    //        var user = userRep.Read(id);
-    //        user.UserName = userReq.UserName;
-    //        user.Email = userReq.Email;
-    //        user.Password = userReq.Password;
-    //        user.IsAdmin = userReq.IsAdmin;
-    //        //Nếu isAdmin khác 0 hoặc 1 thì gán mặc định là 0
-    //        if (userReq.IsAdmin != 0 && userReq.IsAdmin != 1)
-    //            user.IsAdmin = 0;
-    //        res = userRep.UpdateUser(user);
-    //        return res;
-    //    }
+        public SingleRsp UpdateUser(int id, UserReq userReq)
+        {
+            var res = new SingleRsp();
+            var user = userRep.Read(id);
+            user.UserName = userReq.UserName;
+            user.Email = userReq.Email;
+            user.Password = userReq.Password;
+            user.IsAdmin = userReq.IsAdmin;
+            //Nếu isAdmin khác 0 hoặc 1 thì gán mặc định là 0
+            if (userReq.IsAdmin != 0 && userReq.IsAdmin != 1)
+                user.IsAdmin = 0;
+            res = userRep.UpdateUser(user);
+            return res;
+        }
 
-    //    public SingleRsp DeleteUser(int id)
-    //    {
-    //        var res = new SingleRsp();
+        public SingleRsp DeleteUser(int id)
+        {
+            var res = new SingleRsp();
 
-    //        try
-    //        {
-    //            // Find the existing employee
-    //            var user = userRep.Read(id);
+            try
+            {
+                // Find the existing employee
+                var user = userRep.Read(id);
 
-    //            if (user == null)
-    //            {
-    //                res.SetError("Khong tim thay user");
-    //            }
-    //            // Delete the employee from the database
-    //            userRep.DeleteUser(user);
-    //            res.SetMessage("Xoa user thanh cong");
-    //        }
-    //        catch (Exception ex)
-    //        {
-    //            res.SetError(ex.StackTrace);
-    //            res.SetMessage("Failed to delete employee.");
-    //        }
+                if (user == null)
+                {
+                    res.SetError("Khong tim thay user");
+                }
+                // Delete the employee from the database
+                userRep.DeleteUser(user);
+                res.SetMessage("Xoa user thanh cong");
+            }
+            catch (Exception ex)
+            {
+                res.SetError(ex.StackTrace);
+                res.SetMessage("Xoa user that bai");
+            }
 
-    //        return res;
-    //    }
+            return res;
+        }
 
-    //    public SingleRsp GetUserByUsername(string username)
-    //    {
-    //        var res = new SingleRsp();
-    //        res.Data = userRep.GetUserByUsername(username);
-    //        if (res.Data == null)
+        public SingleRsp GetUserByUsername(string username)
+        {
+            var res = new SingleRsp();
+            res.Data = userRep.GetUserByUsername(username);
+            if (res.Data == null)
 
-    //        {
-    //            res.SetMessage("Khong tim thay user");
-    //            res.SetError("404", "Khong tim thay user");
-    //        }
-    //        return res;
-    //    }
+            {
+                res.SetMessage("Khong tim thay user");
+                res.SetError("404", "Khong tim thay user");
+            }
+            return res;
+        }
     }
 }
