@@ -16,9 +16,6 @@ namespace WebDT.DAL.Models
         public string ShipAddress { get; set; }
         public virtual Customer Customer { get; set; }
         public virtual Employee Employee { get; set; }
-<<<<<<< HEAD
-=======
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
->>>>>>> master
     }
 }

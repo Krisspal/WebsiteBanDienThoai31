@@ -115,7 +115,6 @@ namespace WebDT.DAL.Models
                 entity.Property(e => e.OrderDate).HasColumnType("date");
 
                 entity.Property(e => e.ShipAddress).HasMaxLength(50);
-                entity.HasKey(e => e.OrderId);
 
                 entity.HasOne(d => d.Customer)
                     .WithMany(p => p.Orders)
@@ -128,8 +127,6 @@ namespace WebDT.DAL.Models
                     .HasForeignKey(d => d.EmployeeId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Orders_Employees");
-                entity.HasMany(od => od.OrderDetails).WithOne(od => od.Order).HasForeignKey(od => od.OrderId).OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_OrderDetails_Orders"); ;
             });
 
             modelBuilder.Entity<OrderDetail>(entity =>
@@ -141,7 +138,7 @@ namespace WebDT.DAL.Models
                 entity.Property(e => e.ProductId).HasColumnName("ProductID");
 
                 entity.HasOne(d => d.Order)
-                    .WithMany(od=>od.OrderDetails)
+                    .WithMany()
                     .HasForeignKey(d => d.OrderId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_OrderDetails_Orders");

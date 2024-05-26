@@ -240,3 +240,4 @@ D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspN
 D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.MvcApplicationPartsAssemblyInfo.cs

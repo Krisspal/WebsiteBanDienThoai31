@@ -16,12 +16,24 @@ namespace WebDT.DAL
 
         public void CreateCart(Cart cart)
         {
-            Add(cart);
+            add(cart);
         }
 
         public void UpdateCart(Cart cart)
         {
             Update(cart);
         }
+        public void DeleteCartItem(Cart cart, int productId)
+        {
+            var item = cart.CartItems.FirstOrDefault(i => i.ProductId == productId);
+            if (item != null)
+            {
+                cart.CartItems.Remove(item);
+                Update(cart);
+            }
+        }
 
     }
+
+
+}

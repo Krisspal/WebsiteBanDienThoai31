@@ -6,8 +6,7 @@ namespace WebDT.DAL.Models
 {
     public class Cart
     {
-        public string SessionId
-        public Product Product { get; set; }
-        public int Quantity {  get; set; }
+        public string SessionId { get; set; }
+        public ICollection<CartItem> CartItems { get; set; }
     }
 }

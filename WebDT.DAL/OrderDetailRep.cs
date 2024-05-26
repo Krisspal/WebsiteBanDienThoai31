@@ -29,28 +29,9 @@ namespace WebDT.DAL
         }
         #endregion
         #region -- Methods --
-        public SingleRsp CreateProduct(OrderDetail orderDetail)
+        public void CreateOrderDetail(OrderDetail orderDetail)
         {
-            var res = new SingleRsp();
-            using (var context = new QuanLyBanDienThoaiContext())
-            {
-                using (var tran = context.Database.BeginTransaction())
-                {
-                    try
-                    {
-                        var p = context.OrderDetails.Add(orderDetail);
-                        context.SaveChanges();
-                        tran.Commit();
-                    }
-                    catch (Exception ex)
-                    {
-                        tran.Rollback();
-                        res.SetMessage(ex.Message);
-                    }
-                }
-            }
-            return res;
-
+            add(orderDetail);
         }
         #endregion
     }
