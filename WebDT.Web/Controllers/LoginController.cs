@@ -35,7 +35,6 @@ namespace WebDT.Web.Controllers
             _userRepository = userRepository;
         }
 
-
         [HttpPost("Login")]
         [AllowAnonymous]
         public async Task<ActionResult<AuthRsp>> Login(LoginReq request)
@@ -106,7 +105,6 @@ namespace WebDT.Web.Controllers
                 };
                 return BadRequest(response);
             }
-
         }
     }
 }

@@ -1,10 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebDT.BLL;
 using WebDT.Common.Req;
 using WebDT.Common.Rsp;
-using WebDT.DAL;
 
 namespace WebDT.Web.Controllers
 {
@@ -25,6 +23,19 @@ namespace WebDT.Web.Controllers
         {
             var rsp = new SingleRsp();
             rsp = brandSvc.Read(id);
+            return Ok(rsp);
+        }
+
+        [AllowAnonymous]
+        [HttpPost("SearchProductByBrand")]
+        public IActionResult SearchProductByBrand(string brandname)
+        {
+            var rsp = new SingleRsp();
+            rsp = brandSvc.SearchProductByBrandName(brandname);
+            if (rsp == null)
+            {
+                return BadRequest();
+            }
             return Ok(rsp);
         }
 
