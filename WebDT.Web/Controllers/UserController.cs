@@ -31,7 +31,7 @@ namespace WebDT.Web.Controllers
         {
             var res = new SingleRsp();
             res = userSvc.GetUserByUsername(username);
-            return Ok(res);
+            return BadRequest(res);
         }
 
         [HttpGet("GetAllUser")]

@@ -35,19 +35,6 @@ namespace WebDT.Web.Controllers
             _userRepository = userRepository;
         }
 
-<<<<<<< HEAD
-        [HttpPost("login")]
-        [AllowAnonymous]
-        public async Task<ActionResult<AuthRsp>> Login(LoginReq request)
-        {
-            var user = await _userRepository.GetUserByEmailAndPassword(request.Email, request.Password);
-            var claims = await _authService.LoginAsync(request.Email, request.Password);
-            var authProperties = new AuthenticationProperties
-            {
-                IsPersistent = false,
-                //ExpiresUtc = DateTimeOffset.UtcNow.AddHours(6)
-            };
-=======
         [HttpPost("Login")]
         [AllowAnonymous]
         public async Task<ActionResult<AuthRsp>> Login(LoginReq request)
@@ -58,7 +45,6 @@ namespace WebDT.Web.Controllers
             {
                 IsPersistent = false,
         };
->>>>>>> ff522927be0999dce7d0a04dad1579e3064990cd
             if (user != null)
             {
                 await HttpContext.SignInAsync(claims, authProperties);
@@ -84,13 +70,6 @@ namespace WebDT.Web.Controllers
                 return BadRequest(response);
             }
         }
-<<<<<<< HEAD
-        [HttpPost("logout")]
-        public async Task<IActionResult> Logout()
-        {
-            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return Ok();
-=======
 
         [HttpPost("Logout")]
         public async Task<IActionResult> Logout()
@@ -126,8 +105,6 @@ namespace WebDT.Web.Controllers
                 };
                 return BadRequest(response);
             }
-
->>>>>>> ff522927be0999dce7d0a04dad1579e3064990cd
         }
     }
 }

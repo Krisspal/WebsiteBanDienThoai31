@@ -1,9 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
+﻿using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Transactions;
 using WebDT.Common.BLL;
 using WebDT.Common.Req;
@@ -45,6 +42,8 @@ namespace WebDT.BLL
 
             return res;
         }
+
+
         #endregion
 
         #region  -- Methods --
@@ -78,17 +77,23 @@ namespace WebDT.BLL
                     res.SetError("404", "Khong tim thay san pham");
                 }
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 res.SetMessage(ex.Message);
             }
-            
+
+            return res;
+        }
+
+        public SingleRsp SearchProductInPriceRange(int minPrice, int maxPrice)
+        {
+            var res = productRep.SearchProductInPriceRange(minPrice, maxPrice);
             return res;
         }
 
         public SingleRsp CreateProduct(ProductReq productReq)
         {
-           
+
 
             var res = new SingleRsp();
             Product product = new Product();

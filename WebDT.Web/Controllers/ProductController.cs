@@ -29,6 +29,17 @@ namespace WebDT.Web.Controllers
             return Ok(rsp);
         }
 
+        [AllowAnonymous]
+        [HttpPost("search-product-by-price-range")]
+        public IActionResult SearchProductByPriceRange(int minPrice, int maxPrice)
+        {
+            //tao bien tra ve la SingleRespone
+            var rsp = new SingleRsp();
+            //Goi ham Read o lop Svc
+            rsp = productSvc.SearchProductInPriceRange(minPrice, maxPrice);
+            return Ok(rsp);
+        }
+
         [HttpPost("create-product")]
         public IActionResult CreateProduct([FromBody] ProductReq productReq)
         {
