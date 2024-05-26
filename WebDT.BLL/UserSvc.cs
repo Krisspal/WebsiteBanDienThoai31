@@ -86,7 +86,7 @@ namespace WebDT.BLL
             catch (Exception ex)
             {
                 res.SetError(ex.StackTrace);
-                res.SetMessage("Failed to delete employee.");
+                res.SetMessage("Xoa user that bai");
             }
 
             return res;
