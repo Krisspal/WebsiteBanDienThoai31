@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
 using WebDT.Common.DAL;
 using WebDT.Common.Rsp;
 using WebDT.DAL.Models;
@@ -51,15 +48,36 @@ namespace WebDT.DAL
                 }
             }
             return res;
-            
+
         }
         public SingleRsp SearchProduct(string keyWord)
         {
             var res = new SingleRsp();
-            res.Data = All.Where(x=>x.ProductName.Contains(keyWord));
+            res.Data = All.Where(x => x.ProductName.Contains(keyWord));
             return res;
         }
 
+        public SingleRsp SearchProductInPriceRange(int minPrice, int maxPrice)
+        {
+            var res = new SingleRsp();
+
+            using (var context = new QuanLyBanDienThoaiContext())
+            {
+                if (minPrice > maxPrice)
+                {
+                    res.SetError("400", "Nhap gia min cao hon gia max");
+                }
+                else
+                {
+                    res.Data = context.Products.Where(p => p.Price >= minPrice && p.Price <= maxPrice).ToList();
+                    if (res.Data == null)
+                    {
+                        res.SetError("404", "Khong tim thay san pham");
+                    }
+                }
+            }
+            return res;
+        }
         public SingleRsp UpdateProduct(Product product)
         {
             var res = new SingleRsp();
