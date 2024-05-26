@@ -2,7 +2,13 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using WebDT.BLL;
+<<<<<<< HEAD
 using WebDT.DAL.Models;
+=======
+using WebDT.Common.Req;
+using WebDT.Common.Rsp;
+using WebDT.DAL;
+>>>>>>> master
 
 namespace WebDT.Web.Controllers
 {
@@ -10,7 +16,32 @@ namespace WebDT.Web.Controllers
     [Route("api/[controller]")]
     public class OrderController : ControllerBase
     {
+<<<<<<< HEAD
         private readonly IOrderService _orderService;
+=======
+        private OrderSvc osvc;
+        [HttpPost("create-order")]
+        
+        public IActionResult CreateOrder([FromBody] CreateOrderReq createOrderReq) {
+            {
+                var rsp = new SingleRsp();
+                rsp = osvc.CreateOrder(createOrderReq);
+                return Ok(rsp);
+            }
+        }
+        [HttpPost("Get-All")]
+        public IActionResult GetAll([FromBody] OrderRep orderRep)
+        {
+            //tao bien tra ve la SingleRespone
+            var rsp = new SingleRsp();
+            //Goi ham Read o lop Svc
+            rsp = (SingleRsp)osvc.GetAll(orderRep);
+            return Ok(rsp);
+        }
+        public OrderController()
+        {
+            osvc = new OrderSvc();
+>>>>>>> master
 
         public OrderController(IOrderService orderService)
         {

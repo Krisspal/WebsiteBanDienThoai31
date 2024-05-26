@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using WebDT.Common.Rsp;
 using WebDT.Common.Req;
 using WebDT.DAL;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebsiteBanDienThoai31.Controllers
 {
@@ -22,41 +23,54 @@ namespace WebsiteBanDienThoai31.Controllers
             employeeSvc = new EmployeeSvc();
         }
 
-        [HttpPost("{id}")]
-        public IActionResult GetEmployeeByID([FromBody] SimpleReq simpleReq)
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        [Route("{id}")]
+        public IActionResult GetEmployeeByID(int id)
         {
-            //tao bien tra ve la SingleRespone
             var rsp = new SingleRsp();
-            //Goi ham Read o lop Svc
-            rsp = employeeSvc.Read(simpleReq.Id);
+            rsp = employeeSvc.Read(id);
             return Ok(rsp);
         }
-        [HttpGet("")]
+
+        [HttpGet("GetAllEmployee")]
+        [Authorize(Roles = "Admin")]
         public IActionResult GetEmployeeByALL()
-        {
-            //tao bien tra ve la SingleRespone
+        {         
             var rsp = new SingleRsp();
-            //Goi ham o lop Svc
             rsp.Data = employeeSvc.All;
             return Ok(rsp);
         }
-        [HttpPost("")]
-        public IActionResult CreateEmployee([FromBody] EmployeeReq employeeReq)
+
+        [Authorize(Roles = "Admin")]
+        [HttpPost("CreateEmployee")]
+        public IActionResult CreateEmployee(EmployeeReq employeeReq)
         {
-            //tao bien tra ve la SingleRespone
             var rsp = new SingleRsp();
-            //Goi ham o lop Svc
             rsp = employeeSvc.CreateEmployee(employeeReq);
             return Ok(rsp);
         }
-        [HttpPut("{id}")]
-        public IActionResult EditEmployee([FromBody] EmployeeReq employeeReq)
+
+        [Authorize(Roles = "Admin")]
+        [HttpPut("UpdateEmployee/{id}")]
+        public IActionResult UpdateEmployee(int id,[FromBody] EmployeeReq employeeReq)
         {
+            if (id != employeeReq.EmployeeId)
+            {
+                return BadRequest(); 
+            }
             var rsp = new SingleRsp();
             rsp = employeeSvc.UpdateEmployee(employeeReq);
-            return Ok();
+            return Ok(rsp);
         }
-        
-        
+
+        [Authorize(Roles = "Admin")]
+        [HttpDelete("DeleteEmployee")]
+        public IActionResult DeleteEmployee(int id)
+        {
+            var rsp = new SingleRsp();
+            rsp = employeeSvc.DeleteEmployee(id);
+            return Ok(rsp);
+        }
     }
 }
