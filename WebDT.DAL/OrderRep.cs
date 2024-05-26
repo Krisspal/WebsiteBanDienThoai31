@@ -5,6 +5,8 @@ using WebDT.Common.DAL;
 using WebDT.DAL.Models;
 using System.Linq;
 using WebDT.Common.Rsp;
+using System.Net.WebSockets;
+using WebDT.Common.Req;
 
 namespace WebDT.DAL
 {
@@ -35,8 +37,32 @@ namespace WebDT.DAL
             res.Data = All.Where(x => x.OrderId == id);
             return res;
         }
+        public SingleRsp CreateOrder(Order order)
+        {
+            var res = new SingleRsp();
 
-        public SingleRsp UpdateProduct(Order order)
+            using (var context = new QuanLyBanDienThoaiContext())
+            {
+                using (var tran = context.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        context.Orders.Add(order);
+                        context.SaveChanges();
+                        tran.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        tran.Rollback();
+                        res.SetMessage(ex.Message);
+                    }
+                }
+            }
+
+            return res;
+        }
+
+        public SingleRsp UpdateOrder(Order order)
         {
             var res = new SingleRsp();
             using (var context = new QuanLyBanDienThoaiContext())
@@ -58,7 +84,7 @@ namespace WebDT.DAL
             }
             return res;
         }
-        public SingleRsp DeleteProduct(Order order)
+        public SingleRsp DeleteOrder(Order order, OrderDetail od)
         {
             var res = new SingleRsp();
             using (var context = new QuanLyBanDienThoaiContext())
@@ -68,6 +94,7 @@ namespace WebDT.DAL
                     try
                     {
                         var p = context.Orders.Remove(order);
+                        Context.OrderDetails.Remove(od);
                         context.SaveChanges();
                         tran.Commit();
                     }

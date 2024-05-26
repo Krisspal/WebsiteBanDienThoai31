@@ -86,5 +86,11 @@ namespace WebDT.DAL
             }
             return res;
         }
+
+        public User GetUserByUsername(string username)
+        {
+            var res = All.FirstOrDefault(e => e.UserName == username);
+            return res;
+        }
     }
 }

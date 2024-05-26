@@ -1,4 +1,6 @@
 ﻿using System;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -6,16 +8,19 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace WebDT.DAL.Models
 {
-    public partial class QuanLyBanDienThoaiContext : DbContext
+    public partial class QuanLyBanDienThoaiContext : IdentityDbContext<ApplicationUser>
     {
         public QuanLyBanDienThoaiContext()
         {
+            
         }
+
 
         public QuanLyBanDienThoaiContext(DbContextOptions<QuanLyBanDienThoaiContext> options)
             : base(options)
         {
         }
+
 
         public virtual DbSet<Brand> Brands { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
@@ -110,6 +115,7 @@ namespace WebDT.DAL.Models
                 entity.Property(e => e.OrderDate).HasColumnType("date");
 
                 entity.Property(e => e.ShipAddress).HasMaxLength(50);
+                entity.HasKey(e => e.OrderId);
 
                 entity.HasOne(d => d.Customer)
                     .WithMany(p => p.Orders)
@@ -122,6 +128,8 @@ namespace WebDT.DAL.Models
                     .HasForeignKey(d => d.EmployeeId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Orders_Employees");
+                entity.HasMany(od => od.OrderDetails).WithOne(od => od.Order).HasForeignKey(od => od.OrderId).OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_OrderDetails_Orders"); ;
             });
 
             modelBuilder.Entity<OrderDetail>(entity =>
@@ -133,7 +141,7 @@ namespace WebDT.DAL.Models
                 entity.Property(e => e.ProductId).HasColumnName("ProductID");
 
                 entity.HasOne(d => d.Order)
-                    .WithMany()
+                    .WithMany(od=>od.OrderDetails)
                     .HasForeignKey(d => d.OrderId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_OrderDetails_Orders");
@@ -195,26 +203,39 @@ namespace WebDT.DAL.Models
                     .HasConstraintName("FK_Ratings_Users");
             });
 
-            modelBuilder.Entity<User>(entity =>
-            {
-                entity.Property(e => e.UserId).HasColumnName("UserID");
+            //modelBuilder.Entity<User>(entity =>
+            //{
+            //    entity.Property(e => e.UserId).HasColumnName("UserID");
 
-                entity.Property(e => e.Email).HasMaxLength(50);
+            //    entity.Property(e => e.Email).HasMaxLength(50);
 
-                entity.Property(e => e.IsAdmin).HasColumnName("isAdmin");
+            //    entity.Property(e => e.IsAdmin).HasColumnName("isAdmin");
 
-                entity.Property(e => e.Password)
-                    .IsRequired()
-                    .HasMaxLength(50);
+            //    entity.Property(e => e.Password)
+            //        .IsRequired()
+            //        .HasMaxLength(50);
 
-                entity.Property(e => e.UserName)
-                    .IsRequired()
-                    .HasMaxLength(50);
-            });
+            //    entity.Property(e => e.UserName)
+            //        .IsRequired()
+            //        .HasMaxLength(50);
+            //});
 
+            //modelBuilder.Ignore<IdentityUserLogin<string>>();
+            //modelBuilder.Ignore<IdentityUserRole<string>>();
+            //modelBuilder.Ignore<IdentityUserClaim<string>>();
+            //modelBuilder.Ignore<IdentityUserToken<string>>();
+            //modelBuilder.Ignore<IdentityUser<string>>();
+
+            base.OnModelCreating(modelBuilder);
             OnModelCreatingPartial(modelBuilder);
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    base.OnModelCreating(modelBuilder);
+        //    modelBuilder.Ignore<IdentityUserLogin<string>>();
+        //}
     }
 }

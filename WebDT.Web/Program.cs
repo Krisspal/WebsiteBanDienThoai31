@@ -22,5 +22,9 @@ namespace WebDT.Web
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-    }
+
+        }
+
+    
+
 }

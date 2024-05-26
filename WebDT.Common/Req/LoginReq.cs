@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace WebDT.DAL.Models
+namespace WebDT.Common.Req
 {
-    public class LoginDTO
+    public class LoginReq
     {
-        public string UserName { get; set; }
+        public string Username { get; set; }
         public string Password { get; set; }
     }
 }

@@ -33,7 +33,7 @@ namespace WebDT.BLL
                 res.SetError("404", "Khong tim thay user");
             }
 
-            return res; 
+            return res;
         }
 
         public SingleRsp CreateUser(UserReq userReq)
@@ -89,6 +89,19 @@ namespace WebDT.BLL
                 res.SetMessage("Failed to delete employee.");
             }
 
+            return res;
+        }
+
+        public SingleRsp GetUserByUsername(string username)
+        {
+            var res = new SingleRsp();
+            res.Data = userRep.GetUserByUsername(username);
+            if (res.Data == null)
+
+            {
+                res.SetMessage("Khong tim thay user");
+                res.SetError("404", "Khong tim thay user");
+            }
             return res;
         }
     }

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using WebDT.Common.Rsp;
 using WebDT.Common.Req;
 using WebDT.DAL;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebsiteBanDienThoai31.Controllers
 {
@@ -23,6 +24,7 @@ namespace WebsiteBanDienThoai31.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         [Route("{id}")]
         public IActionResult GetEmployeeByID(int id)
         {
@@ -32,6 +34,7 @@ namespace WebsiteBanDienThoai31.Controllers
         }
 
         [HttpGet("GetAllEmployee")]
+        [Authorize(Roles = "Admin")]
         public IActionResult GetEmployeeByALL()
         {         
             var rsp = new SingleRsp();
@@ -39,6 +42,7 @@ namespace WebsiteBanDienThoai31.Controllers
             return Ok(rsp);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost("CreateEmployee")]
         public IActionResult CreateEmployee(EmployeeReq employeeReq)
         {
@@ -47,6 +51,7 @@ namespace WebsiteBanDienThoai31.Controllers
             return Ok(rsp);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPut("UpdateEmployee/{id}")]
         public IActionResult UpdateEmployee(int id,[FromBody] EmployeeReq employeeReq)
         {
@@ -59,6 +64,7 @@ namespace WebsiteBanDienThoai31.Controllers
             return Ok(rsp);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete("DeleteEmployee")]
         public IActionResult DeleteEmployee(int id)
         {

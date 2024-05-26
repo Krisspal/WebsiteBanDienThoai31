@@ -6,6 +6,7 @@ using System.Linq.Expressions;
 namespace WebDT.Common.BLL
 {
     using DAL;
+    using QLBH.Common.BLL;
     using Rsp;
     public class GenericSvc<D, T> : IGenericSvc<T> where T : class where D : IGenericRep<T>, new()
     {
