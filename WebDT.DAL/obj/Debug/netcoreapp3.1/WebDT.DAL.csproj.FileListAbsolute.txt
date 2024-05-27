@@ -49,3 +49,20 @@ D:\LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.cspr
 D:\LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.dll
 D:\LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.pdb
 D:\LTCSDL\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.genruntimeconfig.cache
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.DAL.deps.json
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.DAL.runtimeconfig.json
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.DAL.runtimeconfig.dev.json
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.DAL.dll
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.DAL.pdb
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.Common.dll
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.Common.pdb
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.csproj.AssemblyReference.cache
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.GeneratedMSBuildEditorConfig.editorconfig
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.AssemblyInfoInputs.cache
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.AssemblyInfo.cs
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.csproj.CoreCompileInputs.cache
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.sourcelink.json
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.csproj.Up2Date
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.dll
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.pdb
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.genruntimeconfig.cache

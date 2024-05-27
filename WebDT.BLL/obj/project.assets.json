@@ -6231,11 +6231,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\WebDT.BLL.csproj",
+      "projectUniqueName": "X:\\LTCSDL\\Do An\\WebsiteBanDienThoai31\\WebDT.BLL\\WebDT.BLL.csproj",
       "projectName": "WebDT.BLL",
-      "projectPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\WebDT.BLL.csproj",
+      "projectPath": "X:\\LTCSDL\\Do An\\WebsiteBanDienThoai31\\WebDT.BLL\\WebDT.BLL.csproj",
       "packagesPath": "C:\\Users\\MSII\\.nuget\\packages\\",
-      "outputPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.BLL\\obj\\",
+      "outputPath": "X:\\LTCSDL\\Do An\\WebsiteBanDienThoai31\\WebDT.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MSII\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6252,11 +6252,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj": {
-              "projectPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj"
+            "X:\\LTCSDL\\Do An\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj": {
+              "projectPath": "X:\\LTCSDL\\Do An\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj"
             },
-            "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj": {
-              "projectPath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj"
+            "X:\\LTCSDL\\Do An\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj": {
+              "projectPath": "X:\\LTCSDL\\Do An\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj"
             }
           }
         }

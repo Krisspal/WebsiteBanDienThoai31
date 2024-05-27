@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jIfx81p2oT1SOsFjtvm5nL/cl3t4g3hJ1O3p87CHvfzxldWWKHx8DZzWX9cm89OX9YNSgLhGivqr5hcKxmuFsg==",
+  "dgSpecHash": "TQSRxwZMnkFdeqx0R+wiCx11qqKeYp7WJdhZ0OU5lnJgslZEhYRQOdFu44QnAQQQ9ZAag24DYTV4v5hwL47mYQ==",
   "success": true,
-  "projectFilePath": "X:\\LTCSDL\\WebsiteBanDienThoai31\\WebDT.Web\\WebDT.Web.csproj",
+  "projectFilePath": "X:\\LTCSDL\\Do An\\WebsiteBanDienThoai31\\WebDT.Web\\WebDT.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MSII\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\MSII\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.1.1\\microsoft.aspnetcore.authentication.2.1.1.nupkg.sha512",
