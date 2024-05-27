@@ -42,6 +42,11 @@ namespace WebDT.Web
             services.AddTransient<IAuthService, AuthService>();
             services.AddTransient<IUserAuthRep, UserAuthRep>();
 
+            services.AddSession(options => {
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
+            });
+
+
             services.AddControllersWithViews()
             .AddNewtonsoftJson(options =>
             options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
@@ -112,6 +117,8 @@ namespace WebDT.Web
             app.UseCookiePolicy();
 
             app.UseStaticFiles();
+
+            app.UseSession();
 
             app.UseAuthentication();
 

@@ -4,17 +4,17 @@ using WebDT.BLL;
 
 namespace WebDT.Web.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class OrderController : ControllerBase
-    {
-        private OrderSvc osvc;
-        public OrderController()
-        {
-            osvc = new OrderSvc();
+    //[Route("api/[controller]")]
+    //[ApiController]
+    //public class OrderController : ControllerBase
+    //{
+    //    private OrderSvc osvc;
+    //    public OrderController()
+    //    {
+    //        osvc = new OrderSvc();
 
-        }
+    //    }
          
             
-    }
+    //}
 }
