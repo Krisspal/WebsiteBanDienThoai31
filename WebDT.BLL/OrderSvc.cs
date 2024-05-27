@@ -13,7 +13,10 @@ namespace WebDT.BLL
     public class OrderSvc : GenericSvc<OrderRep,Order>
     {
         private OrderRep orderRep;
-
+        public OrderSvc()
+        {
+            orderRep = new OrderRep();
+        }
 
         #region --Override--
         public override SingleRsp Read(int id)
@@ -45,7 +48,7 @@ namespace WebDT.BLL
             {
                 var order = new Order()
                 {
-                    OrderId = createOrderReq.OrderId,
+                    EmployeeId = createOrderReq.EmployeeId,
                     CustomerId = createOrderReq.CustomerId,
                     OrderDate = DateTime.Now,
                     ShipAddress = createOrderReq.ShipAddress
@@ -61,7 +64,7 @@ namespace WebDT.BLL
                 //        });
 
                 //    }
-                orderRep.CreateOrder(order);
+                res = orderRep.CreateOrder(order);
                 res.SetMessage("Tạo order thành công");
             }
             catch (Exception ex)
