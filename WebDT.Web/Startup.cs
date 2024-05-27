@@ -53,7 +53,10 @@ namespace WebDT.Web
             });
             services.AddTransient<IAuthService, AuthService>();
             services.AddTransient<IUserRepository, UserRepository>();
-
+                services.AddScoped<CartSvc>();
+    services.AddScoped<CartRep>();
+    services.AddScoped<OrderDetailRep>();
+    services.AddScoped<OrderRep>();
             #region -- Swagger --  
             var inf1 = new OpenApiInfo
             {

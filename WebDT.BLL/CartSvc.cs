@@ -70,7 +70,7 @@ namespace WebDT.BLL
             {
                 var orderDetail = new OrderDetail
                 {
-                    OrderId = orderId,
+                    OrderId = order.OrderId,
                     ProductId = item.ProductId,
                     UnitPrice = item.UnitPrice,
                     Quantity = item.Quantity

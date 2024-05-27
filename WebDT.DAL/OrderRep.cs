@@ -30,36 +30,79 @@ namespace WebDT.DAL
         }
 
         #endregion
-        //#region -- Methods --
-        //public SingleRsp CreateOrder(Order order)
-        //{
-        //    var res = new SingleRsp();
-        //    using (var context = new QuanLyBanDienThoaiContext())
-        //    {
-        //        using (var tran = context.Database.BeginTransaction())
-        //        {
-        //            try
-        //            {
-        //                var p = context.Orders.Add(order);
-        //                context.SaveChanges();
-        //                tran.Commit();
-        //            }
-        //            catch (Exception ex)
-        //            {
-        //                tran.Rollback();
-        //                res.SetMessage(ex.Message);
-        //            }
-        //        }
-        //    }
-        //    return res;
-        //}
-
-        //#endregion
-        public int CreateOrder(Order order)
+        #region -- Methods --
+        public SingleRsp CreateOrder(Order order)
         {
-            add(order);
-            return order.OrderId;
+            var res = new SingleRsp();
+            using (var context = new QuanLyBanDienThoaiContext())
+            {
+                using (var tran = context.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        var p = context.Orders.Add(order);
+                        context.SaveChanges();
+                        tran.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        tran.Rollback();
+                        res.SetMessage(ex.Message);
+                    }
+                }
+            }
+            return res;
         }
+        public SingleRsp UpdateOrder(Order order)
+        {
+            var res = new SingleRsp();
+            using (var context = new QuanLyBanDienThoaiContext())
+            {
+                using (var tran = context.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        var p = context.Orders.Update(order);
+                        context.SaveChanges();
+                        tran.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        tran.Rollback();
+                        res.SetError(ex.StackTrace);
+                    }
+                }
+            }
+            return res;
+        }
+        public SingleRsp DeleteOrder(Order order)
+        {
+            var res = new SingleRsp();
+            using (var context = new QuanLyBanDienThoaiContext())
+            {
+                using (var tran = context.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        var p = context.Orders.Remove(order);
+                        context.SaveChanges();
+                        tran.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        tran.Rollback();
+                        res.SetError(ex.StackTrace);
+                    }
+                }
+            }
+            return res;
+        }
+        #endregion
+        //public int CreateOrder(Order order)
+        //{
+        //    add(order);
+        //    return order.OrderId;
+        //}
     }
 
 }

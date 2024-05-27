@@ -17,18 +17,18 @@ namespace WebDT.Web.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetCart()
+        public IActionResult GetCart(string sessionId)
         {
-            var sessionId = HttpContext.Session.Id;
+            /*var sessionId = HttpContext.Session.Id*/;
             var cart = _cartSvc.GetCart(sessionId);
             return Ok(cart);
         }
 
-        [HttpPost]
+        [HttpPost("create-Cart")]
         public IActionResult AddToCart(AddToCartRequest request)
         {
-            var sessionId = HttpContext.Session.Id;
-            _cartSvc.AddToCart(sessionId, request.ProductId, request.Quantity);
+            //var sessionId = HttpContext.Session.Id;
+            _cartSvc.AddToCart(request.sessionId, request.ProductId, request.Quantity);
             return Ok();
         }
 
