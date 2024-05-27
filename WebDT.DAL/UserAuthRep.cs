@@ -33,37 +33,6 @@ namespace WebDT.DAL
             return await dbcontext.Customers.FirstOrDefaultAsync(c => c.Phone == phone);
         }
 
-        //public SingleRsp Register(User user, Customer customer)
-        //{
-        //    var res = new SingleRsp();
-        //    var context = new QuanLyBanDienThoaiContext();
-        //    using (var tran = context.Database.BeginTransaction())
-        //    {
-        //        try
-        //        {
-        //            context.Users.Add(user);
-        //            context.Customers.Add(customer);
-        //            context.SaveChanges();
-        //            tran.Commit();
-        //            //var newCus = context.Customers.OrderByDescending(c => c.CustomerId).FirstOrDefault();
-        //            //var newUser = context.Users.OrderByDescending(c => c.UserId).FirstOrDefault();
-        //            //if (newCus != null && newUser != null)
-        //            //{
-        //            //    newCus.UserId = newUser.UserId;
-        //            //}
-        //            //context.SaveChanges();
-        //            //tran.Commit();
-        //            res.SetMessage("Dang ky thanh cong");
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            tran.Rollback();
-        //            res.SetError(ex.StackTrace);
-        //            res.SetMessage("Dang ky that bai");
-        //        }
-        //    }
-        //    return res;   
-        //}
 
         public async Task<int> CreateUserAsync(User user)
         {
