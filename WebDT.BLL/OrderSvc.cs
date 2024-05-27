@@ -13,7 +13,11 @@ namespace WebDT.BLL
     public class OrderSvc : GenericSvc<OrderRep,Order>
     {
         private OrderRep orderRep;
-
+        
+        public OrderSvc()
+        {
+             orderRep = new OrderRep();
+        }
 
         #region --Override--
         public override SingleRsp Read(int id)
