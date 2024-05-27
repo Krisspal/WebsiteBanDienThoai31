@@ -49,7 +49,7 @@ namespace WebDT.BLL
             {
                 var order = new Order()
                 {
-                    OrderId = createOrderReq.OrderId,
+                    EmployeeId = createOrderReq.EmployeeId,
                     CustomerId = createOrderReq.CustomerId,
                     OrderDate = DateTime.Now,
                     ShipAddress = createOrderReq.ShipAddress
@@ -65,7 +65,7 @@ namespace WebDT.BLL
                 //        });
 
                 //    }
-                orderRep.CreateOrder(order);
+                res=orderRep.CreateOrder(order);
                 res.SetMessage("Tạo order thành công");
             }
             catch (Exception ex)
