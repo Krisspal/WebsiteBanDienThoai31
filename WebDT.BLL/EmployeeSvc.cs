@@ -35,24 +35,24 @@ namespace WebDT.BLL
         {
             employeeRep = new EmployeeRep();
         }
+        //public SingleRsp CreateEmployee(EmployeeReq employeeReq)
+        //{
+        //    var res = new SingleRsp();
+        //    Employee e = new Employee(); 
+
+        //    e.EmployeeName = employeeReq.EmployeeName;
+        //    e.Gender = employeeReq.Gender;
+        //    e.BirthDate = employeeReq.BirthDate;
+        //    e.Idcard = employeeReq.Idcard;
+        //    e.Title = employeeReq.Title;
+        //    e.Phone = employeeReq.Phone;
+        //    e.Salary = employeeReq.Salary;
+
+        //    res = employeeRep.CreateEmployee(e);
+
+        //    return res;
+        //}
         public SingleRsp CreateEmployee(EmployeeReq employeeReq)
-        {
-            var res = new SingleRsp();
-            Employee e = new Employee(); 
-
-            e.EmployeeName = employeeReq.EmployeeName;
-            e.Gender = employeeReq.Gender;
-            e.BirthDate = employeeReq.BirthDate;
-            e.Idcard = employeeReq.Idcard;
-            e.Title = employeeReq.Title;
-            e.Phone = employeeReq.Phone;
-            e.Salary = employeeReq.Salary;
-
-            res = employeeRep.CreateEmployee(e);
-
-            return res;
-        }
-        public SingleRsp CreateEmployeeByUserId(EmployeeReq employeeReq)
         {
             var res = new SingleRsp();
             Employee e = new Employee();
@@ -71,14 +71,14 @@ namespace WebDT.BLL
             return res;
         }
 
-        public SingleRsp UpdateEmployee(EmployeeReq employeeReq)
+        public SingleRsp UpdateEmployee(int id,EmployeeReq employeeReq)
         {
 
             var res = new SingleRsp();
             //Employee ex = new Employee();
-            var ex = employeeRep.Read(employeeReq.EmployeeId);
+            var ex = employeeRep.Read(id);
             //Cap nhat
-            ex.UserId = employeeReq.UserId;
+            //ex.UserId = employeeReq.UserId;
             ex.EmployeeName = employeeReq.EmployeeName;
             ex.Gender = employeeReq.Gender;
             ex.BirthDate = employeeReq.BirthDate;
@@ -115,6 +115,16 @@ namespace WebDT.BLL
             }
 
             return rsp;
+        }
+
+        public Employee GetEmployeeByID(int id)
+        {
+            Employee employee = employeeRep.GetEmployeeByID(id);
+            if (employee == null)
+            {
+                return null;
+            }
+            return employee;
         }
 
         #endregion

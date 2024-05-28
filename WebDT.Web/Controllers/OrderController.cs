@@ -36,8 +36,6 @@ namespace WebDT.Web.Controllers
             int result = int.Parse(userId); 
             //tao bien tra ve la SingleRespone
             var rsp = new SingleRsp();
-            createOrderReq.CustomerId = result; 
-
             rsp = orderSvc.CreateOrder(createOrderReq,result);
             return Ok(rsp);
         }

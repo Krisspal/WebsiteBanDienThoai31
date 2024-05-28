@@ -1,91 +1,14 @@
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\appsettings.Development.json
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\appsettings.json
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.Web.exe
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.Web.deps.json
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.Web.runtimeconfig.json
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.Web.runtimeconfig.dev.json
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.Web.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.Web.pdb
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Humanizer.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.BLL.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.Common.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.DAL.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.BLL.pdb
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.Common.pdb
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.DAL.pdb
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.csproj.AssemblyReference.cache
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.GeneratedMSBuildEditorConfig.editorconfig
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.AssemblyInfoInputs.cache
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.AssemblyInfo.cs
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.csproj.CoreCompileInputs.cache
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.MvcApplicationPartsAssemblyInfo.cs
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.MvcApplicationPartsAssemblyInfo.cache
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.sourcelink.json
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.RazorTargetAssemblyInfo.cache
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\staticwebassets\WebDT.Web.StaticWebAssets.Manifest.cache
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\staticwebassets\WebDT.Web.StaticWebAssets.Pack.cache
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.WebDT.Web.Microsoft.AspNetCore.StaticWebAssets.props
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.build.WebDT.Web.props
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildMultiTargeting.WebDT.Web.props
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildTransitive.WebDT.Web.props
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.csproj.Up2Date
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.pdb
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.genruntimeconfig.cache
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.csproj.AssemblyReference.cache
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.GeneratedMSBuildEditorConfig.editorconfig
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.AssemblyInfoInputs.cache
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.AssemblyInfo.cs
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.csproj.CoreCompileInputs.cache
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.MvcApplicationPartsAssemblyInfo.cs
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.MvcApplicationPartsAssemblyInfo.cache
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.sourcelink.json
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.RazorTargetAssemblyInfo.cache
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.dll
+X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.pdb
 X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\appsettings.Development.json
 X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\appsettings.json
 X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.Web.exe
@@ -155,15 +78,6 @@ X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.DA
 X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.BLL.pdb
 X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.Common.pdb
 X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\bin\Debug\netcoreapp3.1\WebDT.DAL.pdb
-X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.csproj.AssemblyReference.cache
-X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.GeneratedMSBuildEditorConfig.editorconfig
-X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.AssemblyInfoInputs.cache
-X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.AssemblyInfo.cs
-X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.csproj.CoreCompileInputs.cache
-X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.MvcApplicationPartsAssemblyInfo.cs
-X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.MvcApplicationPartsAssemblyInfo.cache
-X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.sourcelink.json
-X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.RazorTargetAssemblyInfo.cache
 X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\staticwebassets\WebDT.Web.StaticWebAssets.Manifest.cache
 X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\staticwebassets\WebDT.Web.StaticWebAssets.Pack.cache
 X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.WebDT.Web.Microsoft.AspNetCore.StaticWebAssets.props
@@ -171,8 +85,6 @@ X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\staticwe
 X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildMultiTargeting.WebDT.Web.props
 X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildTransitive.WebDT.Web.props
 X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.csproj.Up2Date
-X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.dll
-X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.pdb
 X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Web\obj\Debug\netcoreapp3.1\WebDT.Web.genruntimeconfig.cache
 D:\LTCSDL\DFD\WebDT.Web\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\LTCSDL\DFD\WebDT.Web\bin\Debug\netcoreapp3.1\appsettings.json

@@ -8,9 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using WebDT.DAL;
 using WebDT.DAL.Models;
-using Microsoft.AspNetCore.SignalR;
-using static System.Net.WebRequestMethods;
-using System.Net.Http;
 using WebDT.Common.Req;
 using WebDT.Common.Rsp;
 using Microsoft.AspNetCore.Mvc;
@@ -55,6 +52,12 @@ namespace WebDT.BLL
             }
         }
 
+        public interface IAuthService
+        {
+            Task<ClaimsPrincipal> LoginAsync(string email, string password);
+            Task<bool> RegisterAsync(RegisterReq registerReq);
+        }
+
         public async Task<bool> RegisterAsync(RegisterReq registerReq)
         {
             var existingUser = await _userAuthRep.CheckExistUser(registerReq.UserName, registerReq.Email, registerReq.Phone);
@@ -92,11 +95,13 @@ namespace WebDT.BLL
                 return false;
             }
         }
-    }
 
+    }
     public interface IAuthService
     {
         Task<ClaimsPrincipal> LoginAsync(string email, string password);
         Task<bool> RegisterAsync(RegisterReq registerReq);
     }
+
 }
+

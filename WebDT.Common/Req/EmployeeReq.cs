@@ -6,8 +6,8 @@ namespace WebDT.Common.Req
 {
     public class EmployeeReq
     {
-        public int EmployeeId { get; set; }
-        public int? UserId { get; set; }
+        //public int EmployeeId { get; set; }
+        //public int? UserId { get; set; }
         public string EmployeeName { get; set; }
         public string Gender { get; set; }
         public DateTime? BirthDate { get; set; }

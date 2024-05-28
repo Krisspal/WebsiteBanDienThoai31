@@ -40,6 +40,19 @@ namespace WebDT.Web.Controllers
             return Ok(rsp);
         }
 
+        [AllowAnonymous]
+        [HttpPost("SearchProductByBrand")]
+        public IActionResult SearchProductByBrand(string brandname)
+        {
+            var rsp = new SingleRsp();
+            rsp = productSvc.SearchProductByBrandName(brandname);
+            if (rsp == null)
+            {
+                return BadRequest();
+            }
+            return Ok(rsp);
+        }
+
         [HttpPost("CreateProduct")]
         public IActionResult CreateProduct([FromBody] ProductReq productReq)
         {

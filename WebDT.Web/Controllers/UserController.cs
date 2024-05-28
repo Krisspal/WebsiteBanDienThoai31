@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using WebDT.BLL;
 using WebDT.Common.Req;
 using WebDT.Common.Rsp;
@@ -21,13 +22,21 @@ namespace WebDT.Web.Controllers
         [Route("{id}")]
         public IActionResult GetUserByID(int id)
         {
-            var res = new SingleRsp();
-            res = userSvc.Read(id);
-            return Ok(res);
+            try
+            {
+                var res = new SingleRsp();
+                res = userSvc.Read(id);
+                return Ok(res);
+            }
+            catch (Exception)
+            {
+                return BadRequest("Nhap id la so nguyen");
+               
+            }
         }
 
         [HttpPost("GetUserByUsername")]
-        public IActionResult GetUserByUsername([FromBody] string username)
+        public IActionResult GetUserByUsername(string username)
         {
             var res = new SingleRsp();
             res = userSvc.GetUserByUsername(username);

@@ -97,6 +97,25 @@ namespace WebDT.DAL
             return res;
         }
 
+        public Customer GetCustomerByID(int id)
+        {
+            var customer = All.FirstOrDefault(c => c.CustomerId == id);
+            return customer;
+        }
+        public int GetNextUserId()
+        {
+            using (var context = new QuanLyBanDienThoaiContext())
+            {
+                int latestUserId = 0;
+                var last = context.Customers.OrderByDescending(e => e.UserId).FirstOrDefault();
+                if (last != null)
+                {
+                    latestUserId = (int)last.UserId;
+                }
+                return latestUserId;
+            }
+
+        }
         #endregion
     }
 }

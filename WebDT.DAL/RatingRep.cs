@@ -1,115 +1,101 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using WebDT.Common.DAL;
 using WebDT.Common.Rsp;
 using WebDT.DAL.Models;
 
 namespace WebDT.DAL
 {
-    public class UserRep : GenericRep<QuanLyBanDienThoaiContext, User>
+    public class RatingRep : GenericRep<QuanLyBanDienThoaiContext, Rating>
     {
-        public UserRep() { }
+        #region -- Overrides --
 
-        public override User Read(int id)
+        public override Rating Read(int id)
         {
-            var res = All.FirstOrDefault(e => e.UserId == id);
-            return res;
+            return All.FirstOrDefault(r => r.RatingId == id);
         }
 
-        public SingleRsp CreateUser(User user)
+        #endregion
+
+        #region -- Methods --
+
+        public SingleRsp CreateRating(Rating rating)
         {
             var res = new SingleRsp();
-            var context = new QuanLyBanDienThoaiContext();
-            using (var tran = context.Database.BeginTransaction())
-            {
-                var checkuser = context.Users.FirstOrDefault(u => u.UserName == user.UserName || u.Email == user.Email);
-                if (checkuser == null)
-                {
-                    try
-                    {
-                        context.Users.Add(user);
-                        context.SaveChanges();
-                        tran.Commit();
-                        res.SetMessage("Tao user thanh cong");
-                    }
-                    catch (Exception ex)
-                    {
-                        tran.Rollback();
-                        res.SetError(ex.StackTrace);
-                        res.SetMessage("Tao user that bai");
-                    }
-                }
-                else
-                {
-                    res.SetMessage("User da ton tai");
-                    return res;
-                }
-            }
-            return res;
-        }
-
-        public SingleRsp UpdateUser(User user)
-        {
-            var res = new SingleRsp();
-
             using (var context = new QuanLyBanDienThoaiContext())
             {
                 using (var tran = context.Database.BeginTransaction())
                 {
                     try
                     {
-                        context.Users.Update(user);
+                        var r = context.Ratings.Add(rating);
                         context.SaveChanges();
                         tran.Commit();
-                        res.SetMessage("Update user thanh cong");
+                        res.SetMessage("Create Rating successful");
                     }
                     catch (Exception ex)
                     {
                         tran.Rollback();
                         res.SetError(ex.StackTrace);
-                        res.SetMessage("Update user that bai");
+                        res.SetMessage("Create Rating failed");
                     }
                 }
             }
             return res;
         }
 
-        public SingleRsp DeleteUser(User user)
+        public SingleRsp UpdateRating(Rating rating)
         {
             var res = new SingleRsp();
-
             using (var context = new QuanLyBanDienThoaiContext())
             {
                 using (var tran = context.Database.BeginTransaction())
                 {
                     try
                     {
-                        context.Users.Remove(user);
+                        context.Ratings.Update(rating);
                         context.SaveChanges();
                         tran.Commit();
-                        res.SetMessage("Da xoa user");
+                        res.SetMessage("Update Rating successful");
                     }
                     catch (Exception ex)
                     {
                         tran.Rollback();
                         res.SetError(ex.StackTrace);
-                        res.SetMessage("Xoa that bai");
+                        res.SetMessage("Update Rating failed");
                     }
                 }
             }
             return res;
         }
 
-        public User GetUserByUsername(string username)
+        public SingleRsp DeleteRating(Rating rating)
         {
-            var res = All.FirstOrDefault(e => e.UserName == username);
+            var res = new SingleRsp();
+            using (var context = new QuanLyBanDienThoaiContext())
+            {
+                using (var tran = context.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        context.Ratings.Remove(rating);
+                        context.SaveChanges();
+                        tran.Commit();
+                        res.SetMessage("Delete Rating successful");
+                    }
+                    catch (Exception ex)
+                    {
+                        tran.Rollback();
+                        res.SetError(ex.StackTrace);
+                        res.SetMessage("Delete Rating failed");
+                    }
+                }
+            }
             return res;
         }
 
-        public User GetUserByID(int id)
-        {
-            var user = All.FirstOrDefault(e => e.UserId == id);
-            return user;
-        }
+        #endregion
     }
 }

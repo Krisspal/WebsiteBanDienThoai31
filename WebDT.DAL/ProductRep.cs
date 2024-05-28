@@ -57,6 +57,29 @@ namespace WebDT.DAL
             return res;
         }
 
+        public SingleRsp SearchProductByBrandName(string brandName)
+        {
+            var res = new SingleRsp();
+            QuanLyBanDienThoaiContext context = new QuanLyBanDienThoaiContext();
+            try
+            {
+                var brand = context.Brands.FirstOrDefault(b => b.BrandName.Contains(brandName));
+                if (brand == null)
+                {
+                    res.SetMessage("Khong tim thay brand");
+
+                }
+                else
+                    res.Data = context.Products.Where(p => p.BrandId == brand.BrandId);
+            }
+            catch (Exception ex)
+            {
+                res.SetError(ex.StackTrace);
+                res.SetMessage("Khong tim thay brand");
+            }
+            return res;
+        }
+
         public SingleRsp SearchProductInPriceRange(int minPrice, int maxPrice)
         {
             var res = new SingleRsp();
@@ -122,7 +145,11 @@ namespace WebDT.DAL
             }
             return res;
         }
-
+        public Product GetProductByID(int id)
+        {
+            var product = All.FirstOrDefault(p => p.ProductId == id);
+            return product;
+        }
         #endregion
 
     }
