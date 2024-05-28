@@ -21,8 +21,8 @@ namespace WebDT.BLL
             res.Data = _rep.Read(id);
             if (res.Data == null)
             {
-                res.SetMessage("Khong tim thay user");
-                res.SetError("404", "Khong tim thay user");
+                res.SetMessage("Khong tim thay employee");
+                res.SetError("404", "Khong tim thay employee");
             }
             return res;
         }
@@ -40,6 +40,24 @@ namespace WebDT.BLL
             var res = new SingleRsp();
             Employee e = new Employee(); 
 
+            e.EmployeeName = employeeReq.EmployeeName;
+            e.Gender = employeeReq.Gender;
+            e.BirthDate = employeeReq.BirthDate;
+            e.Idcard = employeeReq.Idcard;
+            e.Title = employeeReq.Title;
+            e.Phone = employeeReq.Phone;
+            e.Salary = employeeReq.Salary;
+
+            res = employeeRep.CreateEmployee(e);
+
+            return res;
+        }
+        public SingleRsp CreateEmployeeByUserId(EmployeeReq employeeReq)
+        {
+            var res = new SingleRsp();
+            Employee e = new Employee();
+
+            e.UserId = employeeRep.GetNextUserId();
             e.EmployeeName = employeeReq.EmployeeName;
             e.Gender = employeeReq.Gender;
             e.BirthDate = employeeReq.BirthDate;
@@ -97,6 +115,16 @@ namespace WebDT.BLL
             }
 
             return rsp;
+        }
+
+        public Employee GetEmployeeByID(int id)
+        {
+            Employee employee = employeeRep.GetEmployeeByID(id);
+            if (employee == null)
+            {
+                return null;
+            }
+            return employee;
         }
 
         #endregion

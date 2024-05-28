@@ -104,5 +104,15 @@ namespace WebDT.BLL
             }
             return res;
         }
+
+        public User GetUserByID(int id)
+        {
+            User user = userRep.GetUserByID(id);
+            if (user == null)
+            {
+                return null;
+            }
+            return user;
+        }
     }
 }

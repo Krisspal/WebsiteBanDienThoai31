@@ -34,12 +34,6 @@ namespace WebDT.BLL
             return res;
         }
 
-        public SingleRsp SearchProductByBrandName(string brandName)
-        {
-            SingleRsp res = brandRep.SearchProductByBrandName(brandName);
-            return res;
-        }
-
         public SingleRsp CreateBrand(BrandReq brandReq)
         {
             var res = new SingleRsp();

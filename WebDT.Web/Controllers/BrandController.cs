@@ -27,19 +27,6 @@ namespace WebDT.Web.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost("SearchProductByBrand")]
-        public IActionResult SearchProductByBrand(string brandname)
-        {
-            var rsp = new SingleRsp();
-            rsp = brandSvc.SearchProductByBrandName(brandname);
-            if (rsp == null)
-            {
-                return BadRequest();
-            }
-            return Ok(rsp);
-        }
-
-        [AllowAnonymous]
         [HttpGet("GetAllBrand")]
         public IActionResult GetBrandAll()
         {

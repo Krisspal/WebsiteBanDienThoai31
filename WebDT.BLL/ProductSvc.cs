@@ -91,33 +91,34 @@ namespace WebDT.BLL
             return res;
         }
 
+        public SingleRsp SearchProductByBrandName(string brandName)
+        {
+            SingleRsp res = productRep.SearchProductByBrandName(brandName);
+            return res;
+        }
+
         public SingleRsp CreateProduct(ProductReq productReq)
         {
-
-
             var res = new SingleRsp();
             Product product = new Product();
             try
             {
-                using (TransactionScope scope = new TransactionScope())
-                {
-                    product.BrandId = productReq.BrandId;
-                    product.ProductName = productReq.ProductName;
-                    product.Price = productReq.Price;
-                    product._5g = productReq._5g;
-                    product.Processor = productReq.Processor;
-                    product.Battery = productReq.Battery;
-                    product.FastCharge = productReq.FastCharge;
-                    product.Ram = productReq.Ram;
-                    product.Memory = productReq.Memory;
-                    product.Screen = productReq.Screen;
-                    product.RefreshRate = productReq.RefreshRate;
-                    product.Os = productReq.Os;
-                    product.RearCamera = productReq.RearCamera;
-                    product.FrontCamera = productReq.FrontCamera;
-                    product.ExtendMemory = productReq.ExtendMemory;
-                    res = productRep.CreateProduct(product);
-                }
+               product.BrandId = productReq.BrandId;
+               product.ProductName = productReq.ProductName;
+               product.Price = productReq.Price;
+               product._5g = productReq._5g;
+               product.Processor = productReq.Processor;
+               product.Battery = productReq.Battery;
+               product.FastCharge = productReq.FastCharge;
+               product.Ram = productReq.Ram;
+               product.Memory = productReq.Memory;
+               product.Screen = productReq.Screen;
+               product.RefreshRate = productReq.RefreshRate;
+               product.Os = productReq.Os;
+               product.RearCamera = productReq.RearCamera;
+               product.FrontCamera = productReq.FrontCamera;
+               product.ExtendMemory = productReq.ExtendMemory;
+               res = productRep.CreateProduct(product);
             }
             catch (Exception ex)
             {

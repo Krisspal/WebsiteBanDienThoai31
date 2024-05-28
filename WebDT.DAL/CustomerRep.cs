@@ -1,54 +1,53 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using WebDT.Common.DAL;
 using WebDT.Common.Rsp;
 using WebDT.DAL.Models;
 
 namespace WebDT.DAL
 {
-    public class UserRep : GenericRep<QuanLyBanDienThoaiContext, User>
+    public class CustomerRep : GenericRep<QuanLyBanDienThoaiContext, Customer>
     {
-        public UserRep() { }
+        #region -- Overrides --
 
-        public override User Read(int id)
+
+        public override Customer Read(int id)
         {
-            var res = All.FirstOrDefault(e => e.UserId == id);
+            var res = All.FirstOrDefault(c => c.CustomerId == id);
             return res;
         }
 
-        public SingleRsp CreateUser(User user)
+        #endregion
+
+        #region -- Methods --
+
+        public SingleRsp CreateCustomer(Customer customer)
         {
             var res = new SingleRsp();
-            var context = new QuanLyBanDienThoaiContext();
-            using (var tran = context.Database.BeginTransaction())
+            using (var context = new QuanLyBanDienThoaiContext())
             {
-                var checkuser = context.Users.FirstOrDefault(u => u.UserName == user.UserName || u.Email == user.Email);
-                if (checkuser == null)
+                using (var tran = context.Database.BeginTransaction())
                 {
                     try
                     {
-                        context.Users.Add(user);
+                        var e = context.Customers.Add(customer);
                         context.SaveChanges();
                         tran.Commit();
-                        res.SetMessage("Tao user thanh cong");
+                        res.SetMessage("Tao Customer thanh cong");
                     }
                     catch (Exception ex)
                     {
                         tran.Rollback();
                         res.SetError(ex.StackTrace);
-                        res.SetMessage("Tao user that bai");
+                        res.SetMessage("Tao Customer that bai");
                     }
-                }
-                else
-                {
-                    res.SetMessage("User da ton tai");
-                    return res;
                 }
             }
             return res;
         }
-
-        public SingleRsp UpdateUser(User user)
+        public SingleRsp UpdateCustomer(Customer customer)
         {
             var res = new SingleRsp();
 
@@ -58,36 +57,34 @@ namespace WebDT.DAL
                 {
                     try
                     {
-                        context.Users.Update(user);
+                        context.Customers.Update(customer);
                         context.SaveChanges();
                         tran.Commit();
-                        res.SetMessage("Update user thanh cong");
+                        res.SetMessage("Update Customer thanh cong");
                     }
                     catch (Exception ex)
                     {
                         tran.Rollback();
                         res.SetError(ex.StackTrace);
-                        res.SetMessage("Update user that bai");
+                        res.SetMessage("Update Customer that bai");
                     }
                 }
             }
             return res;
         }
-
-        public SingleRsp DeleteUser(User user)
+        public SingleRsp DeleteCustomer(Customer customer)
         {
             var res = new SingleRsp();
-
             using (var context = new QuanLyBanDienThoaiContext())
             {
                 using (var tran = context.Database.BeginTransaction())
                 {
                     try
                     {
-                        context.Users.Remove(user);
+                        context.Customers.Remove(customer);
                         context.SaveChanges();
                         tran.Commit();
-                        res.SetMessage("Da xoa user");
+                        res.SetMessage("Da xoa Customer");
                     }
                     catch (Exception ex)
                     {
@@ -100,16 +97,12 @@ namespace WebDT.DAL
             return res;
         }
 
-        public User GetUserByUsername(string username)
+        public Customer GetCustomerByID(int id)
         {
-            var res = All.FirstOrDefault(e => e.UserName == username);
-            return res;
+            var customer = All.FirstOrDefault(c => c.CustomerId == id);
+            return customer;
         }
 
-        public User GetUserByID(int id)
-        {
-            var user = All.FirstOrDefault(e => e.UserId == id);
-            return user;
-        }
+        #endregion
     }
 }

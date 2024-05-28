@@ -28,19 +28,26 @@ namespace WebDT.Web.Controllers
         private readonly IAuthService _authService;
         private readonly IUserAuthRep _userRepository;
         HttpClient httpClient = new HttpClient();
+        private UserSvc userSvc;
+        private EmployeeSvc employeeSvc;
+        private CustomerSvc customerSvc;
+        //HttpContext httpContext;
 
         public AuthController(IAuthService authService, IUserAuthRep userRepository)
         {
             _authService = authService;
             _userRepository = userRepository;
+            userSvc = new UserSvc();
+            employeeSvc = new EmployeeSvc();
+            customerSvc = new CustomerSvc();
         }
 
         [HttpPost("Login")]
         [AllowAnonymous]
-        public async Task<ActionResult<AuthRsp>> Login(LoginReq request)
+        public async Task<ActionResult<AuthRsp>> Login(string username, string password)
         {
-            var user = await _userRepository.GetUserByUserNameAndPassword(request.Username, request.Password);
-            var claims = await _authService.LoginAsync(request.Username, request.Password);
+            var user = await _userRepository.GetUserByUserNameAndPassword(username, password);
+            var claims = await _authService.LoginAsync(username, password);
             var authProperties = new AuthenticationProperties
             {
                 IsPersistent = false,
@@ -62,12 +69,7 @@ namespace WebDT.Web.Controllers
             }
             else
             {
-                var response = new AuthRsp
-                {
-                    IsSuccess = false,
-                    ErrorMessage = "Sai username hoac password"
-                };
-                return BadRequest(response);
+                return BadRequest("Sai username hoac password");
             }
         }
 
@@ -76,6 +78,40 @@ namespace WebDT.Web.Controllers
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return Ok("Dang xuat thanh cong");
+        }
+
+        [HttpGet("GetCurrentUser")]
+        public ActionResult<CurrentUserRsp> GetCurrentLogInUser()
+        {
+            var claimsIdentity = HttpContext.User.Identity as ClaimsIdentity;
+            var userDataClaim = claimsIdentity?.FindFirst(ClaimTypes.NameIdentifier);
+            var userId = userDataClaim?.Value;
+            var res = new CurrentUserRsp();
+            if (userId != null)
+            {
+                User user = userSvc.GetUserByID(int.Parse(userId));
+                if (user.IsAdmin == 1)
+                {
+                    var CurrentUser = employeeSvc.GetEmployeeByID(int.Parse(userId));
+                    res.UserName = user.UserName;
+                    res.Email = user.Email;
+                    if (CurrentUser == null)
+                        res.Name = null;
+                    else
+                        res.Name = CurrentUser.EmployeeName;
+                }
+                else
+                {
+                    var CurrentUser = customerSvc.GetCustomerByID(int.Parse(userId));
+                    res.UserName = user.UserName;
+                    res.Email = user.Email;
+                    if (CurrentUser == null)
+                        res.Name = null;
+                    else
+                        res.Name = CurrentUser.CustomerName;
+                }
+            }    
+            return Ok(res);
         }
 
         [HttpPost("Register")]
@@ -105,7 +141,6 @@ namespace WebDT.Web.Controllers
                 };
                 return BadRequest(response);
             }
-
         }
     }
 }

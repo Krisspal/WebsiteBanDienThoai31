@@ -19,7 +19,7 @@ namespace WebDT.Web.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost("search-product")]
+        [HttpPost("SearchProduct")]
         public IActionResult SearchProduct([FromBody] SearchProductReq searchProductReq)
         {
             //tao bien tra ve la SingleRespone
@@ -30,7 +30,7 @@ namespace WebDT.Web.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost("search-product-by-price-range")]
+        [HttpPost("SearchProductByPriceRange")]
         public IActionResult SearchProductByPriceRange(int minPrice, int maxPrice)
         {
             //tao bien tra ve la SingleRespone
@@ -40,7 +40,20 @@ namespace WebDT.Web.Controllers
             return Ok(rsp);
         }
 
-        [HttpPost("create-product")]
+        [AllowAnonymous]
+        [HttpPost("SearchProductByBrand")]
+        public IActionResult SearchProductByBrand(string brandname)
+        {
+            var rsp = new SingleRsp();
+            rsp = productSvc.SearchProductByBrandName(brandname);
+            if (rsp == null)
+            {
+                return BadRequest();
+            }
+            return Ok(rsp);
+        }
+
+        [HttpPost("CreateProduct")]
         public IActionResult CreateProduct([FromBody] ProductReq productReq)
         {
             //tao bien tra ve la SingleRespone
@@ -49,14 +62,14 @@ namespace WebDT.Web.Controllers
             return Ok(rsp);
         }
 
-        [HttpPut("update-product")]
+        [HttpPut("UpdateProduct")]
         public IActionResult UpdateProduct([FromBody] ProductReq reqProduct, string id)
         {
             var res = productSvc.UpdateProduct(reqProduct,id);
             return Ok(res);
         }
 
-        [HttpDelete("delete-product")]
+        [HttpDelete("DeleteProduct")]
         public IActionResult DeleteProduct(int id)
         {
             var res = productSvc.DeleteProduct(id);

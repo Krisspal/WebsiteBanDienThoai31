@@ -1,5 +1,9 @@
 .git
 .vs
+<<<<<<< HEAD
 obj/
+=======
+*.obj
+>>>>>>> Xuan
 bin/
 .user
