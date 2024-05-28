@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using WebDT.Common.BLL;
 using WebDT.Common.Req;
 using WebDT.Common.Rsp;
 using WebDT.DAL;
 using WebDT.DAL.Models;
+using static WebDT.DAL.ThongKeModel;
 
 namespace WebDT.BLL
 {
@@ -54,6 +56,26 @@ namespace WebDT.BLL
             res.Data = result;
             return res;
 
+        }
+        public ProductStatistics GetProductStatistics(int productId)
+        {
+            var product = thongKe.GetProduct(productId);
+            if (product == null)
+            {
+                return null;
+            }
+
+            var orderDetails = thongKe.GetOrderDetailsForProduct(productId);
+
+            var totalOrders = orderDetails.Count();
+            var totalQuantity = orderDetails.Sum(od => od.Quantity ?? 0);
+
+            return new ProductStatistics
+            {
+                ProductId = productId,
+                TotalOrders = totalOrders,
+                TotalQuantity = totalQuantity
+            };
         }
     }
 }

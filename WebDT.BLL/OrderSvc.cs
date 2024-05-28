@@ -13,11 +13,11 @@ namespace WebDT.BLL
     public class OrderSvc : GenericSvc<OrderRep,Order>
     {
         private OrderRep orderRep;
-
         public OrderSvc()
         {
             orderRep = new OrderRep();
         }
+
         #region --Override--
         public override SingleRsp Read(int id)
         {
@@ -41,29 +41,24 @@ namespace WebDT.BLL
             res.Data = _rep.Read(id);
             return res;
         }
-        public SingleRsp CreateOrder(OrderReq createOrderReq)
+        public SingleRsp CreateOrder(OrderReq orderReq)
         {
             var res = new SingleRsp();
             try
             {
-                var order = new Order()
+                var order = new Order
                 {
-                    EmployeeId = createOrderReq.EmployeeId,
-                    CustomerId = createOrderReq.CustomerId,
-                    OrderDate = DateTime.Now,
-                    ShipAddress = createOrderReq.ShipAddress
+                    CustomerId = orderReq.CustomerId,
+                    EmployeeId = orderReq.EmployeeId,
+                    ShipAddress = orderReq.ShipAddress,
+                    OrderDate = DateTime.UtcNow,
+                    OrderDetails = orderReq.OrderDetails.Select(detail => new OrderDetail
+                    {
+                        ProductId = detail.ProductId,
+                        UnitPrice = detail.UnitPrice,
+                        Quantity = detail.Quantity
+                    }).ToList()
                 };
-                //    var orderDetails = new List<OrderDetail>();
-                //    foreach(var orderDetail in createOrderReq.Details)
-                //    {
-                //        orderDetails.Add(new OrderDetail()
-                //        {
-                //            OrderId = order.OrderId,
-                //            ProductId = orderDetail.ProductId,
-                //            Quantity = orderDetail.Quantity,    
-                //        });
-
-                //    }
                 res = orderRep.CreateOrder(order);
                 res.SetMessage("Tạo order thành công");
             }
@@ -73,6 +68,11 @@ namespace WebDT.BLL
             }
             return res;
         }
+        //public SingleRsp CompleteOrder(int orderId, int customerId, string shipAddress)
+        //{
+        //    var res = orderRep.CompleteOrder(orderId, customerId, shipAddress);
+        //    return res;
+        //}
         public SingleRsp UpdateOrder(OrderReq orderReq, string id)
         {
             int result;

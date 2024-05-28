@@ -8,49 +8,7 @@ D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\W
 D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.AssemblyInfoInputs.cache
 D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.AssemblyInfo.cs
 D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.csproj.CoreCompileInputs.cache
+D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.sourcelink.json
 D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.dll
 D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.pdb
 D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.genruntimeconfig.cache
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\bin\Debug\netcoreapp3.1\WebDT.Common.deps.json
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\bin\Debug\netcoreapp3.1\WebDT.Common.runtimeconfig.json
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\bin\Debug\netcoreapp3.1\WebDT.Common.runtimeconfig.dev.json
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\bin\Debug\netcoreapp3.1\WebDT.Common.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\bin\Debug\netcoreapp3.1\WebDT.Common.pdb
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.csproj.AssemblyReference.cache
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.GeneratedMSBuildEditorConfig.editorconfig
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.AssemblyInfoInputs.cache
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.AssemblyInfo.cs
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.csproj.CoreCompileInputs.cache
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.sourcelink.json
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.dll
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.pdb
-X:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.genruntimeconfig.cache
-D:\Đồ án LTCSDL\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.sourcelink.json
-D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.csproj.AssemblyReference.cache
-D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.GeneratedMSBuildEditorConfig.editorconfig
-D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.AssemblyInfoInputs.cache
-D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.AssemblyInfo.cs
-D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.csproj.CoreCompileInputs.cache
-D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.sourcelink.json
-D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.dll
-D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.pdb
-D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\bin\Debug\netcoreapp3.1\WebDT.Common.deps.json
-D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\bin\Debug\netcoreapp3.1\WebDT.Common.runtimeconfig.json
-D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\bin\Debug\netcoreapp3.1\WebDT.Common.runtimeconfig.dev.json
-D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\bin\Debug\netcoreapp3.1\WebDT.Common.dll
-D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\bin\Debug\netcoreapp3.1\WebDT.Common.pdb
-D:\LTCSDL\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.genruntimeconfig.cache
-X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Common\bin\Debug\netcoreapp3.1\WebDT.Common.deps.json
-X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Common\bin\Debug\netcoreapp3.1\WebDT.Common.runtimeconfig.json
-X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Common\bin\Debug\netcoreapp3.1\WebDT.Common.runtimeconfig.dev.json
-X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Common\bin\Debug\netcoreapp3.1\WebDT.Common.dll
-X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Common\bin\Debug\netcoreapp3.1\WebDT.Common.pdb
-X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.csproj.AssemblyReference.cache
-X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.GeneratedMSBuildEditorConfig.editorconfig
-X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.AssemblyInfoInputs.cache
-X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.AssemblyInfo.cs
-X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.csproj.CoreCompileInputs.cache
-X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.sourcelink.json
-X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.dll
-X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.pdb
-X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.Common\obj\Debug\netcoreapp3.1\WebDT.Common.genruntimeconfig.cache

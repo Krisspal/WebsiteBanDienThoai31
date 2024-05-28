@@ -42,5 +42,12 @@ namespace WebDT.Web.Controllers
             var res = orderSvc.DeleteOrder(id);
             return Ok(res);
         }
+        //[HttpPost("Checkout")]
+        //public IActionResult Checkout([FromBody] CheckoutReq checkoutReq)
+        //{
+        //    var rsp = new SingleRsp();
+        //    rsp = orderSvc.CompleteOrder(checkoutReq.OrderId, checkoutReq.CustomerId, checkoutReq.ShipAddress);
+        //    return Ok(rsp);
+        //}
     }
 }

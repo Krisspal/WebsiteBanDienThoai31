@@ -35,7 +35,16 @@ namespace WebDT.Web.Controllers
             var res = thongkeSvc.ThongKeDoanhThuTheoThang(month, year);
             return Ok(res);
         }
-
+        [HttpGet("{productId}/statistics")]
+        public IActionResult GetProductStatistics(int productId)
+        {
+            var statistics = thongkeSvc.GetProductStatistics(productId);
+            if (statistics == null)
+            {
+                return NotFound($"Product with ID {productId} not found.");
+            }
+            return Ok(statistics);
+        }
 
     }
 }
