@@ -6,7 +6,8 @@ namespace WebDT.Common.Req
 {
     public class CreateOrderReq
     {
+        public int EmployeeId { get; set; }
+        public DateTime? OrderDate { get; }
         public string ShipAddress { get; set; }
-
     }
 }

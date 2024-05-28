@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace WebDT.Common.Req
-{
+{ 
     public class OrderReq
     {
         public int OrderId { get; }

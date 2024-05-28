@@ -12,12 +12,15 @@ namespace WebDT.DAL.Models
     {
         public QuanLyBanDienThoaiContext()
         {
+            
         }
+
 
         public QuanLyBanDienThoaiContext(DbContextOptions<QuanLyBanDienThoaiContext> options)
             : base(options)
         {
         }
+
 
         public virtual DbSet<Brand> Brands { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }

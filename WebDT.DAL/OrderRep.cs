@@ -10,6 +10,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
+using System.Net.WebSockets;
+using WebDT.Common.Req;
+
 
 namespace WebDT.DAL
 {
@@ -32,6 +35,7 @@ namespace WebDT.DAL
 
         #endregion
         #region -- Methods --
+
         public int getproducprice(int id)
         {
             var context = new QuanLyBanDienThoaiContext();
@@ -73,6 +77,8 @@ namespace WebDT.DAL
             }
             return res;
         }
+
+
         public SingleRsp UpdateOrder(Order order)
         {
             var res = new SingleRsp();
@@ -125,6 +131,7 @@ namespace WebDT.DAL
             }
             return res;
         }
+
         //public SingleRsp CompleteOrder(int orderId, int customerId, string shipAddress)
         //{
         //    var res = new SingleRsp();
@@ -162,5 +169,7 @@ namespace WebDT.DAL
         //    return res;
         //}
         #endregion
+
     }
+
 }

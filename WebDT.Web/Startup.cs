@@ -41,7 +41,6 @@ namespace WebDT.Web
                 options.ValidationInterval = TimeSpan.FromSeconds(30);
             });
             services.AddTransient<IAuthService, AuthService>();
-            services.AddTransient<IUserAuthRep, UserAuthRep>();
 
             services.AddSession(options => {
                 options.IdleTimeout = TimeSpan.FromMinutes(30);
@@ -54,6 +53,13 @@ namespace WebDT.Web
             options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
 );
 
+//=======
+//            services.AddTransient<IUserRepository, UserRepository>();
+//                services.AddScoped<CartSvc>();
+//    services.AddScoped<CartRep>();
+//    services.AddScoped<OrderDetailRep>();
+//    services.AddScoped<OrderRep>();
+//>>>>>>> ac07c6d14102545b7d1c90344a79f0f095fea17b
             #region -- Swagger --  
             var inf1 = new OpenApiInfo
             {

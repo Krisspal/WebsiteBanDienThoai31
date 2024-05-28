@@ -11,9 +11,10 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
 using Microsoft.Extensions.Primitives;
 
+
 namespace WebDT.BLL
 {
-    public class OrderSvc : GenericSvc<OrderRep,Order>
+    public class OrderSvc : GenericSvc<OrderRep, Order>
     {
         private OrderRep orderRep;
         public OrderSvc()

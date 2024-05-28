@@ -126,6 +126,11 @@ namespace WebDT.Common.DAL
             var t = _context.Set<T>().Remove(m);
             return t.Entity;
         }
+        protected T add(T m)
+        {
+            var t = _context.Set<T>().Add(m);
+            return t.Entity;
+        }
 
         #endregion
 

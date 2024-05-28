@@ -8,10 +8,17 @@ using WebDT.Common.Req;
 using WebDT.Common.Rsp;
 using WebDT.DAL.Models;
 
+using WebDT.DAL.Models;
+
+using WebDT.Common.Req;
+using WebDT.Common.Rsp;
+using WebDT.DAL;
+
+
 namespace WebDT.Web.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class OrderController : ControllerBase
     {
         private OrderSvc orderSvc;

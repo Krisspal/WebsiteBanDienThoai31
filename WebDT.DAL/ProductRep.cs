@@ -43,7 +43,7 @@ namespace WebDT.DAL
                     catch (Exception ex)
                     {
                         tran.Rollback();
-                        res.SetError(ex.StackTrace);
+                        res.SetMessage(ex.Message);
                     }
                 }
             }

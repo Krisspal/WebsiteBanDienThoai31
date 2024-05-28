@@ -2,16 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace WebDT.Common.Req
+namespace WebDT.DAL.Models
 {
-    public class OrderDetailReq
+    public class CartItem
     {
         public int ProductId { get; set; }
-        public int UnitPrice { get; }
         public int Quantity { get; set; }
+        public int UnitPrice { get; set; }
     }
- }
-
-    
-
-
+}

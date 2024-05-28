@@ -51,7 +51,7 @@ namespace WebDT.Web.Controllers
             var authProperties = new AuthenticationProperties
             {
                 IsPersistent = false,
-        };
+            };
             if (user != null)
             {
                 await HttpContext.SignInAsync(claims, authProperties);
