@@ -33,7 +33,7 @@ namespace WebDT.BLL
                 {
                     new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
                     new Claim(ClaimTypes.Email, user.Email),
-                    new Claim(ClaimTypes.Role, user.IsAdmin == 1 ? "Admin" : "User")
+                    new Claim(ClaimTypes.Role, user.IsAdmin == 1 ? "Admin" : "Customer")
                 };
 
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
