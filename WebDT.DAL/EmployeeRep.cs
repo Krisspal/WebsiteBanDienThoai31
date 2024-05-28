@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using WebDT.Common.DAL;
-using WebDT.DAL.Models;
 using System.Linq;
+using WebDT.Common.DAL;
 using WebDT.Common.Rsp;
-using Microsoft.EntityFrameworkCore;
+using WebDT.DAL.Models;
 
 namespace WebDT.DAL
 {
-    public class EmployeeRep:GenericRep<QuanLyBanDienThoaiContext,Employee>
+    public class EmployeeRep : GenericRep<QuanLyBanDienThoaiContext, Employee>
     {
         #region -- Overrides --
 
@@ -19,7 +16,7 @@ namespace WebDT.DAL
             var res = All.FirstOrDefault(e => e.EmployeeId == id);
             return res;
         }
-  
+
         #endregion
 
         #region -- Methods --
@@ -82,7 +79,7 @@ namespace WebDT.DAL
                 {
                     try
                     {
-                        context.Employees.Remove(employee); 
+                        context.Employees.Remove(employee);
                         context.SaveChanges();
                         tran.Commit(); 
                         res.SetMessage("Da xoa nhan vien");
@@ -110,7 +107,13 @@ namespace WebDT.DAL
                 }
                 return latestUserId;
             }
-            
+
+        }
+
+        public Employee GetEmployeeByID(int id)
+        {
+            var employee = All.FirstOrDefault(e => e.EmployeeId == id);
+            return employee;
         }
         #endregion
     }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using WebDT.Common.DAL;
 using WebDT.DAL.Models;
@@ -14,6 +16,14 @@ namespace WebDT.DAL
         public DateTime startDate { get; set; }
         public DateTime endDate { get; set; }
         public int? TotalSale { get; set; }
+
+        public class ProductStatistics
+        {
+            public int ProductId { get; set; }
+            public int TotalOrders { get; set; }
+            public int TotalQuantity { get; set; }
+        }
+
 
         public ThongKeModel() 
         { 
@@ -57,6 +67,19 @@ namespace WebDT.DAL
                             .Sum();
             return total;
         }
+
+        public Product GetProduct(int productId)
+        {
+            var context = new QuanLyBanDienThoaiContext();
+            return context.Products.FirstOrDefault(p => p.ProductId == productId);
+        }
+
+        public IEnumerable<OrderDetail> GetOrderDetailsForProduct(int productId)
+        {
+            var context = new QuanLyBanDienThoaiContext();
+            return context.OrderDetails.Where(od => od.ProductId == productId);
+        }
+
 
     }
 }

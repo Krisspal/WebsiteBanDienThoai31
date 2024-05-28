@@ -91,6 +91,15 @@ namespace WebDT.BLL
             return rsp;
         }
 
+        public Customer GetCustomerByID(int id)
+        {
+            Customer customer = customerRep.GetCustomerByID(id);
+            if (customer == null)
+            {
+                return null;
+            }
+            return customer;
+        }
         #endregion
     }
 }

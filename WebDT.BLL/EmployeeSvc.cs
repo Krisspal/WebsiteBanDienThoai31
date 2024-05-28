@@ -117,6 +117,16 @@ namespace WebDT.BLL
             return rsp;
         }
 
+        public Employee GetEmployeeByID(int id)
+        {
+            Employee employee = employeeRep.GetEmployeeByID(id);
+            if (employee == null)
+            {
+                return null;
+            }
+            return employee;
+        }
+
         #endregion
     }
 }

@@ -97,6 +97,12 @@ namespace WebDT.DAL
             return res;
         }
 
+        public Customer GetCustomerByID(int id)
+        {
+            var customer = All.FirstOrDefault(c => c.CustomerId == id);
+            return customer;
+        }
+
         #endregion
     }
 }

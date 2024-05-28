@@ -38,7 +38,7 @@ namespace WebDT.Web.Controllers
             return Ok(rsp);
         }
 
-        [HttpPost("CreateEmployee")]
+        [HttpPost("CreateCustomer")]
         public IActionResult CreateCustomer(CustomerReq customerReq)
         {
             var rsp = new SingleRsp();
