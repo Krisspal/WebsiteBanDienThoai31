@@ -46,6 +46,7 @@ namespace WebDT.Web
                 options.IdleTimeout = TimeSpan.FromMinutes(30);
             });
 
+            services.AddHttpContextAccessor();
 
             services.AddControllersWithViews()
             .AddNewtonsoftJson(options =>

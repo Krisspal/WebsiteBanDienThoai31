@@ -35,32 +35,28 @@ namespace WebsiteBanDienThoai31.Controllers
             return Ok(rsp);
         }
 
+        //[HttpPost("CreateEmployee")]
+        //public IActionResult CreateEmployee(EmployeeReq employeeReq)
+        //{
+        //    var rsp = new SingleRsp();
+        //    rsp = employeeSvc.CreateEmployee(employeeReq);
+        //    return Ok(rsp);
+        //}
+
         [HttpPost("CreateEmployee")]
-        public IActionResult CreateEmployee(EmployeeReq employeeReq)
+        public IActionResult CreateEmployeeWithUserId(EmployeeReq employeeReq)
         {
             var rsp = new SingleRsp();
             rsp = employeeSvc.CreateEmployee(employeeReq);
             return Ok(rsp);
         }
 
-
-        [HttpPost("CreateEmployeeByUserId")]
-        public IActionResult CreateEmployeeWithUserId(EmployeeReq employeeReq)
-        {
-            var rsp = new SingleRsp();
-            rsp = employeeSvc.CreateEmployeeByUserId(employeeReq);
-            return Ok(rsp);
-        }
-
         [HttpPut("UpdateEmployee/{id}")]
         public IActionResult UpdateEmployee(int id, [FromBody] EmployeeReq employeeReq)
         {
-            if (id != employeeReq.EmployeeId)
-            {
-                return BadRequest();
-            }
+
             var rsp = new SingleRsp();
-            rsp = employeeSvc.UpdateEmployee(employeeReq);
+            rsp = employeeSvc.UpdateEmployee(id,employeeReq);
             return Ok(rsp);
         }
 

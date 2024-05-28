@@ -40,7 +40,7 @@ namespace WebDT.BLL
             Customer c = new Customer();
 
             c.CustomerName = customerReq.CustomerName;
-            c.UserId = customerReq.UserId;
+            c.UserId = customerRep.GetNextUserId();
             c.Phone = customerReq.Phone;
             c.Address = customerReq.Address;
 
@@ -49,15 +49,15 @@ namespace WebDT.BLL
             return res;
         }
 
-        public SingleRsp UpdateCustomer(CustomerReq customerReq)
+        public SingleRsp UpdateCustomer(int id,CustomerReq customerReq)
         {
 
             var res = new SingleRsp();
             //Employee ex = new Employee();
-            var cx = customerRep.Read(customerReq.CustomerId);
+            var cx = customerRep.Read(id);
             //Cap nhat
             cx.CustomerName = customerReq.CustomerName;
-            cx.UserId = customerReq.UserId;
+            //cx.UserId = customerReq.UserId;
             cx.Phone = customerReq.Phone;
             cx.Address = customerReq.Address;
             res = customerRep.UpdateCustomer(cx);
@@ -91,6 +91,15 @@ namespace WebDT.BLL
             return rsp;
         }
 
+        public Customer GetCustomerByID(int id)
+        {
+            Customer customer = customerRep.GetCustomerByID(id);
+            if (customer == null)
+            {
+                return null;
+            }
+            return customer;
+        }
         #endregion
     }
 }

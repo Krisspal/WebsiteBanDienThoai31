@@ -8,9 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using WebDT.DAL;
 using WebDT.DAL.Models;
-using Microsoft.AspNetCore.SignalR;
-using static System.Net.WebRequestMethods;
-using System.Net.Http;
 using WebDT.Common.Req;
 using WebDT.Common.Rsp;
 using Microsoft.AspNetCore.Mvc;
@@ -34,7 +31,7 @@ namespace WebDT.BLL
             {
                 var claims = new List<Claim>
                 {
-                    new Claim(ClaimTypes.NameIdentifier, user.UserName),
+                    new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
                     new Claim(ClaimTypes.Email, user.Email),
                     new Claim(ClaimTypes.Role, user.IsAdmin == 1 ? "Admin" : "User")
                 };
@@ -53,6 +50,12 @@ namespace WebDT.BLL
             {
                 return null;
             }
+        }
+
+        public interface IAuthService
+        {
+            Task<ClaimsPrincipal> LoginAsync(string email, string password);
+            Task<bool> RegisterAsync(RegisterReq registerReq);
         }
 
         public async Task<bool> RegisterAsync(RegisterReq registerReq)
@@ -92,11 +95,13 @@ namespace WebDT.BLL
                 return false;
             }
         }
-    }
 
+    }
     public interface IAuthService
     {
         Task<ClaimsPrincipal> LoginAsync(string email, string password);
         Task<bool> RegisterAsync(RegisterReq registerReq);
     }
+
 }
+

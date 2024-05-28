@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
+using System.Security.Claims;
 using System.Text;
 using WebDT.Common.BLL;
 using WebDT.Common.Req;
@@ -12,7 +14,12 @@ namespace WebDT.BLL
     public class RatingSvc : GenericSvc<RatingRep, Rating>
     {
         #region -- Overrides --
-
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public RatingRep ratingRep;
+        public RatingSvc()
+        {
+            ratingRep = new RatingRep();
+        }
         public override SingleRsp Read(int id)
         {
             var res = new SingleRsp();
@@ -29,25 +36,26 @@ namespace WebDT.BLL
 
         #region -- Methods --
 
-        public SingleRsp CreateRating(RatingReq ratingRequest)
+        public SingleRsp CreateRating(int userid,RatingReq ratingRequest)
         {
             var res = new SingleRsp();
-            var rating = new Rating
-            {
-                UserId = ratingRequest.UserId,
-                ProductId = ratingRequest.ProductId,
-                RatingValue = ratingRequest.RatingValue,
-                Comment = ratingRequest.Comment
-            };
+            //var currentUserId = GetCurrentUserId();
+            var r = new Rating();
 
-            res = _rep.CreateRating(rating);
+            r.UserId = userid;
+            r.ProductId = ratingRequest.ProductId;
+            r.RatingValue = ratingRequest.RatingValue;
+            r.Comment = ratingRequest.Comment;
+   
+
+            res = _rep.CreateRating(r);
             return res;
         }
 
-        public SingleRsp UpdateRating(RatingReq ratingRequest)
+        public SingleRsp UpdateRating(int id,RatingReq ratingRequest)
         {
             var res = new SingleRsp();
-            var rating = _rep.Read(ratingRequest.RatingId);
+            var rating = _rep.Read(id);
             if (rating == null)
             {
                 res.SetMessage("Rating not found");
@@ -74,7 +82,12 @@ namespace WebDT.BLL
             res = _rep.DeleteRating(rating);
             return res;
         }
-
-        #endregion
+        //private int GetCurrentUserId()
+        //{
+        //    var user = _httpContextAccessor.HttpContext.User;
+        //    var userId = int.Parse(user.FindFirstValue(ClaimTypes.NameIdentifier));
+        //    return userId;
+        //}
     }
+        #endregion
 }

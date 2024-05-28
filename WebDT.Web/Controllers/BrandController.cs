@@ -27,19 +27,6 @@ namespace WebDT.Web.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost("SearchProductByBrand")]
-        public IActionResult SearchProductByBrand(string brandname)
-        {
-            var rsp = new SingleRsp();
-            rsp = brandSvc.SearchProductByBrandName(brandname);
-            if (rsp == null)
-            {
-                return BadRequest();
-            }
-            return Ok(rsp);
-        }
-
-        [AllowAnonymous]
         [HttpGet("GetAllBrand")]
         public IActionResult GetBrandAll()
         {
@@ -49,7 +36,7 @@ namespace WebDT.Web.Controllers
         }
 
         [HttpPost("CreateBrand")]
-        public IActionResult CreateEmployee(BrandReq brandReq)
+        public IActionResult CreateBrand(BrandReq brandReq)
         {
             var rsp = new SingleRsp();
             rsp = brandSvc.CreateBrand(brandReq);
@@ -57,7 +44,7 @@ namespace WebDT.Web.Controllers
         }
 
         [HttpPut("UpdateBrand/{id}")]
-        public IActionResult UpdateEmployee(int id, [FromBody] BrandReq brandReq)
+        public IActionResult UpdateBrand(int id, [FromBody] BrandReq brandReq)
         {
             var res = brandSvc.UpdateBrand(id, brandReq);
             return Ok(res);

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using WebDT.BLL;
 using WebDT.Common.Req;
 using WebDT.Common.Rsp;
@@ -18,14 +19,15 @@ namespace WebDT.Web.Controllers
             ratingSvc = new RatingSvc();
         }
         [HttpGet("GetAllRating")]
-        public IActionResult GetEmployeeByALL()
+        public IActionResult GetRatingAll()
         {
             var rsp = new SingleRsp();
             rsp.Data = ratingSvc.All;
             return Ok(rsp);
         }
-        [HttpGet("{id}")]
-        public IActionResult GetRating(int id)
+        [HttpPost]
+        [Route("GetRatingByID")]
+        public IActionResult GetRatingByID(int id)
         {
             var response = ratingSvc.Read(id);
             if (response.Data == null)
@@ -35,27 +37,23 @@ namespace WebDT.Web.Controllers
             return Ok(response.Data);
         }
 
-        [HttpPost]
-        public IActionResult CreateRating(RatingReq ratingRequest)
+        //[HttpPost("CreateRating")]
+        //public IActionResult CreateRating(RatingReq ratingRequest)
+        //{
+        //    var rsp = new SingleRsp();
+        //    rsp = ratingSvc.CreateRating(ratingRequest);
+        //    return Ok(rsp);
+        //}
+
+        [HttpPut("UpdateRating")]
+        public IActionResult UpdateRating(int id, RatingReq ratingRequest)
         {
             var rsp = new SingleRsp();
-            rsp = ratingSvc.CreateRating(ratingRequest);
+            rsp = ratingSvc.UpdateRating(id,ratingRequest);
             return Ok(rsp);
         }
 
-        [HttpPut("{id}")]
-        public IActionResult UpdateRating(int id, RatingReq ratingRequest)
-        {
-            ratingRequest.RatingId = id;
-            var response = ratingSvc.UpdateRating(ratingRequest);
-            if (response.Success)
-            {
-                return Ok(response.Data);
-            }
-            return BadRequest(response.Message);
-        }
-
-        [HttpDelete("{id}")]
+        [HttpDelete("DeleteRating")]
         public IActionResult DeleteRating(int id)
         {
             var response = ratingSvc.DeleteRating(id);
@@ -65,5 +63,34 @@ namespace WebDT.Web.Controllers
             }
             return BadRequest(response.Message);
         }
+        [HttpPost]
+        public IActionResult CreateRating(RatingReq ratingRequest, [FromServices] IHttpContextAccessor httpContextAccessor)
+        {
+            var rsp = new SingleRsp();
+
+            var user = httpContextAccessor.HttpContext.User;
+            var userId = int.Parse(user.FindFirstValue(ClaimTypes.NameIdentifier));
+            //var currentUserId = GetCurrentUserId(httpContextAccessor);
+
+            rsp = ratingSvc.CreateRating(userId, ratingRequest);
+            return Ok(rsp);
+        }
+
+        //private int GetCurrentUserId(IHttpContextAccessor httpContextAccessor)
+        //{
+        //    // Assuming you have a claims-based authentication system
+        //    if (httpContextAccessor.HttpContext != null && httpContextAccessor.HttpContext.User != null)
+        //    {
+        //        var user = httpContextAccessor.HttpContext.User;
+        //        var userId = int.Parse(user.FindFirstValue(ClaimTypes.NameIdentifier));
+        //        return userId;
+        //    }
+        //    else
+        //    {
+        //        // Handle the case where HttpContext or User is null
+        //        // You can return a default value or throw an exception, depending on your requirements
+        //        return 0;
+        //    }
+        //}
     }
 }

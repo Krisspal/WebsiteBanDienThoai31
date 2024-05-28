@@ -38,7 +38,7 @@ namespace WebDT.Web.Controllers
             return Ok(rsp);
         }
 
-        [HttpPost("CreateEmployee")]
+        [HttpPost("CreateCustomer")]
         public IActionResult CreateCustomer(CustomerReq customerReq)
         {
             var rsp = new SingleRsp();
@@ -49,12 +49,8 @@ namespace WebDT.Web.Controllers
         [HttpPut("UpdateCustomer/{id}")]
         public IActionResult UpdateCustomer(int id, [FromBody] CustomerReq customerReq)
         {
-            if (id != customerReq.CustomerId)
-            {
-                return BadRequest();
-            }
             var rsp = new SingleRsp();
-            rsp = customerSvc.UpdateCustomer(customerReq);
+            rsp = customerSvc.UpdateCustomer(id,customerReq);
             return Ok(rsp);
         }
 
