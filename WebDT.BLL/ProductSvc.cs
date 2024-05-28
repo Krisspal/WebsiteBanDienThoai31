@@ -130,54 +130,49 @@ namespace WebDT.BLL
         public SingleRsp UpdateProduct(ProductReq productReq, string id)
         {
             int result;
-            var context = new QuanLyBanDienThoaiContext();
             var res = new SingleRsp();
-            using (var tran = context.Database.BeginTransaction())
+            try
             {
-                try
+                if (int.TryParse(id, out result))
                 {
-                    if (int.TryParse(id, out result))
+                    var product = productRep.Read(result);
+                    if (product != null)
                     {
-                        var product = context.Products.FirstOrDefault(u => u.ProductId == result);
-                        if (product != null)
-                        {
-                            product.BrandId = productReq.BrandId;
-                            product.ProductName = productReq.ProductName;
-                            product.Price = productReq.Price;
-                            product._5g = productReq._5g;
-                            product.Processor = productReq.Processor;
-                            product.Battery = productReq.Battery;
-                            product.FastCharge = productReq.FastCharge;
-                            product.Ram = productReq.Ram;
-                            product.Memory = productReq.Memory;
-                            product.Screen = productReq.Screen;
-                            product.RefreshRate = productReq.RefreshRate;
-                            product.Os = productReq.Os;
-                            product.RearCamera = productReq.RearCamera;
-                            product.FrontCamera = productReq.FrontCamera;
-                            product.ExtendMemory = productReq.ExtendMemory;
-                            context.SaveChanges();
-                            tran.Commit();
-                            res.SetMessage("Update thanh cong");
-                        }
-                        else
-                        {
-                            res.SetMessage("Khong tim thay san pham");
-                            res.SetError("404", "Khong tim thay san pham");
-                        }
+                        product.BrandId = productReq.BrandId;
+                        product.ProductName = productReq.ProductName;
+                        product.Price = productReq.Price;
+                        product._5g = productReq._5g;
+                        product.Processor = productReq.Processor;
+                        product.Battery = productReq.Battery;
+                        product.FastCharge = productReq.FastCharge;
+                        product.Ram = productReq.Ram;
+                        product.Memory = productReq.Memory;
+                        product.Screen = productReq.Screen;
+                        product.RefreshRate = productReq.RefreshRate;
+                        product.Os = productReq.Os;
+                        product.RearCamera = productReq.RearCamera;
+                        product.FrontCamera = productReq.FrontCamera;
+                        product.ExtendMemory = productReq.ExtendMemory;
+                        res = productRep.UpdateProduct(product);
+                        res.SetMessage("Update thanh cong");
                     }
                     else
                     {
-                        res.SetError("400", "Ma san pham khong hop le");
+                        res.SetMessage("Khong tim thay san pham");
+                        res.SetError("404", "Khong tim thay san pham");
                     }
                 }
-                catch (Exception ex)
+                else
                 {
-                    tran.Rollback();
-                    res.SetError(ex.StackTrace);
-                    res.SetMessage(ex.Message);
+                    res.SetError("400", "Ma san pham khong hop le");
                 }
             }
+            catch (Exception ex)
+            {
+                res.SetError(ex.StackTrace);
+                res.SetMessage(ex.Message);
+            }
+
             return res;
         }
 
