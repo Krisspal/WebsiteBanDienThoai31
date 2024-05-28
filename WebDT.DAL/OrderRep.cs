@@ -83,9 +83,17 @@ namespace WebDT.DAL
                 {
                     try
                     {
+                        List<OrderDetail> a = context.OrderDetails.Where(o => o.OrderId == order.OrderId).ToList();
+                        foreach (var detail in a)
+                        {
+                            context.OrderDetails.Remove(detail);
+                        }
+
                         var p = context.Orders.Remove(order);
                         context.SaveChanges();
                         tran.Commit();
+
+
                     }
                     catch (Exception ex)
                     {
@@ -96,42 +104,23 @@ namespace WebDT.DAL
             }
             return res;
         }
-        //public SingleRsp CompleteOrder(int orderId, int customerId, string shipAddress)
-        //{
-        //    var res = new SingleRsp();
-        //    using (var context = new QuanLyBanDienThoaiContext())
-        //    {
-        //        using (var tran = context.Database.BeginTransaction())
-        //        {
-        //            try
-        //            {
-        //                var order = context.Orders.Include(o => o.OrderDetails).FirstOrDefault(o => o.OrderId == orderId);
-        //                if (order == null)
-        //                {
-        //                    res.SetMessage("Order not found");
-        //                    res.SetError("404", "Order not found");
-        //                    return res;
-        //                }
+        public int getproducprice(int id)
+        {
+            var context = new QuanLyBanDienThoaiContext();
+            var price = context.Products.Where(o => o.ProductId == id).Select(p => p.Price).FirstOrDefault();
+            int a = (int)price;
+            return a;
 
-        //                order.CustomerId = customerId;
-        //                order.ShipAddress = shipAddress;
-        //                order.OrderDate = DateTime.UtcNow;
+        }
+        public int getuserid(int id)
+        {
+            var context = new QuanLyBanDienThoaiContext();
+            var price = context.Customers.Where(o => o.UserId == id).Select(p => p.CustomerId).FirstOrDefault();
+            int a = (int)price;
+            return a;
 
-        //                context.SaveChanges();
-        //                tran.Commit();
-        //                res.Data = order;
-        //                res.SetMessage("Order completed successfully");
-        //            }
-        //            catch (Exception ex)
-        //            {
-        //                tran.Rollback();
-        //                res.SetError(ex.StackTrace);
-        //                res.SetMessage("Failed to complete order");
-        //            }
-        //        }
-        //    }
-        //    return res;
-        //}
+        }
+
         #endregion
     }
 }

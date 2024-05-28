@@ -51,7 +51,7 @@ namespace WebDT.Web.Controllers
             var authProperties = new AuthenticationProperties
             {
                 IsPersistent = false,
-        };
+            };
             if (user != null)
             {
                 await HttpContext.SignInAsync(claims, authProperties);
@@ -110,12 +110,12 @@ namespace WebDT.Web.Controllers
                     else
                         res.Name = CurrentUser.CustomerName;
                 }
-            }    
+            }
             return Ok(res);
         }
 
         [HttpPost("Register")]
-        public async Task<ActionResult<AuthRsp>>Register(RegisterReq registerReq)
+        public async Task<ActionResult<AuthRsp>> Register(RegisterReq registerReq)
         {
             var success = await _authService.RegisterAsync(registerReq);
             if (success)

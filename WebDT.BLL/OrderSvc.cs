@@ -41,26 +41,30 @@ namespace WebDT.BLL
             res.Data = _rep.Read(id);
             return res;
         }
-        public SingleRsp CreateOrder(OrderReq orderReq)
+        public SingleRsp CreateOrder(OrderReq orderReq, int userID)
         {
+
             var res = new SingleRsp();
             try
             {
+
+
                 var order = new Order
                 {
-                    CustomerId = orderReq.CustomerId,
+                    CustomerId = orderRep.getuserid(userID),
                     EmployeeId = orderReq.EmployeeId,
                     ShipAddress = orderReq.ShipAddress,
                     OrderDate = DateTime.UtcNow,
                     OrderDetails = orderReq.OrderDetails.Select(detail => new OrderDetail
                     {
                         ProductId = detail.ProductId,
-                        UnitPrice = detail.UnitPrice,
+                        UnitPrice = orderRep.getproducprice(detail.ProductId),
                         Quantity = detail.Quantity
                     }).ToList()
                 };
                 res = orderRep.CreateOrder(order);
                 res.SetMessage("Tạo order thành công");
+
             }
             catch (Exception ex)
             {
@@ -73,57 +77,62 @@ namespace WebDT.BLL
         //    var res = orderRep.CompleteOrder(orderId, customerId, shipAddress);
         //    return res;
         //}
-        public SingleRsp UpdateOrder(OrderReq orderReq, string id)
+        public SingleRsp UpdateOrder(CreateOrderReq createOrderReq, int id)
         {
-            int result;
-            var context = new QuanLyBanDienThoaiContext();
             var res = new SingleRsp();
-            using (var tran = context.Database.BeginTransaction())
+
+
+            try
             {
-                try
+                var order = orderRep.Read(id);
+                if (order != null)
                 {
-                    if (int.TryParse(id, out result))
-                    {
-                        var order = context.Orders.FirstOrDefault(u => u.OrderId == result);
-                        if (order != null)
-                        {
-                            order.ShipAddress = orderReq.ShipAddress;
-                            context.SaveChanges();
-                            tran.Commit();
-                            res.SetMessage("Update thanh cong");
-                        }
-                        else
-                        {
-                            res.SetMessage("Không tìm thấy đơn hàng");
-                            res.SetError("404", "\"Không tìm thấy đơn hàng");
-                        }
-                    }
+                    DateTime now = DateTime.UtcNow;
+                    TimeSpan diference = (TimeSpan)(order.OrderDate - now);
+                    if ((int)(diference.TotalMinutes) < 30)
+                        res.SetMessage("Đơn hàng đã được giao");
                     else
                     {
-                        res.SetError("400", "Ma san pham khong hop le");
+                        order.ShipAddress = createOrderReq.ShipAddress;
+                        orderRep.UpdateOrder(order);
+                        res.SetMessage("Update thanh cong");
                     }
                 }
-                catch (Exception ex)
+
+                else
                 {
-                    tran.Rollback();
-                    res.SetError(ex.StackTrace);
-                    res.SetMessage(ex.Message);
+                    res.SetMessage("Không tìm thấy đơn hàng");
+                    res.SetError("404", "\"Không tìm thấy đơn hàng");
                 }
             }
+
+
+
+            catch (Exception ex)
+            {
+                res.SetError(ex.StackTrace);
+                res.SetMessage(ex.Message);
+            }
+
             return res;
         }
         public SingleRsp DeleteOrder(int id)
         {
             var res = new SingleRsp();
-            var context = new QuanLyBanDienThoaiContext();
             try
             {
-                var order = context.Orders.Find(id);
+                var order = orderRep.Read(id);
                 if (order != null)
                 {
-                    context.Orders.Remove(order);
-                    context.SaveChanges();
-                    res.SetMessage("Đã xóa đơn hàng");
+                    DateTime now = DateTime.UtcNow;
+                    TimeSpan diference = (TimeSpan)(order.OrderDate - now);
+                    if ((int)(diference.TotalMinutes) < 30)
+                        res.SetMessage("Đơn hàng đã được giao");
+                    else
+                    {
+                        orderRep.DeleteOrder(order);
+                        res.SetMessage("Đã xóa đơn hàng");
+                    }
                 }
                 else
                 {
