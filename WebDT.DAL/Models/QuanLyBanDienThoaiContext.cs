@@ -124,11 +124,16 @@ namespace WebDT.DAL.Models
                     .HasForeignKey(d => d.EmployeeId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Orders_Employees");
+
+                entity.HasMany(o => o.OrderDetails)
+                        .WithOne(d => d.Order)
+                        .HasForeignKey(d => d.OrderId);   
+
             });
 
             modelBuilder.Entity<OrderDetail>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(od => new { od.OrderId, od.ProductId });
 
                 entity.Property(e => e.OrderId).HasColumnName("OrderID");
 
@@ -196,7 +201,19 @@ namespace WebDT.DAL.Models
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Ratings_Users");
             });
+            //modelBuilder.Entity<OrderDetail>()
+            //    .HasKey(od => new { od.OrderId, od.ProductId });
 
+            // Configure the Order - OrderDetail relationship
+            modelBuilder.Entity<Order>()
+                .HasMany(o => o.OrderDetails)
+                .WithOne(d => d.Order)
+                .HasForeignKey(d => d.OrderId);
+
+
+            // Configure other relationships and settings as needed
+
+            //OnModelCreatingPartial(modelBuilder);
             //modelBuilder.Entity<User>(entity =>
             //{
             //    entity.Property(e => e.UserId).HasColumnName("UserID");
