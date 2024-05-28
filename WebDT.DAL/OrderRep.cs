@@ -6,6 +6,10 @@ using WebDT.DAL.Models;
 using System.Linq;
 using WebDT.Common.Rsp;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace WebDT.DAL
 {
@@ -28,6 +32,23 @@ namespace WebDT.DAL
 
         #endregion
         #region -- Methods --
+        public int getproducprice(int id)
+        {
+            var context = new QuanLyBanDienThoaiContext();
+            var price = context.Products.Where(o => o.ProductId == id).Select(p => p.Price).FirstOrDefault();
+            int a = (int)price;
+            return a;
+
+        }
+        public int getuserid(int id)
+        {
+            var context = new QuanLyBanDienThoaiContext();
+            var price = context.Customers.Where(o => o.UserId == id).Select(p => p.CustomerId).FirstOrDefault();
+            int a = (int)price;
+            return a;
+
+        }
+
         public SingleRsp CreateOrder(Order order)
         {
             var res = new SingleRsp();
@@ -83,9 +104,17 @@ namespace WebDT.DAL
                 {
                     try
                     {
+                        List<OrderDetail> a = context.OrderDetails.Where(o => o.OrderId == order.OrderId).ToList();
+                        foreach (var detail in a)
+                        {
+                           context.OrderDetails.Remove(detail);
+                        }
+
                         var p = context.Orders.Remove(order);
                         context.SaveChanges();
                         tran.Commit();
+
+
                     }
                     catch (Exception ex)
                     {

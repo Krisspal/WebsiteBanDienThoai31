@@ -6,10 +6,10 @@ namespace WebDT.Common.Req
 {
     public class OrderReq
     {
-        public int OrderId { get; set; }
-        public int CustomerId { get; set; }
+        public int OrderId { get; }
+        public int CustomerId { get; }
         public int EmployeeId { get; set; }
-        public DateTime? OrderDate { get; set; }
+        public DateTime? OrderDate { get;  }
         public string ShipAddress { get; set; }
 
         public List<OrderDetailReq> OrderDetails { get; set; }

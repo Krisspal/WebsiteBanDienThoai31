@@ -124,15 +124,12 @@ namespace WebDT.BLL
         public SingleRsp UpdateProduct(ProductReq productReq, string id)
         {
             int result;
-            var context = new QuanLyBanDienThoaiContext();
             var res = new SingleRsp();
-            using (var tran = context.Database.BeginTransaction())
-            {
                 try
                 {
                     if (int.TryParse(id, out result))
                     {
-                        var product = context.Products.FirstOrDefault(u => u.ProductId == result);
+                        var product = productRep.Read(result);
                         if (product != null)
                         {
                             product.BrandId = productReq.BrandId;
@@ -150,8 +147,7 @@ namespace WebDT.BLL
                             product.RearCamera = productReq.RearCamera;
                             product.FrontCamera = productReq.FrontCamera;
                             product.ExtendMemory = productReq.ExtendMemory;
-                            context.SaveChanges();
-                            tran.Commit();
+                        res = productRep.UpdateProduct(product);
                             res.SetMessage("Update thanh cong");
                         }
                         else
@@ -167,25 +163,22 @@ namespace WebDT.BLL
                 }
                 catch (Exception ex)
                 {
-                    tran.Rollback();
                     res.SetError(ex.StackTrace);
                     res.SetMessage(ex.Message);
                 }
-            }
+            
             return res;
         }
 
         public SingleRsp DeleteProduct(int id)
         {
             var res = new SingleRsp();
-            var context = new QuanLyBanDienThoaiContext();
             try
             {
-                var product = context.Products.Find(id);
+                var product = productRep.Read(id);
                 if (product != null)
                 {
-                    context.Products.Remove(product);
-                    context.SaveChanges();
+                    res = productRep.DeleteProduct(product);
                     res.SetMessage("Đã xóa sản phẩm");
                 }
                 else

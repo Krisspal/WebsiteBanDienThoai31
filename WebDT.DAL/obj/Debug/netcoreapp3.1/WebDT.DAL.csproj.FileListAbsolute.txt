@@ -66,3 +66,19 @@ X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DA
 X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.dll
 X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.pdb
 X:\LTCSDL\Do An\WebsiteBanDienThoai31\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.genruntimeconfig.cache
+D:\LTCSDL\DFD\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.DAL.deps.json
+D:\LTCSDL\DFD\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.DAL.runtimeconfig.json
+D:\LTCSDL\DFD\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.DAL.runtimeconfig.dev.json
+D:\LTCSDL\DFD\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.DAL.dll
+D:\LTCSDL\DFD\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.DAL.pdb
+D:\LTCSDL\DFD\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.Common.dll
+D:\LTCSDL\DFD\WebDT.DAL\bin\Debug\netcoreapp3.1\WebDT.Common.pdb
+D:\LTCSDL\DFD\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.csproj.AssemblyReference.cache
+D:\LTCSDL\DFD\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\LTCSDL\DFD\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.AssemblyInfoInputs.cache
+D:\LTCSDL\DFD\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.AssemblyInfo.cs
+D:\LTCSDL\DFD\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.csproj.CoreCompileInputs.cache
+D:\LTCSDL\DFD\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.csproj.Up2Date
+D:\LTCSDL\DFD\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.dll
+D:\LTCSDL\DFD\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.pdb
+D:\LTCSDL\DFD\WebDT.DAL\obj\Debug\netcoreapp3.1\WebDT.DAL.genruntimeconfig.cache

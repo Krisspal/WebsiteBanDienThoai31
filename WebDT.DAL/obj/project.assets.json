@@ -6110,19 +6110,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MSII\\.nuget\\packages\\": {}
+    "C:\\Users\\HP\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "X:\\LTCSDL\\Do An\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj",
+      "projectUniqueName": "D:\\LTCSDL\\DFD\\WebDT.DAL\\WebDT.DAL.csproj",
       "projectName": "WebDT.DAL",
-      "projectPath": "X:\\LTCSDL\\Do An\\WebsiteBanDienThoai31\\WebDT.DAL\\WebDT.DAL.csproj",
-      "packagesPath": "C:\\Users\\MSII\\.nuget\\packages\\",
-      "outputPath": "X:\\LTCSDL\\Do An\\WebsiteBanDienThoai31\\WebDT.DAL\\obj\\",
+      "projectPath": "D:\\LTCSDL\\DFD\\WebDT.DAL\\WebDT.DAL.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "D:\\LTCSDL\\DFD\\WebDT.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\MSII\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6130,14 +6130,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "X:\\LTCSDL\\Do An\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj": {
-              "projectPath": "X:\\LTCSDL\\Do An\\WebsiteBanDienThoai31\\WebDT.Common\\WebDT.Common.csproj"
+            "D:\\LTCSDL\\DFD\\WebDT.Common\\WebDT.Common.csproj": {
+              "projectPath": "D:\\LTCSDL\\DFD\\WebDT.Common\\WebDT.Common.csproj"
             }
           }
         }
@@ -6204,7 +6205,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
