@@ -22,6 +22,7 @@ namespace WebDT.DAL
             public int ProductId { get; set; }
             public int TotalOrders { get; set; }
             public int TotalQuantity { get; set; }
+            public decimal TotalRevenue { get; set; }
         }
 
 

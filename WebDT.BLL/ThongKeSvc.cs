@@ -69,12 +69,14 @@ namespace WebDT.BLL
 
             var totalOrders = orderDetails.Count();
             var totalQuantity = orderDetails.Sum(od => od.Quantity ?? 0);
+            var totalRevenue = orderDetails.Sum(od => od.Quantity * od.UnitPrice);
 
             return new ProductStatistics
             {
                 ProductId = productId,
                 TotalOrders = totalOrders,
-                TotalQuantity = totalQuantity
+                TotalQuantity = totalQuantity,
+                TotalRevenue = (decimal)totalRevenue,
             };
         }
     }
