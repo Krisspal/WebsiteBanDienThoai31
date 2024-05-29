@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using WebDT.BLL;
@@ -17,6 +18,7 @@ namespace WebDT.Web.Controllers
             orderSvc = new OrderSvc();
         }
         [HttpGet("SearchOrder")]
+        [Authorize(Roles = "Admin")]
         public IActionResult SearchOrder(int id)
         {
             var res = new SingleRsp();
@@ -24,6 +26,7 @@ namespace WebDT.Web.Controllers
             return Ok(res);
         }
         [HttpPost("CreateOrder")]
+        [Authorize(Roles = "Customer")]
         public IActionResult CreateOrder([FromBody] OrderReq createOrderReq /*[FromServices] HttpContextAccessor httpContextAccessor*/)
         {
             var claimsIdentity = HttpContext.User.Identity as ClaimsIdentity;
@@ -51,6 +54,7 @@ namespace WebDT.Web.Controllers
         //}
 
         [HttpPut("UpdateOrder")]
+        [Authorize(Roles = "Admin")]
         public IActionResult UpdateOrder([FromBody] CreateOrderReq createOrderReq, int id)
         {
             var res = orderSvc.UpdateOrder(createOrderReq, id);
@@ -58,6 +62,7 @@ namespace WebDT.Web.Controllers
         }
 
         [HttpDelete("DeleteOrder")]
+        [Authorize(Roles = "Admin")]
         public IActionResult DeleteOrder(int id)
         {
             var res = new SingleRsp();
