@@ -13,6 +13,7 @@ namespace WebDT.BLL
     public class CustomerSvc : GenericSvc<CustomerRep, Customer>
     {
         private CustomerRep customerRep;
+        private EmployeeRep employeeRep;
         #region -- Overrides --
 
         public override SingleRsp Read(int id)
@@ -55,6 +56,12 @@ namespace WebDT.BLL
             Customer c = new Customer();
             int nextUserId = customerRep.GetNextUserId();
 
+            var existingEmployee = employeeRep.All.FirstOrDefault(e => e.UserId == nextUserId);
+            if (existingEmployee != null)
+            {
+                res.SetError($"The UserId {nextUserId} is already associated with an employee.");
+                return res;
+            }
             var existingCustomer = customerRep.All.FirstOrDefault(x => x.UserId == nextUserId);
             if (existingCustomer != null)
             {

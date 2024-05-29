@@ -107,7 +107,7 @@ namespace WebDT.DAL
             using (var context = new QuanLyBanDienThoaiContext())
             {
                 int latestUserId = 0;
-                var last = context.Customers.OrderByDescending(e => e.UserId).FirstOrDefault();
+                var last = context.Users.OrderByDescending(e => e.UserId).FirstOrDefault();
                 if (last != null)
                 {
                     latestUserId = (int)last.UserId;
