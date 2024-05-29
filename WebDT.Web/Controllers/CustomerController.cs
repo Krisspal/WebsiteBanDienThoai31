@@ -38,11 +38,18 @@ namespace WebDT.Web.Controllers
             return Ok(rsp);
         }
 
+        //[HttpPost("CreateCustomer")]
+        //public IActionResult CreateCustomer(CustomerReq customerReq)
+        //{
+        //    var rsp = new SingleRsp();
+        //    rsp = customerSvc.CreateCustomer(customerReq);
+        //    return Ok(rsp);
+        //}
         [HttpPost("CreateCustomer")]
         public IActionResult CreateCustomer(CustomerReq customerReq)
         {
             var rsp = new SingleRsp();
-            rsp = customerSvc.CreateCustomer(customerReq);
+            rsp = customerSvc.CreateCustomerWithUserID(customerReq);
             return Ok(rsp);
         }
 

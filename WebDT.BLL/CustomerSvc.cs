@@ -6,6 +6,7 @@ using WebDT.Common.Rsp;
 using WebDT.DAL.Models;
 using WebDT.DAL;
 using WebDT.Common.BLL;
+using System.Linq;
 
 namespace WebDT.BLL
 {
@@ -34,13 +35,35 @@ namespace WebDT.BLL
         {
             customerRep = new CustomerRep();
         }
-        public SingleRsp CreateCustomer(CustomerReq customerReq)
+        //public SingleRsp CreateCustomer(CustomerReq customerReq)
+        //{
+        //    var res = new SingleRsp();
+        //    Customer c = new Customer();
+
+        //    c.UserId = customerReq.UserId;
+        //    c.CustomerName = customerReq.CustomerName;
+        //    c.Phone = customerReq.Phone;
+        //    c.Address = customerReq.Address;
+
+        //    res = customerRep.CreateCustomer(c);
+
+        //    return res;
+        //}
+        public SingleRsp CreateCustomerWithUserID(CustomerReq customerReq)
         {
             var res = new SingleRsp();
             Customer c = new Customer();
+            int nextUserId = customerRep.GetNextUserId();
+
+            var existingCustomer = customerRep.All.FirstOrDefault(x => x.UserId == nextUserId);
+            if (existingCustomer != null)
+            {
+                res.SetError($"Customer with UserId {nextUserId} already exists.Please create new User");
+                return res;
+            }
 
             c.CustomerName = customerReq.CustomerName;
-            c.UserId = customerRep.GetNextUserId();
+            c.UserId = nextUserId;
             c.Phone = customerReq.Phone;
             c.Address = customerReq.Address;
 

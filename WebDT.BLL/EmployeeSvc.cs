@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Intrinsics.X86;
+using System.Security.Cryptography;
 using System.Text;
 using WebDT.Common.BLL;
 using WebDT.Common.Req;
@@ -55,38 +57,62 @@ namespace WebDT.BLL
         public SingleRsp CreateEmployee(EmployeeReq employeeReq)
         {
             var res = new SingleRsp();
-            Employee e = new Employee();
+            try
+            {
+                Employee e = new Employee();
+                int nextUserId = employeeRep.GetNextUserId();
 
-            e.UserId = employeeRep.GetNextUserId();
-            e.EmployeeName = employeeReq.EmployeeName;
-            e.Gender = employeeReq.Gender;
-            e.BirthDate = employeeReq.BirthDate;
-            e.Idcard = employeeReq.Idcard;
-            e.Title = employeeReq.Title;
-            e.Phone = employeeReq.Phone;
-            e.Salary = employeeReq.Salary;
+                var existingEmp = employeeRep.All.FirstOrDefault(x => x.UserId == nextUserId);
+                if (existingEmp != null)
+                {
+                    res.SetError($"Employee with UserId {nextUserId} already exists.Please create new User");
+                    return res;
+                }
 
-            res = employeeRep.CreateEmployee(e);
+                e.UserId = nextUserId;
+                e.EmployeeName = employeeReq.EmployeeName;
+                e.Gender = employeeReq.Gender;
+                e.BirthDate = employeeReq.BirthDate;
+                e.Idcard = employeeReq.Idcard;
+                e.Title = employeeReq.Title;
+                e.Phone = employeeReq.Phone;
+                e.Salary = employeeReq.Salary;
+
+                res = employeeRep.CreateEmployee(e);
+            }
+            catch (Exception ex)
+            {
+
+                res.SetError(ex.StackTrace);
+                res.SetMessage("Failed to create employee.");
+            }
 
             return res;
         }
 
         public SingleRsp UpdateEmployee(int id,EmployeeReq employeeReq)
         {
-
             var res = new SingleRsp();
-            //Employee ex = new Employee();
-            var ex = employeeRep.Read(id);
-            //Cap nhat
-            //ex.UserId = employeeReq.UserId;
-            ex.EmployeeName = employeeReq.EmployeeName;
-            ex.Gender = employeeReq.Gender;
-            ex.BirthDate = employeeReq.BirthDate;
-            ex.Idcard = employeeReq.Idcard;
-            ex.Title = employeeReq.Title;
-            ex.Phone = employeeReq.Phone;
-            ex.Salary = employeeReq.Salary;
-            res = employeeRep.UpdateEmployee(ex);
+            try
+            {
+                //Employee ex = new Employee();
+                var ex = employeeRep.Read(id);
+                //Cap nhat
+                //ex.UserId = employeeReq.UserId;
+                ex.EmployeeName = employeeReq.EmployeeName;
+                ex.Gender = employeeReq.Gender;
+                ex.BirthDate = employeeReq.BirthDate;
+                ex.Idcard = employeeReq.Idcard;
+                ex.Title = employeeReq.Title;
+                ex.Phone = employeeReq.Phone;
+                ex.Salary = employeeReq.Salary;
+                res = employeeRep.UpdateEmployee(ex);;
+            }
+            catch (Exception ex)
+            {
+                res.SetError(ex.StackTrace);
+                res.SetMessage("Failed to update employee.");
+            }
             return res;
         }
 
