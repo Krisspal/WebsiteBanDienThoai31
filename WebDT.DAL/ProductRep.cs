@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using WebDT.Common.DAL;
 using WebDT.Common.Rsp;
@@ -39,22 +40,24 @@ namespace WebDT.DAL
                         var p = context.Products.Add(product);
                         context.SaveChanges();
                         tran.Commit();
+                        res.SetMessage("Tạo sản phẩm thành công");
+
                     }
                     catch (Exception ex)
                     {
                         tran.Rollback();
-                        res.SetMessage(ex.Message);
+                        res.SetError(ex.StackTrace);
+                        res.SetMessage("Tạo sản phẩm thất bại")
+;
                     }
                 }
             }
             return res;
 
         }
-        public SingleRsp SearchProduct(string keyWord)
+        public List<Product> searchProduct(string Keyword)
         {
-            var res = new SingleRsp();
-            res.Data = All.Where(x => x.ProductName.Contains(keyWord));
-            return res;
+            return All.Where(x => x.ProductName.Contains(Keyword)).ToList();
         }
 
         public SingleRsp SearchProductByBrandName(string brandName)
@@ -75,7 +78,7 @@ namespace WebDT.DAL
             catch (Exception ex)
             {
                 res.SetError(ex.StackTrace);
-                res.SetMessage("Khong tim thay brand");
+                res.SetError("Khong tim thay brand");
             }
             return res;
         }
@@ -110,14 +113,18 @@ namespace WebDT.DAL
                 {
                     try
                     {
+
                         var p = context.Products.Update(product);
                         context.SaveChanges();
                         tran.Commit();
+                        res.SetMessage("Cập nhật sản phẩm thành công");
+
                     }
                     catch (Exception ex)
                     {
                         tran.Rollback();
                         res.SetError(ex.StackTrace);
+                        res.SetMessage("Cập nhật không thành công");
                     }
                 }
             }

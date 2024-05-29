@@ -48,7 +48,7 @@ namespace WebDT.DAL
     }
 
     public interface IUserAuthRep
-    { 
+    {
         Task<User> GetUserByUserNameAndPassword(string email, string password);
         Task<User> CheckExistUser(string username, string email, string phone);
         Task<Customer> CheckExistCustomer(string phone);

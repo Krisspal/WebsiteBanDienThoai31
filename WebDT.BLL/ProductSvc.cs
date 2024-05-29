@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Transactions;
 using WebDT.Common.BLL;
@@ -52,14 +53,13 @@ namespace WebDT.BLL
             var res = new SingleRsp();
             try
             {
-                var products = All.Where(x => x.ProductName.Contains(s.Keyword));
-                if (products != null)
+                var products = All.Where(p => p.ProductName.Contains(s.Keyword)).ToList();
+                if (products.Count() != 0)
                 {
-                    var offset = (s.Page - 1) * s.Size;
-                    var total = products.Count();
-                    int totalPage = (total % s.Size) == 0 ? (int)(total / s.Size) :
-                        (int)(1 + (total / s.Size));
-                    var data = products.OrderBy(x => x.ProductName).Skip(offset).Take(s.Size).ToList();
+                    int offset = (s.Page - 1) * s.Size;
+                    int total = products.Count();
+                    int totalPage = (total % s.Size) == 0 ? total / s.Size : 1 + (total / s.Size);
+                    var data = products.Skip(offset).Take(s.Size).ToList();
                     var obj = new
                     {
                         Data = data,
@@ -69,6 +69,7 @@ namespace WebDT.BLL
                         Size = s.Size
 
                     };
+
                     res.Data = obj;
                 }
                 else
@@ -103,22 +104,30 @@ namespace WebDT.BLL
             Product product = new Product();
             try
             {
-               product.BrandId = productReq.BrandId;
-               product.ProductName = productReq.ProductName;
-               product.Price = productReq.Price;
-               product._5g = productReq._5g;
-               product.Processor = productReq.Processor;
-               product.Battery = productReq.Battery;
-               product.FastCharge = productReq.FastCharge;
-               product.Ram = productReq.Ram;
-               product.Memory = productReq.Memory;
-               product.Screen = productReq.Screen;
-               product.RefreshRate = productReq.RefreshRate;
-               product.Os = productReq.Os;
-               product.RearCamera = productReq.RearCamera;
-               product.FrontCamera = productReq.FrontCamera;
-               product.ExtendMemory = productReq.ExtendMemory;
-               res = productRep.CreateProduct(product);
+                if (productReq.ProductName == null || productReq.BrandId <= 0 || productReq.Price <= 0 || productReq.ProductName == "string")
+                {
+                    res.SetError("Thiếu thông tin hãng, tên sản phẩm, giá tiền");
+                }
+                else
+                {
+
+                    product.BrandId = productReq.BrandId;
+                    product.ProductName = productReq.ProductName;
+                    product.Price = productReq.Price;
+                    product._5g = productReq._5g;
+                    product.Processor = productReq.Processor;
+                    product.Battery = productReq.Battery;
+                    product.FastCharge = productReq.FastCharge;
+                    product.Ram = productReq.Ram;
+                    product.Memory = productReq.Memory;
+                    product.Screen = productReq.Screen;
+                    product.RefreshRate = productReq.RefreshRate;
+                    product.Os = productReq.Os;
+                    product.RearCamera = productReq.RearCamera;
+                    product.FrontCamera = productReq.FrontCamera;
+                    product.ExtendMemory = productReq.ExtendMemory;
+                    res = productRep.CreateProduct(product);
+                }
             }
             catch (Exception ex)
             {
@@ -131,62 +140,70 @@ namespace WebDT.BLL
         {
             int result;
             var res = new SingleRsp();
-
             try
             {
                 if (int.TryParse(id, out result))
                 {
                     var product = productRep.Read(result);
+
                     if (product != null)
                     {
-                        product.BrandId = productReq.BrandId;
-                        product.ProductName = productReq.ProductName;
-                        product.Price = productReq.Price;
-                        product._5g = productReq._5g;
-                        product.Processor = productReq.Processor;
-                        product.Battery = productReq.Battery;
-                        product.FastCharge = productReq.FastCharge;
-                        product.Ram = productReq.Ram;
-                        product.Memory = productReq.Memory;
-                        product.Screen = productReq.Screen;
-                        product.RefreshRate = productReq.RefreshRate;
-                        product.Os = productReq.Os;
-                        product.RearCamera = productReq.RearCamera;
-                        product.FrontCamera = productReq.FrontCamera;
-                        product.ExtendMemory = productReq.ExtendMemory;
-                        res = productRep.UpdateProduct(product);
-                        res.SetMessage("Update thanh cong");
+                        if (productReq.ProductName == null || productReq.BrandId <= 0 || productReq.Price <= 0 || productReq.ProductName == "string")
+                        {
+                            res.SetError("Thiếu thông tin hãng, tên sản phẩm, giá tiền");
+                        }
+                        else
+                        {
+                            product.BrandId = productReq.BrandId;
+                            product.ProductName = productReq.ProductName;
+                            product.Price = productReq.Price;
+                            product._5g = productReq._5g;
+                            product.Processor = productReq.Processor;
+                            product.Battery = productReq.Battery;
+                            product.FastCharge = productReq.FastCharge;
+                            product.Ram = productReq.Ram;
+                            product.Memory = productReq.Memory;
+                            product.Screen = productReq.Screen;
+                            product.RefreshRate = productReq.RefreshRate;
+                            product.Os = productReq.Os;
+                            product.RearCamera = productReq.RearCamera;
+                            product.FrontCamera = productReq.FrontCamera;
+                            product.ExtendMemory = productReq.ExtendMemory;
+                            res = productRep.UpdateProduct(product);
+                        }
                     }
 
                     else
                     {
-                        res.SetMessage("Khong tim thay san pham");
-                        res.SetError("404", "Khong tim thay san pham");
+                        res.SetMessage("Không tìm thấy sản phẩm");
+                        res.SetError("404", "Không tìm thấy sản phẩm");
                     }
-
                 }
                 else
                 {
-                    res.SetMessage("Ma san pham khong hop le");
+                    res.SetError("400", "Mã sản phẩm không hợp lệ");
                 }
             }
-                catch (Exception ex)
-                {
-                    res.SetError(ex.StackTrace);
-                    res.SetMessage(ex.Message);
-                }
-            
+            catch (Exception ex)
+            {
+                res.SetError(ex.StackTrace);
+                res.SetMessage(ex.Message);
+            }
+
             return res;
         }
+
         public SingleRsp DeleteProduct(int id)
         {
             var res = new SingleRsp();
+            var context = new QuanLyBanDienThoaiContext();
             try
             {
-                var product = productRep.Read(id);
+                var product = context.Products.Find(id);
                 if (product != null)
                 {
-                    res = productRep.DeleteProduct(product);
+                    context.Products.Remove(product);
+                    context.SaveChanges();
                     res.SetMessage("Đã xóa sản phẩm");
                 }
                 else
@@ -202,6 +219,7 @@ namespace WebDT.BLL
             return res;
         }
         #endregion
+
         public ProductSvc()
         {
             productRep = new ProductRep();
