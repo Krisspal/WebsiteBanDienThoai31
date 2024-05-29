@@ -140,13 +140,13 @@ namespace WebDT.BLL
                 {
                     DateTime now = DateTime.UtcNow;
                     TimeSpan diference = (TimeSpan)(order.OrderDate - now);
-                    if ((int)(diference.TotalMinutes) < 30)
-                        res.SetMessage("Đơn hàng đã được giao");
-                    else
-                    {
+                    //if ((int)(diference.TotalMinutes) < 30)
+                    //    res.SetMessage("Đơn hàng đã được giao");
+                    //else
+                    //{
                         orderRep.DeleteOrder(order);
                         res.SetMessage("Đã xóa đơn hàng");
-                    }
+                    //}
                 }
                 else
                 {

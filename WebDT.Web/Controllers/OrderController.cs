@@ -60,7 +60,8 @@ namespace WebDT.Web.Controllers
         [HttpDelete("DeleteOrder")]
         public IActionResult DeleteOrder(int id)
         {
-            var res = orderSvc.DeleteOrder(id);
+            var res = new SingleRsp();
+            res = orderSvc.DeleteOrder(id);
             return Ok(res);
         }
         //[HttpPost("Checkout")]
