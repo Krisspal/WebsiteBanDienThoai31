@@ -20,7 +20,7 @@ namespace WebDT.Web.Controllers
         public IActionResult SearchOrder(int id)
         {
             var res = new SingleRsp();
-            res = orderSvc.Read(id);
+            res = orderSvc.GetOrderWithDetails(id);
             return Ok(res);
         }
         [HttpPost("CreateOrder")]

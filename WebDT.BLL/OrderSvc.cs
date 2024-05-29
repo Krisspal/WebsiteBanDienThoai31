@@ -41,6 +41,20 @@ namespace WebDT.BLL
             res.Data = _rep.Read(id);
             return res;
         }
+        public SingleRsp GetOrderWithDetails(int id) 
+        {
+            var res = new SingleRsp();
+            var order = _rep.GetOrderWithDetails(id);
+            if (order != null)
+            {
+                res.Data = order;
+            }
+            else
+            {
+                res.SetError("404", "Order not found");
+            }
+            return res;
+        }
         public SingleRsp CreateOrder(OrderReq orderReq, int userID)
         {
 

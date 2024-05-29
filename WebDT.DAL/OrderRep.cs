@@ -120,7 +120,13 @@ namespace WebDT.DAL
             return a;
 
         }
-
+        public Order GetOrderWithDetails(int orderId)
+        {
+            return All
+                .Include(o => o.OrderDetails)
+                .ThenInclude(od => od.Product)
+                .FirstOrDefault(o => o.OrderId == orderId);
+        }
         #endregion
     }
 }
