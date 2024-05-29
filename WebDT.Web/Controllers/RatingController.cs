@@ -63,16 +63,24 @@ namespace WebDT.Web.Controllers
             }
             return BadRequest(response.Message);
         }
-        [HttpPost]
+        [HttpPost("CreateByUserLogin")]
         public IActionResult CreateRating(RatingReq ratingRequest, [FromServices] IHttpContextAccessor httpContextAccessor)
         {
             var rsp = new SingleRsp();
 
-            var user = httpContextAccessor.HttpContext.User;
-            var userId = int.Parse(user.FindFirstValue(ClaimTypes.NameIdentifier));
-            //var currentUserId = GetCurrentUserId(httpContextAccessor);
+            try
+            {
+                var user = httpContextAccessor.HttpContext.User;
+                var userId = int.Parse(user.FindFirstValue(ClaimTypes.NameIdentifier));
+                //var currentUserId = GetCurrentUserId(httpContextAccessor);
 
-            rsp = ratingSvc.CreateRating(userId, ratingRequest);
+                rsp = ratingSvc.CreateRating(userId, ratingRequest);
+            }
+            catch (System.Exception ex)
+            {
+
+                return BadRequest("User chua login");
+            }
             return Ok(rsp);
         }
 

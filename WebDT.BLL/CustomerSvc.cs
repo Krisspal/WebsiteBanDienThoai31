@@ -7,6 +7,7 @@ using WebDT.DAL.Models;
 using WebDT.DAL;
 using WebDT.Common.BLL;
 using System.Linq;
+using System.Security.Cryptography;
 
 namespace WebDT.BLL
 {
@@ -35,6 +36,7 @@ namespace WebDT.BLL
         public CustomerSvc()
         {
             customerRep = new CustomerRep();
+            employeeRep = new EmployeeRep();
         }
         //public SingleRsp CreateCustomer(CustomerReq customerReq)
         //{
@@ -86,11 +88,19 @@ namespace WebDT.BLL
             //Employee ex = new Employee();
             var cx = customerRep.Read(id);
             //Cap nhat
-            cx.CustomerName = customerReq.CustomerName;
-            //cx.UserId = customerReq.UserId;
-            cx.Phone = customerReq.Phone;
-            cx.Address = customerReq.Address;
-            res = customerRep.UpdateCustomer(cx);
+            try
+            {
+                cx.CustomerName = customerReq.CustomerName;
+                //cx.UserId = customerReq.UserId;
+                cx.Phone = customerReq.Phone;
+                cx.Address = customerReq.Address;
+                res = customerRep.UpdateCustomer(cx);
+            }
+            catch (Exception ex)
+            {
+
+                res.SetMessage("Failed to update customer.");
+            }
             return res;
         }
 
@@ -110,7 +120,7 @@ namespace WebDT.BLL
                 }
                 // Delete the employee from the database
                 customerRep.DeleteCustomer(customer);
-                rsp.SetMessage("Employee deleted successfully.");
+                rsp.SetMessage("Customer deleted successfully.");
             }
             catch (Exception ex)
             {

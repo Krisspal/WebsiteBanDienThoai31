@@ -37,6 +37,7 @@ namespace WebDT.BLL
         public EmployeeSvc() 
         {
             employeeRep = new EmployeeRep();
+            customerRep = new CustomerRep();
         }
         //public SingleRsp CreateEmployee(EmployeeReq employeeReq)
         //{
