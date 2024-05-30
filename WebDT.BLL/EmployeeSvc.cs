@@ -102,26 +102,34 @@ namespace WebDT.BLL
         public SingleRsp UpdateEmployee(int id,EmployeeReq employeeReq)
         {
             var res = new SingleRsp();
-            try
+            var ex = employeeRep.Read(id);
+            if (ex != null)
             {
-                //Employee ex = new Employee();
-                var ex = employeeRep.Read(id);
-                //Cap nhat
-                //ex.UserId = employeeReq.UserId;
-                ex.EmployeeName = employeeReq.EmployeeName;
-                ex.Gender = employeeReq.Gender;
-                ex.BirthDate = employeeReq.BirthDate;
-                ex.Idcard = employeeReq.Idcard;
-                ex.Title = employeeReq.Title;
-                ex.Phone = employeeReq.Phone;
-                ex.Salary = employeeReq.Salary;
-                res = employeeRep.UpdateEmployee(ex);;
+                try
+                {
+                    //Employee ex = new Employee();
+                    //Cap nhat
+                    //ex.UserId = employeeReq.UserId;
+                    ex.EmployeeName = employeeReq.EmployeeName;
+                    ex.Gender = employeeReq.Gender;
+                    ex.BirthDate = employeeReq.BirthDate;
+                    ex.Idcard = employeeReq.Idcard;
+                    ex.Title = employeeReq.Title;
+                    ex.Phone = employeeReq.Phone;
+                    ex.Salary = employeeReq.Salary;
+                    res = employeeRep.UpdateEmployee(ex); ;
+                }
+                catch (Exception exp)
+                {
+                    res.SetError(exp.StackTrace);
+                    res.SetMessage("Failed to update employee.");
+                }
             }
-            catch (Exception ex)
+            else
             {
-                res.SetError(ex.StackTrace);
                 res.SetMessage("Failed to update employee.");
             }
+            
             return res;
         }
 

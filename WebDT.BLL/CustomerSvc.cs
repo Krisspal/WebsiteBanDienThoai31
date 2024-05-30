@@ -88,19 +88,26 @@ namespace WebDT.BLL
             //Employee ex = new Employee();
             var cx = customerRep.Read(id);
             //Cap nhat
-            try
+            if(cx != null)
             {
-                cx.CustomerName = customerReq.CustomerName;
-                //cx.UserId = customerReq.UserId;
-                cx.Phone = customerReq.Phone;
-                cx.Address = customerReq.Address;
-                res = customerRep.UpdateCustomer(cx);
-            }
-            catch (Exception ex)
-            {
+                try
+                {
+                    cx.CustomerName = customerReq.CustomerName;
+                    //cx.UserId = customerReq.UserId;
+                    cx.Phone = customerReq.Phone;
+                    cx.Address = customerReq.Address;
+                    res = customerRep.UpdateCustomer(cx);
+                }
+                catch (Exception ex)
+                {
 
-                res.SetMessage("Failed to update customer.");
+                    res.SetMessage("Failed to update customer.");
+                }
             }
+            else
+            {
+                res.SetMessage("Failed to update customer.");
+            }    
             return res;
         }
 
