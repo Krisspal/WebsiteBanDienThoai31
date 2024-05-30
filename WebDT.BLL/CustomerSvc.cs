@@ -55,28 +55,38 @@ namespace WebDT.BLL
         public SingleRsp CreateCustomerWithUserID(CustomerReq customerReq)
         {
             var res = new SingleRsp();
-            Customer c = new Customer();
-            int nextUserId = customerRep.GetNextUserId();
 
-            var existingEmployee = employeeRep.All.FirstOrDefault(e => e.UserId == nextUserId);
-            if (existingEmployee != null)
+            try
             {
-                res.SetError($"The UserId {nextUserId} is already associated with an employee.");
-                return res;
+                Customer c = new Customer();
+                int nextUserId = customerRep.GetNextUserId();
+
+                var existingEmployee = employeeRep.All.FirstOrDefault(e => e.UserId == nextUserId);
+                if (existingEmployee != null)
+                {
+                    res.SetError($"The UserId {nextUserId} is already associated with an employee.");
+                    return res;
+                }
+                var existingCustomer = customerRep.All.FirstOrDefault(x => x.UserId == nextUserId);
+                if (existingCustomer != null)
+                {
+                    res.SetError($"Customer with UserId {nextUserId} already exists.Please create new User");
+                    return res;
+                }
+
+                c.CustomerName = customerReq.CustomerName;
+                c.UserId = nextUserId;
+                c.Phone = customerReq.Phone;
+                c.Address = customerReq.Address;
+
+                res = customerRep.CreateCustomer(c);
             }
-            var existingCustomer = customerRep.All.FirstOrDefault(x => x.UserId == nextUserId);
-            if (existingCustomer != null)
+            catch (Exception ex)
             {
-                res.SetError($"Customer with UserId {nextUserId} already exists.Please create new User");
-                return res;
+
+                res.SetError(ex.StackTrace);
+                res.SetMessage("Failed to create customer.");
             }
-
-            c.CustomerName = customerReq.CustomerName;
-            c.UserId = nextUserId;
-            c.Phone = customerReq.Phone;
-            c.Address = customerReq.Address;
-
-            res = customerRep.CreateCustomer(c);
 
             return res;
         }

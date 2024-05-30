@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebDT.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1921301d0141ff44589c76cfa02ac7906e69410e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a987bd5606dfdace51df4894ad5ec9fbda253a75")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebDT.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebDT.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
